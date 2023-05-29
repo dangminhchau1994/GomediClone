@@ -34,6 +34,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -52,12 +64,22 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
     
     flavorDimensions "default"
 
     productFlavors {
       prod {
           dimension "default"
+          applicationIdSuffix ".prod"
           resValue "string", "app_name", "Gomedi Prod"
       }
       dev {
@@ -66,14 +88,6 @@ android {
           resValue "string", "app_name", "Gomedi Dev"
           versionNameSuffix ".dev"
       }
-    }
-
-    buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
-        }
     }
 }
 
