@@ -6,10 +6,10 @@ import '../infrastructure/data/repositories/user_repository.dart';
 
 final getIt = GetIt.instance;
 
-Future<void> setup() async {
+Future<void> setupLocator(String url) async {
   getIt.registerSingleton(Dio());
 
-  getIt.registerSingleton(DioClient(getIt<Dio>()));
+  getIt.registerSingleton(DioClient(getIt<Dio>(), url));
 
   getIt.registerSingleton(UserApi(dioClient: getIt<DioClient>()));
 

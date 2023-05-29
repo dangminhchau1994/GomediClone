@@ -58,12 +58,12 @@ android {
     productFlavors {
       prod {
           dimension "default"
-          resValue "string", "app_name", "Gomedi Dev"
+          resValue "string", "app_name", "Gomedi Prod"
       }
       dev {
           dimension "default"
           applicationIdSuffix ".dev"
-          resValue "string", "app_name", "Gomedi Prod"
+          resValue "string", "app_name", "Gomedi Dev"
           versionNameSuffix ".dev"
       }
     }

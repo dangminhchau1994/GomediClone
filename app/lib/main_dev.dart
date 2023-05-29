@@ -1,14 +1,16 @@
 import 'package:app/application/app/app_view.dart';
+import 'package:app/infrastructure/data/network/api/endpoints.dart';
 import 'package:flutter/material.dart';
-
 import 'application/config/app_config.dart';
+import 'di/service_locator.dart';
 
-void main() {
+void main() async {
   AppConfig.create(
     appName: "Gomedi Dev",
-    baseUrl: "http://gomedi-qa.eu-central-1.elasticbeanstalk.com/api/",
+    baseUrl: Endpoints.devUrl,
     flavor: Flavor.dev,
   );
-
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupLocator(AppConfig.create().baseUrl);
   runApp(const App());
 }

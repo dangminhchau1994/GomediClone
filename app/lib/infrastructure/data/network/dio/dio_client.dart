@@ -6,9 +6,12 @@ class DioClient {
   // dio instance
   final Dio _dio;
 
-  DioClient(this._dio) {
+  DioClient(
+    this._dio,
+    String url,
+  ) {
     _dio
-      ..options.baseUrl = Endpoints.baseUrl
+      ..options.baseUrl = url
       ..options.connectTimeout =
           const Duration(milliseconds: Endpoints.connectionTimeout)
       ..options.receiveTimeout =
