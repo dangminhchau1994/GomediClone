@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 import 'application/config/app_config.dart';
 import 'di/service_locator.dart';
 
-void main() async {
-  AppConfig.create(
+void main() {
+  final appConfig = AppConfig.create(
     appName: "Gomedi Dev",
     baseUrl: Endpoints.devUrl,
     flavor: Flavor.dev,
   );
-  WidgetsFlutterBinding.ensureInitialized();
-  await setupLocator(AppConfig.create().baseUrl);
-  runApp(const App());
+  setupLocator(appConfig.baseUrl);
+  runApp(App(appConfig: appConfig));
 }

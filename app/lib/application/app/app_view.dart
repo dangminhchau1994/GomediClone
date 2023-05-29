@@ -2,9 +2,13 @@ import 'package:app/application/config/app_config.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  const App({
+    super.key,
+    this.appConfig,
+  });
 
-  // This widget is the root of your application.
+  final AppConfig? appConfig;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,10 +25,10 @@ class App extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                AppConfig.shared.appName,
+                appConfig?.appName ?? '',
               ),
               Text(
-                AppConfig.shared.baseUrl,
+                appConfig?.baseUrl ?? '',
               )
             ],
           ),
