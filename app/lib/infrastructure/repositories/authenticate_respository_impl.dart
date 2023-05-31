@@ -5,7 +5,6 @@ import 'package:app/infrastructure/network/api/authenticate_api.dart';
 import 'package:app/infrastructure/network/dio/dio_exception.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 
 class AuthenticateRepositoryImpl implements IAuthenticateRepository {
   final AuthenticateApi authenticateApi;
@@ -21,7 +20,7 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
   ) async {
     try {
       final response = await authenticateApi.authenticate(username, password);
-      return right(Token.fromJson(response.data as Map<String, dynamic>));
+      return right(Token.fromJson(response?.data as Map<String, dynamic>));
     } on DioError catch (e) {
       return left(
         AuthFailure.serverError(DioExceptions.fromDioError(e).toString()),

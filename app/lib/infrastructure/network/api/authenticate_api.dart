@@ -8,7 +8,7 @@ class AuthenticateApi {
 
   AuthenticateApi({required this.dioClient});
 
-  Future<Response> authenticate(
+  Future<Response?>? authenticate(
     String username,
     String password,
   ) async {
