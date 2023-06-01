@@ -1,6 +1,6 @@
-import 'package:app/infrastructure/models/token/token.dart';
-import 'package:app/domain/core/failures.dart';
 import 'package:dartz/dartz.dart';
+import '../../infrastructure/models/token/token.dart';
+import '../core/failures.dart';
 
 abstract class IAuthenticateRepository {
   Future<Either<AuthFailure, Token>> authenticate(
