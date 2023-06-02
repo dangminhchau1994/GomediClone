@@ -58,9 +58,7 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0B90082A24494A00DE0CA2 /* Runner copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Runner copy-Info.plist"; path = "/Users/chaudang/Documents/gomedi-clone/app/ios/Runner copy-Info.plist"; sourceTree = "<absolute>"; };
 		ABA03DC02A24542900F3F7BB /* dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABA03DC12A24542A00F3F7BB /* prod copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "prod copy-Info.plist"; path = "/Users/chaudang/Documents/gomedi-clone/app/ios/prod copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +96,6 @@
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
-				AB0B90082A24494A00DE0CA2 /* Runner copy-Info.plist */,
-				ABA03DC12A24542A00F3F7BB /* prod copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
