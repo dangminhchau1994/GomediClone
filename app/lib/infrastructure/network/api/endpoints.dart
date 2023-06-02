@@ -13,4 +13,6 @@ class Endpoints {
   static const int connectionTimeout = 15000;
 
   static const String authenticate = '/authenticate';
+
+  static const String regiter = '/register';
 }
