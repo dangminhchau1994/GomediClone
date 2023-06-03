@@ -7,9 +7,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   RegisterBloc(this.authenticateRepository)
-      : super(const RegisterState(
-          status: BaseStatus.initial(),
-        )) {
+      : super(
+          const RegisterState(
+            status: BaseStatus.initial(),
+          ),
+        ) {
     on<SubmitRegister>(
       _register,
     );

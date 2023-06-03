@@ -6,17 +6,19 @@ class UIButton extends StatelessWidget {
     super.key,
     this.title,
     this.isPrimaryButton = true,
+    this.width,
     this.onPressed,
   });
 
   final String? title;
+  final double? width;
   final bool? isPrimaryButton;
   final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
+      width: width ?? MediaQuery.of(context).size.width,
       height: 50,
       child: ElevatedButton(
         key: key,

@@ -5,8 +5,8 @@ import 'package:app/presentation/register/register_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRoutes {
-  final routers = GoRouter(
-    initialLocation: RouteNames.splash,
+  static final GoRouter _router = GoRouter(
+    initialLocation: RouteNames.login,
     routes: [
       GoRoute(
         path: RouteNames.register,
@@ -26,4 +26,5 @@ class AppRoutes {
       )
     ],
   );
+  GoRouter get router => _router;
 }

@@ -1,9 +1,11 @@
 import 'dart:io';
+import 'package:app/application/constants/route_names.dart';
 import 'package:app/application/widgets/ui_app_bar.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/gen/assets.gen.dart';
 import 'package:app/presentation/login/widgets/login_social_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -55,7 +57,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 UIButton(
                   key: const Key('register'),
                   title: 'Register',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(RouteNames.register);
+                  },
                 ),
                 const SizedBox(
                   height: 14,

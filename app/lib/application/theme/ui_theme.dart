@@ -34,6 +34,7 @@ ThemeData getAppTheme(BuildContext context) {
     ),
     iconTheme: IconThemeData(color: UIColors.blue),
     dividerColor: UIColors.lightGrey,
+    dividerTheme: const DividerThemeData(color: Colors.grey),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
             fontFamily: FontFamily.robotoMono,
@@ -45,17 +46,18 @@ ThemeData getAppTheme(BuildContext context) {
           subtitle1: Theme.of(context).textTheme.subtitle1?.copyWith(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
-                fontFamily: FontFamily.robotoMono,
+                color: Colors.black,
+                fontFamily: FontFamily.raleway,
               ),
           caption: Theme.of(context).textTheme.caption?.copyWith(
                 fontSize: 14,
-                color: Theme.of(context).textTheme.bodyText2?.color,
+                color: Theme.of(context).textTheme.caption?.color,
                 fontFamily: FontFamily.robotoMono,
               ),
-          bodyText1: Theme.of(context).textTheme.caption?.copyWith(
+          bodyText1: Theme.of(context).textTheme.bodyText1?.copyWith(
                 color: UIColors.lightGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: 14,
+                fontSize: 16,
                 fontFamily: FontFamily.robotoMono,
               ),
         ),

@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:app/application/app/app_view.dart';
 import 'package:app/presentation/login/login_screen.dart';
 import 'package:app/presentation/login/widgets/login_social_button.dart';

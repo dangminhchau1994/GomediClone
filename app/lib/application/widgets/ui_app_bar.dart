@@ -1,6 +1,7 @@
 import 'package:app/application/theme/ui_color.dart';
 import 'package:app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class UIAppbar extends StatelessWidget implements PreferredSize {
   const UIAppbar({
@@ -16,14 +17,34 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: title == null,
-      title: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Image.asset(
-          Assets.images.logoTextPng.path,
-          width: 150,
-          height: 150,
+      leading: Visibility(
+        visible: title != null,
+        child: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            context.pop();
+          },
         ),
       ),
+      title: title == null
+          ? Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                Assets.images.logoTextPng.path,
+                width: 150,
+                height: 150,
+              ),
+            )
+          : Text(
+              title ?? '',
+              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                  ),
+            ),
       actions: [
         Visibility(
           visible: showBadge ?? true,
@@ -38,7 +59,7 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
                 child: Icon(
                   Icons.notifications,
                   size: 24,
-                  color: UIColors.lightGrey,
+                  color: Colors.white.withOpacity(0.9),
                 ),
               ),
             ),
