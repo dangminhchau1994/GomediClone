@@ -10,6 +10,7 @@ ThemeData getAppTheme(BuildContext context) {
     ),
     backgroundColor: Colors.white,
     primaryColor: UIColors.blue,
+    unselectedWidgetColor: Colors.grey,
     scaffoldBackgroundColor: Colors.white,
     colorScheme: ThemeData.light().colorScheme.copyWith(
           secondary: UIColors.lightBlue,
@@ -30,6 +31,13 @@ ThemeData getAppTheme(BuildContext context) {
             .textTheme
             .bodyText2
             ?.copyWith(fontWeight: FontWeight.w700),
+      ),
+    ),
+    checkboxTheme: CheckboxThemeData(
+      checkColor: MaterialStateProperty.all(Colors.white),
+      fillColor: MaterialStateProperty.all(UIColors.blue),
+      side: const BorderSide(
+        color: Colors.black,
       ),
     ),
     iconTheme: IconThemeData(color: UIColors.blue),

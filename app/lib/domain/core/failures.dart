@@ -11,3 +11,12 @@ class AuthFailure with _$AuthFailure {
 
   const factory AuthFailure.invalidEmailAndPassword() = InvalidEmailAndPassword;
 }
+
+@freezed
+class FormFailure with _$FormFailure {
+  const factory FormFailure.invalidEmail() = InvalidEmail;
+
+  const factory FormFailure.invalidPassword() = InvalidPassword;
+
+  const factory FormFailure.mismatchedPassword() = MismatchedPassword;
+}

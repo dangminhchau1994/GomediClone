@@ -2,20 +2,19 @@ import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
-
 import '../constants/dimensions.dart';
 
 class UIDropdownBottom extends StatefulWidget {
   const UIDropdownBottom({
     super.key,
     this.title,
-    this.height,
     this.bottomItems,
+    this.onUpdateItem,
   });
 
   final String? title;
-  final double? height;
   final List<BottomItem>? bottomItems;
+  final Function(BottomItem item)? onUpdateItem;
 
   @override
   State<UIDropdownBottom> createState() => _UIDropdownBottomState();
@@ -42,37 +41,18 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
       ),
       builder: (context) {
         return SizedBox(
-          height: widget.height,
+          height: 300,
           child: Stack(
             fit: StackFit.expand,
             children: [
-              ListView.separated(
-                shrinkWrap: true,
-                itemCount: widget.bottomItems?.length ?? 0,
-                separatorBuilder: (context, index) => Container(
-                  height: 0.5,
-                  color: Colors.grey,
-                ),
-                itemBuilder: (context, index) => ListTile(
-                  onTap: () {
-                    setState(() {
-                      item = widget.bottomItems![index];
-                    });
-                  },
-                  trailing: Visibility(
-                    visible: item == widget.bottomItems![index],
-                    child: Icon(
-                      Icons.check,
-                      color: UIColors.blue,
-                    ),
-                  ),
-                  title: Text(
-                    widget.bottomItems![index].title ?? '',
-                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ),
+              UIDropdownBottomList(
+                bottomItems: widget.bottomItems,
+                item: item,
+                onUpdateItem: (updatedItem) {
+                  setState(() {
+                    item = updatedItem;
+                  });
+                },
               ),
               Positioned(
                 bottom: 0,
@@ -162,6 +142,58 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
           ),
         )
       ],
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class UIDropdownBottomList extends StatefulWidget {
+  UIDropdownBottomList({
+    super.key,
+    this.bottomItems,
+    this.item,
+    this.onUpdateItem,
+  });
+
+  BottomItem? item;
+  List<BottomItem>? bottomItems;
+  Function(BottomItem item)? onUpdateItem;
+
+  @override
+  State<UIDropdownBottomList> createState() => _UIDropdownBottomListState();
+}
+
+class _UIDropdownBottomListState extends State<UIDropdownBottomList> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      shrinkWrap: true,
+      itemCount: widget.bottomItems?.length ?? 0,
+      separatorBuilder: (context, index) => Container(
+        height: 0.5,
+        color: Colors.grey,
+      ),
+      itemBuilder: (context, index) => ListTile(
+        onTap: () {
+          setState(() {
+            widget.item = widget.bottomItems![index];
+            widget.onUpdateItem!(widget.item!);
+          });
+        },
+        trailing: Visibility(
+          visible: widget.item == widget.bottomItems![index],
+          child: Icon(
+            Icons.check,
+            color: UIColors.blue,
+          ),
+        ),
+        title: Text(
+          widget.bottomItems![index].title ?? '',
+          style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+      ),
     );
   }
 }

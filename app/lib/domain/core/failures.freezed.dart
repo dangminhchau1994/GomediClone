@@ -579,3 +579,393 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
 abstract class InvalidEmailAndPassword implements AuthFailure {
   const factory InvalidEmailAndPassword() = _$InvalidEmailAndPassword;
 }
+
+/// @nodoc
+mixin _$FormFailure {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmail,
+    required TResult Function() invalidPassword,
+    required TResult Function() mismatchedPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidEmail,
+    TResult? Function()? invalidPassword,
+    TResult? Function()? mismatchedPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? invalidPassword,
+    TResult Function()? mismatchedPassword,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(MismatchedPassword value) mismatchedPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(MismatchedPassword value)? mismatchedPassword,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(MismatchedPassword value)? mismatchedPassword,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FormFailureCopyWith<$Res> {
+  factory $FormFailureCopyWith(
+          FormFailure value, $Res Function(FormFailure) then) =
+      _$FormFailureCopyWithImpl<$Res, FormFailure>;
+}
+
+/// @nodoc
+class _$FormFailureCopyWithImpl<$Res, $Val extends FormFailure>
+    implements $FormFailureCopyWith<$Res> {
+  _$FormFailureCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$InvalidEmailCopyWith<$Res> {
+  factory _$$InvalidEmailCopyWith(
+          _$InvalidEmail value, $Res Function(_$InvalidEmail) then) =
+      __$$InvalidEmailCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InvalidEmailCopyWithImpl<$Res>
+    extends _$FormFailureCopyWithImpl<$Res, _$InvalidEmail>
+    implements _$$InvalidEmailCopyWith<$Res> {
+  __$$InvalidEmailCopyWithImpl(
+      _$InvalidEmail _value, $Res Function(_$InvalidEmail) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InvalidEmail implements InvalidEmail {
+  const _$InvalidEmail();
+
+  @override
+  String toString() {
+    return 'FormFailure.invalidEmail()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidEmail);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmail,
+    required TResult Function() invalidPassword,
+    required TResult Function() mismatchedPassword,
+  }) {
+    return invalidEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidEmail,
+    TResult? Function()? invalidPassword,
+    TResult? Function()? mismatchedPassword,
+  }) {
+    return invalidEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? invalidPassword,
+    TResult Function()? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(MismatchedPassword value) mismatchedPassword,
+  }) {
+    return invalidEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(MismatchedPassword value)? mismatchedPassword,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(MismatchedPassword value)? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidEmail implements FormFailure {
+  const factory InvalidEmail() = _$InvalidEmail;
+}
+
+/// @nodoc
+abstract class _$$InvalidPasswordCopyWith<$Res> {
+  factory _$$InvalidPasswordCopyWith(
+          _$InvalidPassword value, $Res Function(_$InvalidPassword) then) =
+      __$$InvalidPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InvalidPasswordCopyWithImpl<$Res>
+    extends _$FormFailureCopyWithImpl<$Res, _$InvalidPassword>
+    implements _$$InvalidPasswordCopyWith<$Res> {
+  __$$InvalidPasswordCopyWithImpl(
+      _$InvalidPassword _value, $Res Function(_$InvalidPassword) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InvalidPassword implements InvalidPassword {
+  const _$InvalidPassword();
+
+  @override
+  String toString() {
+    return 'FormFailure.invalidPassword()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmail,
+    required TResult Function() invalidPassword,
+    required TResult Function() mismatchedPassword,
+  }) {
+    return invalidPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidEmail,
+    TResult? Function()? invalidPassword,
+    TResult? Function()? mismatchedPassword,
+  }) {
+    return invalidPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? invalidPassword,
+    TResult Function()? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(MismatchedPassword value) mismatchedPassword,
+  }) {
+    return invalidPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(MismatchedPassword value)? mismatchedPassword,
+  }) {
+    return invalidPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(MismatchedPassword value)? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidPassword implements FormFailure {
+  const factory InvalidPassword() = _$InvalidPassword;
+}
+
+/// @nodoc
+abstract class _$$MismatchedPasswordCopyWith<$Res> {
+  factory _$$MismatchedPasswordCopyWith(_$MismatchedPassword value,
+          $Res Function(_$MismatchedPassword) then) =
+      __$$MismatchedPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MismatchedPasswordCopyWithImpl<$Res>
+    extends _$FormFailureCopyWithImpl<$Res, _$MismatchedPassword>
+    implements _$$MismatchedPasswordCopyWith<$Res> {
+  __$$MismatchedPasswordCopyWithImpl(
+      _$MismatchedPassword _value, $Res Function(_$MismatchedPassword) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$MismatchedPassword implements MismatchedPassword {
+  const _$MismatchedPassword();
+
+  @override
+  String toString() {
+    return 'FormFailure.mismatchedPassword()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$MismatchedPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmail,
+    required TResult Function() invalidPassword,
+    required TResult Function() mismatchedPassword,
+  }) {
+    return mismatchedPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidEmail,
+    TResult? Function()? invalidPassword,
+    TResult? Function()? mismatchedPassword,
+  }) {
+    return mismatchedPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? invalidPassword,
+    TResult Function()? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (mismatchedPassword != null) {
+      return mismatchedPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(MismatchedPassword value) mismatchedPassword,
+  }) {
+    return mismatchedPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(MismatchedPassword value)? mismatchedPassword,
+  }) {
+    return mismatchedPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(MismatchedPassword value)? mismatchedPassword,
+    required TResult orElse(),
+  }) {
+    if (mismatchedPassword != null) {
+      return mismatchedPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MismatchedPassword implements FormFailure {
+  const factory MismatchedPassword() = _$MismatchedPassword;
+}

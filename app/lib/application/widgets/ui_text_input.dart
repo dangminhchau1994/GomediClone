@@ -13,7 +13,7 @@ class UITextInput extends StatefulWidget {
 
   final TextEditingController? editingController;
   final Function(String value)? onChanged;
-  final String? validator;
+  final String? Function(String value)? validator;
   final String? title;
   final bool? isPasswordType;
 
@@ -38,7 +38,7 @@ class _UITextInputState extends State<UITextInput> {
         TextFormField(
           controller: widget.editingController,
           onChanged: (value) => widget.onChanged,
-          validator: (value) => widget.validator,
+          validator: (value) => widget.validator!(value ?? ''),
           obscureText: _passwordVisible,
           decoration: InputDecoration(
             suffixIcon: Visibility(
