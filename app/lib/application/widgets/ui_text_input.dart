@@ -37,7 +37,9 @@ class _UITextInputState extends State<UITextInput> {
         ),
         TextFormField(
           controller: widget.editingController,
-          onChanged: (value) => widget.onChanged,
+          onChanged: (value) {
+            widget.onChanged!(value);
+          },
           validator: (value) => widget.validator!(value ?? ''),
           obscureText: _passwordVisible,
           decoration: InputDecoration(

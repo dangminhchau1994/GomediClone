@@ -16,7 +16,11 @@ class DioClient {
           const Duration(milliseconds: Endpoints.connectionTimeout)
       ..options.receiveTimeout =
           const Duration(milliseconds: Endpoints.receiveTimeout)
-      ..options.responseType = ResponseType.json;
+      ..options.responseType = ResponseType.json
+      ..interceptors.add(LogInterceptor(
+        requestBody: true,
+        request: true,
+      ));
   }
 
   // Get:-----------------------------------------------------------------------

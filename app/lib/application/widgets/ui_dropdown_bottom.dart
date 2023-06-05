@@ -2,6 +2,7 @@ import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../constants/dimensions.dart';
 
 class UIDropdownBottom extends StatefulWidget {
@@ -49,9 +50,9 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
                 bottomItems: widget.bottomItems,
                 item: item,
                 onUpdateItem: (updatedItem) {
-                  setState(() {
-                    item = updatedItem;
-                  });
+                  widget.onUpdateItem!(updatedItem);
+                  item = updatedItem;
+                  setState(() {});
                 },
               ),
               Positioned(
@@ -79,7 +80,9 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
                           width: 180,
                           isPrimaryButton: false,
                           title: 'Cancel',
-                          onPressed: () {},
+                          onPressed: () {
+                            context.pop();
+                          },
                         ),
                         const SizedBox(
                           width: 20,
@@ -87,7 +90,9 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
                         UIButton(
                           width: 180,
                           title: 'OK',
-                          onPressed: () {},
+                          onPressed: () {
+                            context.pop();
+                          },
                         ),
                       ],
                     ),

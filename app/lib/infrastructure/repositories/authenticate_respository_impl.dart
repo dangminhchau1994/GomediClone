@@ -1,5 +1,5 @@
 import 'package:app/domain/core/failures.dart';
-import 'package:app/domain/token/I_authenticate_repository.dart';
+import 'package:app/domain/token/i_authenticate_repository.dart';
 import 'package:app/infrastructure/models/register/register.dart';
 import 'package:app/infrastructure/models/token/token.dart';
 import 'package:app/infrastructure/network/api/authenticate_api.dart';
@@ -9,6 +9,11 @@ import 'package:dio/dio.dart';
 
 class AuthenticateRepositoryImpl implements IAuthenticateRepository {
   final AuthenticateApi authenticateApi;
+
+  Future<AuthenticateRepositoryImpl> init() async {
+    Future.delayed(const Duration(seconds: 1));
+    return this;
+  }
 
   AuthenticateRepositoryImpl({
     required this.authenticateApi,

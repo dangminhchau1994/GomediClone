@@ -24,13 +24,13 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       ),
     );
 
-    on<InputPassword>(
-      (event, emit) => emit(
+    on<InputPassword>((event, emit) {
+      emit(
         state.copyWith(
           password: event.password,
         ),
-      ),
-    );
+      );
+    });
 
     on<InputEmail>(
       (event, emit) => emit(
@@ -65,30 +65,42 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   ) async {
     emit(state.copyWith(status: const BaseStatus.loading()));
 
-    final request = state.register?.copyWith(
+    final request = Register(
       firstName: state.firstName,
       password: state.password,
       email: state.email,
-      login: state.login,
-      languageId: state.languageId,
+      login: state.email,
+      languageId: state.languageId ?? 0,
     );
 
-    final result = await authenticateRepository.register(
-      request ?? Register(),
-    );
+    final result = await authenticateRepository.register(request);
 
     result.fold(
-      (failure) => emit(
-        state.copyWith(
-          status: const BaseStatus.failure(),
-          authFailure: failure,
-        ),
-      ),
-      (success) => emit(
-        state.copyWith(
-          status: const BaseStatus.success(),
-        ),
-      ),
+      (failure) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.failure(),
+            authFailure: failure,
+          ),
+        );
+        emit(
+          state.copyWith(
+            status: const BaseStatus.initial(),
+          ),
+        );
+      },
+      (success) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.success(),
+          ),
+        );
+        emit(
+          state.copyWith(
+            status: const BaseStatus.initial(),
+          ),
+        );
+      },
     );
   }
 }
