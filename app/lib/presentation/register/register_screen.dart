@@ -226,11 +226,12 @@ class _BodyState extends State<Body> {
                           FlushbarHelper.createError(
                             message: 'You must accept the regulations',
                           ).show(context);
-                        }
-                        if (formKey.currentState!.validate()) {
-                          context
-                              .read<RegisterBloc>()
-                              .add(const SubmitRegister());
+                        } else {
+                          if (formKey.currentState!.validate()) {
+                            context
+                                .read<RegisterBloc>()
+                                .add(const SubmitRegister());
+                          }
                         }
                       },
                     ),

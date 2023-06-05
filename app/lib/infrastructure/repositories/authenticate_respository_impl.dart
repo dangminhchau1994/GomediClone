@@ -29,7 +29,7 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
       return right(Token.fromJson(response?.data as Map<String, dynamic>));
     } on DioError catch (e) {
       return left(
-        AuthFailure.serverError(DioExceptions.fromDioError(e).toString()),
+        AuthFailure.serverError(DioExceptions.fromDioError(e).message),
       );
     }
   }
@@ -41,7 +41,7 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
       return right(unit);
     } on DioError catch (e) {
       return left(
-        AuthFailure.serverError(DioExceptions.fromDioError(e).toString()),
+        AuthFailure.serverError(DioExceptions.fromDioError(e).message),
       );
     }
   }
