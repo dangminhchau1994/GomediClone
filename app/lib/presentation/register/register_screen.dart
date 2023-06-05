@@ -2,7 +2,6 @@ import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:app/application/blocs/register/register_bloc.dart';
 import 'package:app/application/blocs/register/register_event.dart';
 import 'package:app/application/blocs/register/register_state.dart';
-import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/constants/string_constanst.dart';
 import 'package:app/application/widgets/ui_app_bar.dart';
@@ -217,24 +216,22 @@ class _BodyState extends State<Body> {
                   ],
                 ),
                 child: SafeArea(
-                  child: BlocBuilder<RegisterBloc, RegisterState>(
-                    builder: (context, state) => UIButton(
-                      width: 180,
-                      title: 'Register',
-                      onPressed: () {
-                        if (!isCheckedTerms) {
-                          FlushbarHelper.createError(
-                            message: 'You must accept the regulations',
-                          ).show(context);
-                        } else {
-                          if (formKey.currentState!.validate()) {
-                            context
-                                .read<RegisterBloc>()
-                                .add(const SubmitRegister());
-                          }
+                  child: UIButton(
+                    width: 180,
+                    title: 'Register',
+                    onPressed: () {
+                      if (!isCheckedTerms) {
+                        FlushbarHelper.createError(
+                          message: 'You must accept the regulations',
+                        ).show(context);
+                      } else {
+                        if (formKey.currentState!.validate()) {
+                          context
+                              .read<RegisterBloc>()
+                              .add(const SubmitRegister());
                         }
-                      },
-                    ),
+                      }
+                    },
                   ),
                 ),
               ),

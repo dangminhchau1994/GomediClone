@@ -1,6 +1,8 @@
+import 'package:app/infrastructure/network/interceptors/auth_interceptor.dart';
 import 'package:dio/dio.dart';
 
 import '../api/endpoints.dart';
+import '../interceptors/logging_interceptor.dart';
 
 class DioClient {
   // dio instance
@@ -17,10 +19,8 @@ class DioClient {
       ..options.receiveTimeout =
           const Duration(milliseconds: Endpoints.receiveTimeout)
       ..options.responseType = ResponseType.json
-      ..interceptors.add(LogInterceptor(
-        requestBody: true,
-        request: true,
-      ));
+      ..interceptors.add(LoggingInterceptor())
+      ..interceptors.add(AuthInterceptor(_dio));
   }
 
   // Get:-----------------------------------------------------------------------
