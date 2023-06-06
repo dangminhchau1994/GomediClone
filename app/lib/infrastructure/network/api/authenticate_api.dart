@@ -13,17 +13,17 @@ class AuthenticateApi {
     String username,
     String password,
   ) async {
-    try {
-      final Response response = await dioClient.post(
-        Endpoints.authenticate,
-        data: {
-          'username': username,
-          'password': password,
-        },
-      );
+    final Response response = await dioClient.post(
+      Endpoints.authenticate,
+      data: {
+        'username': username,
+        'password': password,
+      },
+    );
+    if (response.statusCode == 200) {
       return response;
-    } catch (e) {
-      rethrow;
+    } else {
+      throw Exception('Failed to load token');
     }
   }
 

@@ -24,12 +24,17 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
     String username,
     String password,
   ) async {
-    try {
-      final response = await authenticateApi.authenticate(username, password);
-      return right(Token.fromJson(response?.data as Map<String, dynamic>));
-    } on DioError catch (e) {
+    final response = await authenticateApi.authenticate(username, password);
+    if (response?.statusCode == 200) {
+      return right(Token.fromJson(response?.data));
+    } else {
       return left(
-        AuthFailure.serverError(DioExceptions.fromDioError(e).message),
+        AuthFailure.serverError(DioExceptions.fromDioError(
+          DioException(
+            message: response?.statusMessage ?? '',
+            requestOptions: RequestOptions(),
+          ),
+        ).message),
       );
     }
   }
@@ -39,7 +44,7 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
     try {
       await authenticateApi.register(request);
       return right(unit);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(
         AuthFailure.serverError(DioExceptions.fromDioError(e).message),
       );

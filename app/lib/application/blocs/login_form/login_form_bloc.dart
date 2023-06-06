@@ -59,7 +59,7 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
         );
       },
       (data) {
-        SharePref().setToken(data.idToken ?? '');
+        //SharePref().setToken(data.idToken ?? '');
         emit(
           state.copyWith(
             status: const BaseStatus.success(),

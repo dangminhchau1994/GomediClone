@@ -1,4 +1,3 @@
-import 'package:app/application/prefs/share_preferences.dart';
 import 'package:dio/dio.dart';
 
 class AuthInterceptor extends Interceptor {
@@ -11,8 +10,8 @@ class AuthInterceptor extends Interceptor {
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
-    final accessToken = SharePref().getToken();
-    options.headers['Authorization'] = 'Bearer $accessToken';
+    //final accessToken = SharePref().getToken();
+    //options.headers['Authorization'] = 'Bearer $accessToken';
     return handler.next(options);
   }
 }
