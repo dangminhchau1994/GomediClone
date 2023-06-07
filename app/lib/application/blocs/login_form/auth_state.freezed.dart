@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_form_state.dart';
+part of 'auth_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoginFormState {
+mixin _$AuthState {
   BaseStatus<dynamic>? get status => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
@@ -23,15 +23,14 @@ mixin _$LoginFormState {
   Token? get token => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $LoginFormStateCopyWith<LoginFormState> get copyWith =>
+  $AuthStateCopyWith<AuthState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginFormStateCopyWith<$Res> {
-  factory $LoginFormStateCopyWith(
-          LoginFormState value, $Res Function(LoginFormState) then) =
-      _$LoginFormStateCopyWithImpl<$Res, LoginFormState>;
+abstract class $AuthStateCopyWith<$Res> {
+  factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
+      _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
   $Res call(
       {BaseStatus<dynamic>? status,
@@ -45,9 +44,9 @@ abstract class $LoginFormStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoginFormStateCopyWithImpl<$Res, $Val extends LoginFormState>
-    implements $LoginFormStateCopyWith<$Res> {
-  _$LoginFormStateCopyWithImpl(this._value, this._then);
+class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
+    implements $AuthStateCopyWith<$Res> {
+  _$AuthStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -113,11 +112,10 @@ class _$LoginFormStateCopyWithImpl<$Res, $Val extends LoginFormState>
 }
 
 /// @nodoc
-abstract class _$$_LoginFormStateCopyWith<$Res>
-    implements $LoginFormStateCopyWith<$Res> {
-  factory _$$_LoginFormStateCopyWith(
-          _$_LoginFormState value, $Res Function(_$_LoginFormState) then) =
-      __$$_LoginFormStateCopyWithImpl<$Res>;
+abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
+  factory _$$_AuthStateCopyWith(
+          _$_AuthState value, $Res Function(_$_AuthState) then) =
+      __$$_AuthStateCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -134,11 +132,11 @@ abstract class _$$_LoginFormStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LoginFormStateCopyWithImpl<$Res>
-    extends _$LoginFormStateCopyWithImpl<$Res, _$_LoginFormState>
-    implements _$$_LoginFormStateCopyWith<$Res> {
-  __$$_LoginFormStateCopyWithImpl(
-      _$_LoginFormState _value, $Res Function(_$_LoginFormState) _then)
+class __$$_AuthStateCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$_AuthState>
+    implements _$$_AuthStateCopyWith<$Res> {
+  __$$_AuthStateCopyWithImpl(
+      _$_AuthState _value, $Res Function(_$_AuthState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +148,7 @@ class __$$_LoginFormStateCopyWithImpl<$Res>
     Object? failure = freezed,
     Object? token = freezed,
   }) {
-    return _then(_$_LoginFormState(
+    return _then(_$_AuthState(
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -177,8 +175,8 @@ class __$$_LoginFormStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoginFormState implements _LoginFormState {
-  const _$_LoginFormState(
+class _$_AuthState implements _AuthState {
+  const _$_AuthState(
       {this.status, this.email, this.password, this.failure, this.token});
 
   @override
@@ -194,14 +192,14 @@ class _$_LoginFormState implements _LoginFormState {
 
   @override
   String toString() {
-    return 'LoginFormState(status: $status, email: $email, password: $password, failure: $failure, token: $token)';
+    return 'AuthState(status: $status, email: $email, password: $password, failure: $failure, token: $token)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoginFormState &&
+            other is _$_AuthState &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
@@ -217,17 +215,17 @@ class _$_LoginFormState implements _LoginFormState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoginFormStateCopyWith<_$_LoginFormState> get copyWith =>
-      __$$_LoginFormStateCopyWithImpl<_$_LoginFormState>(this, _$identity);
+  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
+      __$$_AuthStateCopyWithImpl<_$_AuthState>(this, _$identity);
 }
 
-abstract class _LoginFormState implements LoginFormState {
-  const factory _LoginFormState(
+abstract class _AuthState implements AuthState {
+  const factory _AuthState(
       {final BaseStatus<dynamic>? status,
       final String? email,
       final String? password,
       final AuthFailure? failure,
-      final Token? token}) = _$_LoginFormState;
+      final Token? token}) = _$_AuthState;
 
   @override
   BaseStatus<dynamic>? get status;
@@ -241,6 +239,6 @@ abstract class _LoginFormState implements LoginFormState {
   Token? get token;
   @override
   @JsonKey(ignore: true)
-  _$$_LoginFormStateCopyWith<_$_LoginFormState> get copyWith =>
+  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
       throw _privateConstructorUsedError;
 }

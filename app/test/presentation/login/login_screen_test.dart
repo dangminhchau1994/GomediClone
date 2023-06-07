@@ -17,9 +17,6 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byKey(const Key('register facebook key')),
-        warnIfMissed: false);
-
     expect(find.text('Register'), findsOneWidget);
     expect(find.text('Register z Google'), findsOneWidget);
     expect(find.text('Register z Facebook'), findsOneWidget);

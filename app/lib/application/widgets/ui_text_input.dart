@@ -1,4 +1,3 @@
-import 'package:app/application/theme/ui_color.dart';
 import 'package:flutter/material.dart';
 
 class UITextInput extends StatefulWidget {

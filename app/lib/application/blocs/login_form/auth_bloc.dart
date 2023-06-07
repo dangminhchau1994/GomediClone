@@ -1,16 +1,16 @@
-import 'package:app/application/blocs/login_form/login_form_event.dart';
-import 'package:app/application/blocs/login_form/login_form_state.dart';
+import 'package:app/application/blocs/login_form/auth_event.dart';
+import 'package:app/application/blocs/login_form/auth_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
-import 'package:app/application/prefs/share_preferences.dart';
+import 'package:app/application/prefs/flutter_local_storage.dart';
 import 'package:app/domain/token/i_authenticate_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final IAuthenticateRepository repository;
 
-  LoginFormBloc(this.repository)
+  AuthBloc(this.repository)
       : super(
-          const LoginFormState(
+          const AuthState(
             status: BaseStatus.initial(),
           ),
         ) {
@@ -31,7 +31,7 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
 
   Future<void> _login(
     SubmitLogin event,
-    Emitter<LoginFormState> emit,
+    Emitter<AuthState> emit,
   ) async {
     emit(
       state.copyWith(
@@ -58,8 +58,8 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
           ),
         );
       },
-      (data) {
-        //SharePref().setToken(data.idToken ?? '');
+      (data) async {
+        //await FlutterLocalStorage.setToken(data.idToken ?? '');
         emit(
           state.copyWith(
             status: const BaseStatus.success(),

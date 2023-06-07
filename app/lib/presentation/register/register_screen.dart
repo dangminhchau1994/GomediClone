@@ -50,6 +50,7 @@ class _BodyState extends State<Body> {
       appBar: const UIAppbar(
         title: 'Register',
         showBadge: true,
+        showArrow: true,
       ),
       body: BlocListener<RegisterBloc, RegisterState>(
         listener: (context, state) {

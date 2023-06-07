@@ -1,3 +1,3 @@
-class SharePreferencesKey {
+class FlutterLocalKey {
   static const String token = 'token';
 }

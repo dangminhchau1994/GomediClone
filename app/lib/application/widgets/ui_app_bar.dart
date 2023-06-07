@@ -7,10 +7,12 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
   const UIAppbar({
     super.key,
     this.showBadge,
+    this.showArrow,
     this.title,
   });
 
   final bool? showBadge;
+  final bool? showArrow;
   final String? title;
 
   @override
@@ -18,7 +20,7 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
     return AppBar(
       centerTitle: title == null,
       leading: Visibility(
-        visible: title != null,
+        visible: showArrow ?? false,
         child: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,

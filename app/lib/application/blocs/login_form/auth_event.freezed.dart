@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_form_event.dart';
+part of 'auth_event.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoginFormEvent {
+mixin _$AuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String email) inputEmail,
@@ -63,16 +63,15 @@ mixin _$LoginFormEvent {
 }
 
 /// @nodoc
-abstract class $LoginFormEventCopyWith<$Res> {
-  factory $LoginFormEventCopyWith(
-          LoginFormEvent value, $Res Function(LoginFormEvent) then) =
-      _$LoginFormEventCopyWithImpl<$Res, LoginFormEvent>;
+abstract class $AuthEventCopyWith<$Res> {
+  factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
+      _$AuthEventCopyWithImpl<$Res, AuthEvent>;
 }
 
 /// @nodoc
-class _$LoginFormEventCopyWithImpl<$Res, $Val extends LoginFormEvent>
-    implements $LoginFormEventCopyWith<$Res> {
-  _$LoginFormEventCopyWithImpl(this._value, this._then);
+class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
+    implements $AuthEventCopyWith<$Res> {
+  _$AuthEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -91,7 +90,7 @@ abstract class _$$InputEmailCopyWith<$Res> {
 
 /// @nodoc
 class __$$InputEmailCopyWithImpl<$Res>
-    extends _$LoginFormEventCopyWithImpl<$Res, _$InputEmail>
+    extends _$AuthEventCopyWithImpl<$Res, _$InputEmail>
     implements _$$InputEmailCopyWith<$Res> {
   __$$InputEmailCopyWithImpl(
       _$InputEmail _value, $Res Function(_$InputEmail) _then)
@@ -121,7 +120,7 @@ class _$InputEmail implements InputEmail {
 
   @override
   String toString() {
-    return 'LoginFormEvent.inputEmail(email: $email)';
+    return 'AuthEvent.inputEmail(email: $email)';
   }
 
   @override
@@ -210,7 +209,7 @@ class _$InputEmail implements InputEmail {
   }
 }
 
-abstract class InputEmail implements LoginFormEvent {
+abstract class InputEmail implements AuthEvent {
   const factory InputEmail(final String email) = _$InputEmail;
 
   String get email;
@@ -230,7 +229,7 @@ abstract class _$$InputPasswordCopyWith<$Res> {
 
 /// @nodoc
 class __$$InputPasswordCopyWithImpl<$Res>
-    extends _$LoginFormEventCopyWithImpl<$Res, _$InputPassword>
+    extends _$AuthEventCopyWithImpl<$Res, _$InputPassword>
     implements _$$InputPasswordCopyWith<$Res> {
   __$$InputPasswordCopyWithImpl(
       _$InputPassword _value, $Res Function(_$InputPassword) _then)
@@ -260,7 +259,7 @@ class _$InputPassword implements InputPassword {
 
   @override
   String toString() {
-    return 'LoginFormEvent.inputPassword(password: $password)';
+    return 'AuthEvent.inputPassword(password: $password)';
   }
 
   @override
@@ -350,7 +349,7 @@ class _$InputPassword implements InputPassword {
   }
 }
 
-abstract class InputPassword implements LoginFormEvent {
+abstract class InputPassword implements AuthEvent {
   const factory InputPassword(final String password) = _$InputPassword;
 
   String get password;
@@ -368,7 +367,7 @@ abstract class _$$SubmitLoginCopyWith<$Res> {
 
 /// @nodoc
 class __$$SubmitLoginCopyWithImpl<$Res>
-    extends _$LoginFormEventCopyWithImpl<$Res, _$SubmitLogin>
+    extends _$AuthEventCopyWithImpl<$Res, _$SubmitLogin>
     implements _$$SubmitLoginCopyWith<$Res> {
   __$$SubmitLoginCopyWithImpl(
       _$SubmitLogin _value, $Res Function(_$SubmitLogin) _then)
@@ -382,7 +381,7 @@ class _$SubmitLogin implements SubmitLogin {
 
   @override
   String toString() {
-    return 'LoginFormEvent.submitLogin()';
+    return 'AuthEvent.submitLogin()';
   }
 
   @override
@@ -463,6 +462,6 @@ class _$SubmitLogin implements SubmitLogin {
   }
 }
 
-abstract class SubmitLogin implements LoginFormEvent {
+abstract class SubmitLogin implements AuthEvent {
   const factory SubmitLogin() = _$SubmitLogin;
 }

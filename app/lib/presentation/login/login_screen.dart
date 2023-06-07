@@ -68,7 +68,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   key: const Key('login'),
                   isPrimaryButton: false,
                   title: 'Login',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(RouteNames.loginForm);
+                  },
                 ),
                 const SizedBox(
                   height: 14,

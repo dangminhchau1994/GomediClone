@@ -1,7 +1,6 @@
 import 'package:app/application/config/app_config.dart';
 import 'package:app/application/routes/app_routes.dart';
 import 'package:app/application/theme/ui_theme.dart';
-import 'package:app/presentation/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
