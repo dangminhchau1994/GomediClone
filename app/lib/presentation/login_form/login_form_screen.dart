@@ -26,7 +26,7 @@ class LoginFormScreen extends StatelessWidget {
       create: (context) => AuthBloc(
         getIt<IAuthenticateRepository>(),
       ),
-      child: const Body(),
+      child: const LoaderOverlay(child: Body()),
     );
   }
 }

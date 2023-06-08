@@ -24,17 +24,12 @@ class AuthenticateRepositoryImpl implements IAuthenticateRepository {
     String username,
     String password,
   ) async {
-    final response = await authenticateApi.authenticate(username, password);
-    if (response?.statusCode == 200) {
-      return right(Token.fromJson(response?.data));
-    } else {
+    try {
+      final response = await authenticateApi.authenticate(username, password);
+      return right(Token.fromJson(response?.data as Map<String, dynamic>));
+    } on DioException catch (e) {
       return left(
-        AuthFailure.serverError(DioExceptions.fromDioError(
-          DioException(
-            message: response?.statusMessage ?? '',
-            requestOptions: RequestOptions(),
-          ),
-        ).message),
+        AuthFailure.serverError(DioExceptions.fromDioError(e).toString()),
       );
     }
   }

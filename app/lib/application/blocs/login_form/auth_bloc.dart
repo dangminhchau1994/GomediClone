@@ -1,7 +1,7 @@
 import 'package:app/application/blocs/login_form/auth_event.dart';
 import 'package:app/application/blocs/login_form/auth_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
-import 'package:app/application/prefs/flutter_local_storage.dart';
+import 'package:app/application/utils/share_preferences.dart';
 import 'package:app/domain/token/i_authenticate_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -58,8 +58,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           ),
         );
       },
-      (data) async {
-        //await FlutterLocalStorage.setToken(data.idToken ?? '');
+      (data) {
+        SharePref().setToken(data.idToken ?? '');
         emit(
           state.copyWith(
             status: const BaseStatus.success(),

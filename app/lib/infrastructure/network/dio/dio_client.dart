@@ -18,8 +18,8 @@ class DioClient {
       ..options.receiveTimeout =
           const Duration(milliseconds: Endpoints.receiveTimeout)
       ..options.responseType = ResponseType.json
-      ..interceptors.add(LoggingInterceptor());
-    //..interceptors.add(AuthInterceptor(_dio));
+      ..interceptors.add(LoggingInterceptor())
+      ..interceptors.add(AuthInterceptor(_dio));
   }
 
   // Get:-----------------------------------------------------------------------
