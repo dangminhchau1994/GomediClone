@@ -1,6 +1,5 @@
 import 'package:app/infrastructure/network/interceptors/auth_interceptor.dart';
 import 'package:dio/dio.dart';
-
 import '../api/endpoints.dart';
 import '../interceptors/logging_interceptor.dart';
 
