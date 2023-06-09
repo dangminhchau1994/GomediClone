@@ -16,6 +16,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         ) {
     on<SubmitLogin>(_login);
 
+    on<CheckStatus>(_checkStatus);
+
     on<InputEmail>(
       (event, emit) => emit(
         state.copyWith(email: event.email),
@@ -27,6 +29,34 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         state.copyWith(password: event.password),
       ),
     );
+  }
+
+  Future<void> _checkStatus(
+    CheckStatus event,
+    Emitter<AuthState> emit,
+  ) async {
+    await Future.delayed(const Duration(milliseconds: 1200));
+    if (SharePref().onboarding.isEmpty) {
+      emit(
+        state.copyWith(
+          authStatus: const AuthStatus.unonboarding(),
+        ),
+      );
+    } else {
+      if (SharePref().token.isEmpty) {
+        emit(
+          state.copyWith(
+            authStatus: const AuthStatus.unauthenticated(),
+          ),
+        );
+      } else {
+        emit(
+          state.copyWith(
+            authStatus: const AuthStatus.authenticated(),
+          ),
+        );
+      }
+    }
   }
 
   Future<void> _login(

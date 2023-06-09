@@ -8,4 +8,6 @@ class AuthEvent with _$AuthEvent {
   const factory AuthEvent.inputPassword(String password) = InputPassword;
 
   const factory AuthEvent.submitLogin() = SubmitLogin;
+
+  const factory AuthEvent.checkStatus() = CheckStatus;
 }

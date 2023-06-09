@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RegisterState {
-  BaseStatus<dynamic>? get status => throw _privateConstructorUsedError;
+  BaseStatus? get status => throw _privateConstructorUsedError;
   String? get firstName => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $RegisterStateCopyWith<$Res> {
       _$RegisterStateCopyWithImpl<$Res, RegisterState>;
   @useResult
   $Res call(
-      {BaseStatus<dynamic>? status,
+      {BaseStatus? status,
       String? firstName,
       String? password,
       String? email,
@@ -46,7 +46,7 @@ abstract class $RegisterStateCopyWith<$Res> {
       Register? register,
       AuthFailure? authFailure});
 
-  $BaseStatusCopyWith<dynamic, $Res>? get status;
+  $BaseStatusCopyWith<$Res>? get status;
   $RegisterCopyWith<$Res>? get register;
   $AuthFailureCopyWith<$Res>? get authFailure;
 }
@@ -77,7 +77,7 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseStatus<dynamic>?,
+              as BaseStatus?,
       firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -111,12 +111,12 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
 
   @override
   @pragma('vm:prefer-inline')
-  $BaseStatusCopyWith<dynamic, $Res>? get status {
+  $BaseStatusCopyWith<$Res>? get status {
     if (_value.status == null) {
       return null;
     }
 
-    return $BaseStatusCopyWith<dynamic, $Res>(_value.status!, (value) {
+    return $BaseStatusCopyWith<$Res>(_value.status!, (value) {
       return _then(_value.copyWith(status: value) as $Val);
     });
   }
@@ -155,7 +155,7 @@ abstract class _$$_RegisterStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BaseStatus<dynamic>? status,
+      {BaseStatus? status,
       String? firstName,
       String? password,
       String? email,
@@ -165,7 +165,7 @@ abstract class _$$_RegisterStateCopyWith<$Res>
       AuthFailure? authFailure});
 
   @override
-  $BaseStatusCopyWith<dynamic, $Res>? get status;
+  $BaseStatusCopyWith<$Res>? get status;
   @override
   $RegisterCopyWith<$Res>? get register;
   @override
@@ -196,7 +196,7 @@ class __$$_RegisterStateCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseStatus<dynamic>?,
+              as BaseStatus?,
       firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -243,7 +243,7 @@ class _$_RegisterState implements _RegisterState {
       this.authFailure});
 
   @override
-  final BaseStatus<dynamic>? status;
+  final BaseStatus? status;
   @override
   final String? firstName;
   @override
@@ -297,7 +297,7 @@ class _$_RegisterState implements _RegisterState {
 
 abstract class _RegisterState implements RegisterState {
   const factory _RegisterState(
-      {final BaseStatus<dynamic>? status,
+      {final BaseStatus? status,
       final String? firstName,
       final String? password,
       final String? email,
@@ -307,7 +307,7 @@ abstract class _RegisterState implements RegisterState {
       final AuthFailure? authFailure}) = _$_RegisterState;
 
   @override
-  BaseStatus<dynamic>? get status;
+  BaseStatus? get status;
   @override
   String? get firstName;
   @override

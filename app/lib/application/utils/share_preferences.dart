@@ -14,7 +14,14 @@ class SharePref {
 
   String get token => _sharedPrefs?.getString(StringConstants.token) ?? "";
 
+  String get onboarding =>
+      _sharedPrefs?.getString(StringConstants.onboarding) ?? "";
+
   void setToken(String value) {
     _sharedPrefs?.setString(StringConstants.token, value);
+  }
+
+  void setOnboarding(String value) {
+    _sharedPrefs?.setString(StringConstants.onboarding, value);
   }
 }

@@ -3,15 +3,21 @@ import 'package:flutter/material.dart';
 
 class LoggingInterceptor extends Interceptor {
   @override
-  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+  void onRequest(
+    RequestOptions options,
+    RequestInterceptorHandler handler,
+  ) {
     debugPrint(
-      'REQUEST[${options.method}] => PATH: ${options.path} => BODY: ${options.data}',
+      'REQUEST[${options.method}] => PATH: ${options.path} => BODY: ${options.data} => => QUERYPARAMS: ${options.queryParameters}',
     );
     return super.onRequest(options, handler);
   }
 
   @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) {
+  void onResponse(
+    Response response,
+    ResponseInterceptorHandler handler,
+  ) {
     debugPrint(
       'RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path} => DATA: ${response.data}',
     );
@@ -19,7 +25,10 @@ class LoggingInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioException err, ErrorInterceptorHandler handler) {
+  void onError(
+    DioException err,
+    ErrorInterceptorHandler handler,
+  ) {
     debugPrint(
       'ERROR[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}',
     );

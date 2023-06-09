@@ -21,6 +21,7 @@ mixin _$AuthEvent {
     required TResult Function(String email) inputEmail,
     required TResult Function(String password) inputPassword,
     required TResult Function() submitLogin,
+    required TResult Function() checkStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AuthEvent {
     TResult? Function(String email)? inputEmail,
     TResult? Function(String password)? inputPassword,
     TResult? Function()? submitLogin,
+    TResult? Function()? checkStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AuthEvent {
     TResult Function(String email)? inputEmail,
     TResult Function(String password)? inputPassword,
     TResult Function()? submitLogin,
+    TResult Function()? checkStatus,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$AuthEvent {
     required TResult Function(InputEmail value) inputEmail,
     required TResult Function(InputPassword value) inputPassword,
     required TResult Function(SubmitLogin value) submitLogin,
+    required TResult Function(CheckStatus value) checkStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$AuthEvent {
     TResult? Function(InputEmail value)? inputEmail,
     TResult? Function(InputPassword value)? inputPassword,
     TResult? Function(SubmitLogin value)? submitLogin,
+    TResult? Function(CheckStatus value)? checkStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$AuthEvent {
     TResult Function(InputEmail value)? inputEmail,
     TResult Function(InputPassword value)? inputPassword,
     TResult Function(SubmitLogin value)? submitLogin,
+    TResult Function(CheckStatus value)? checkStatus,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,6 +152,7 @@ class _$InputEmail implements InputEmail {
     required TResult Function(String email) inputEmail,
     required TResult Function(String password) inputPassword,
     required TResult Function() submitLogin,
+    required TResult Function() checkStatus,
   }) {
     return inputEmail(email);
   }
@@ -156,6 +163,7 @@ class _$InputEmail implements InputEmail {
     TResult? Function(String email)? inputEmail,
     TResult? Function(String password)? inputPassword,
     TResult? Function()? submitLogin,
+    TResult? Function()? checkStatus,
   }) {
     return inputEmail?.call(email);
   }
@@ -166,6 +174,7 @@ class _$InputEmail implements InputEmail {
     TResult Function(String email)? inputEmail,
     TResult Function(String password)? inputPassword,
     TResult Function()? submitLogin,
+    TResult Function()? checkStatus,
     required TResult orElse(),
   }) {
     if (inputEmail != null) {
@@ -180,6 +189,7 @@ class _$InputEmail implements InputEmail {
     required TResult Function(InputEmail value) inputEmail,
     required TResult Function(InputPassword value) inputPassword,
     required TResult Function(SubmitLogin value) submitLogin,
+    required TResult Function(CheckStatus value) checkStatus,
   }) {
     return inputEmail(this);
   }
@@ -190,6 +200,7 @@ class _$InputEmail implements InputEmail {
     TResult? Function(InputEmail value)? inputEmail,
     TResult? Function(InputPassword value)? inputPassword,
     TResult? Function(SubmitLogin value)? submitLogin,
+    TResult? Function(CheckStatus value)? checkStatus,
   }) {
     return inputEmail?.call(this);
   }
@@ -200,6 +211,7 @@ class _$InputEmail implements InputEmail {
     TResult Function(InputEmail value)? inputEmail,
     TResult Function(InputPassword value)? inputPassword,
     TResult Function(SubmitLogin value)? submitLogin,
+    TResult Function(CheckStatus value)? checkStatus,
     required TResult orElse(),
   }) {
     if (inputEmail != null) {
@@ -286,6 +298,7 @@ class _$InputPassword implements InputPassword {
     required TResult Function(String email) inputEmail,
     required TResult Function(String password) inputPassword,
     required TResult Function() submitLogin,
+    required TResult Function() checkStatus,
   }) {
     return inputPassword(password);
   }
@@ -296,6 +309,7 @@ class _$InputPassword implements InputPassword {
     TResult? Function(String email)? inputEmail,
     TResult? Function(String password)? inputPassword,
     TResult? Function()? submitLogin,
+    TResult? Function()? checkStatus,
   }) {
     return inputPassword?.call(password);
   }
@@ -306,6 +320,7 @@ class _$InputPassword implements InputPassword {
     TResult Function(String email)? inputEmail,
     TResult Function(String password)? inputPassword,
     TResult Function()? submitLogin,
+    TResult Function()? checkStatus,
     required TResult orElse(),
   }) {
     if (inputPassword != null) {
@@ -320,6 +335,7 @@ class _$InputPassword implements InputPassword {
     required TResult Function(InputEmail value) inputEmail,
     required TResult Function(InputPassword value) inputPassword,
     required TResult Function(SubmitLogin value) submitLogin,
+    required TResult Function(CheckStatus value) checkStatus,
   }) {
     return inputPassword(this);
   }
@@ -330,6 +346,7 @@ class _$InputPassword implements InputPassword {
     TResult? Function(InputEmail value)? inputEmail,
     TResult? Function(InputPassword value)? inputPassword,
     TResult? Function(SubmitLogin value)? submitLogin,
+    TResult? Function(CheckStatus value)? checkStatus,
   }) {
     return inputPassword?.call(this);
   }
@@ -340,6 +357,7 @@ class _$InputPassword implements InputPassword {
     TResult Function(InputEmail value)? inputEmail,
     TResult Function(InputPassword value)? inputPassword,
     TResult Function(SubmitLogin value)? submitLogin,
+    TResult Function(CheckStatus value)? checkStatus,
     required TResult orElse(),
   }) {
     if (inputPassword != null) {
@@ -399,6 +417,7 @@ class _$SubmitLogin implements SubmitLogin {
     required TResult Function(String email) inputEmail,
     required TResult Function(String password) inputPassword,
     required TResult Function() submitLogin,
+    required TResult Function() checkStatus,
   }) {
     return submitLogin();
   }
@@ -409,6 +428,7 @@ class _$SubmitLogin implements SubmitLogin {
     TResult? Function(String email)? inputEmail,
     TResult? Function(String password)? inputPassword,
     TResult? Function()? submitLogin,
+    TResult? Function()? checkStatus,
   }) {
     return submitLogin?.call();
   }
@@ -419,6 +439,7 @@ class _$SubmitLogin implements SubmitLogin {
     TResult Function(String email)? inputEmail,
     TResult Function(String password)? inputPassword,
     TResult Function()? submitLogin,
+    TResult Function()? checkStatus,
     required TResult orElse(),
   }) {
     if (submitLogin != null) {
@@ -433,6 +454,7 @@ class _$SubmitLogin implements SubmitLogin {
     required TResult Function(InputEmail value) inputEmail,
     required TResult Function(InputPassword value) inputPassword,
     required TResult Function(SubmitLogin value) submitLogin,
+    required TResult Function(CheckStatus value) checkStatus,
   }) {
     return submitLogin(this);
   }
@@ -443,6 +465,7 @@ class _$SubmitLogin implements SubmitLogin {
     TResult? Function(InputEmail value)? inputEmail,
     TResult? Function(InputPassword value)? inputPassword,
     TResult? Function(SubmitLogin value)? submitLogin,
+    TResult? Function(CheckStatus value)? checkStatus,
   }) {
     return submitLogin?.call(this);
   }
@@ -453,6 +476,7 @@ class _$SubmitLogin implements SubmitLogin {
     TResult Function(InputEmail value)? inputEmail,
     TResult Function(InputPassword value)? inputPassword,
     TResult Function(SubmitLogin value)? submitLogin,
+    TResult Function(CheckStatus value)? checkStatus,
     required TResult orElse(),
   }) {
     if (submitLogin != null) {
@@ -464,4 +488,118 @@ class _$SubmitLogin implements SubmitLogin {
 
 abstract class SubmitLogin implements AuthEvent {
   const factory SubmitLogin() = _$SubmitLogin;
+}
+
+/// @nodoc
+abstract class _$$CheckStatusCopyWith<$Res> {
+  factory _$$CheckStatusCopyWith(
+          _$CheckStatus value, $Res Function(_$CheckStatus) then) =
+      __$$CheckStatusCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CheckStatusCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckStatus>
+    implements _$$CheckStatusCopyWith<$Res> {
+  __$$CheckStatusCopyWithImpl(
+      _$CheckStatus _value, $Res Function(_$CheckStatus) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CheckStatus implements CheckStatus {
+  const _$CheckStatus();
+
+  @override
+  String toString() {
+    return 'AuthEvent.checkStatus()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CheckStatus);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) inputEmail,
+    required TResult Function(String password) inputPassword,
+    required TResult Function() submitLogin,
+    required TResult Function() checkStatus,
+  }) {
+    return checkStatus();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email)? inputEmail,
+    TResult? Function(String password)? inputPassword,
+    TResult? Function()? submitLogin,
+    TResult? Function()? checkStatus,
+  }) {
+    return checkStatus?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? inputEmail,
+    TResult Function(String password)? inputPassword,
+    TResult Function()? submitLogin,
+    TResult Function()? checkStatus,
+    required TResult orElse(),
+  }) {
+    if (checkStatus != null) {
+      return checkStatus();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InputEmail value) inputEmail,
+    required TResult Function(InputPassword value) inputPassword,
+    required TResult Function(SubmitLogin value) submitLogin,
+    required TResult Function(CheckStatus value) checkStatus,
+  }) {
+    return checkStatus(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InputEmail value)? inputEmail,
+    TResult? Function(InputPassword value)? inputPassword,
+    TResult? Function(SubmitLogin value)? submitLogin,
+    TResult? Function(CheckStatus value)? checkStatus,
+  }) {
+    return checkStatus?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InputEmail value)? inputEmail,
+    TResult Function(InputPassword value)? inputPassword,
+    TResult Function(SubmitLogin value)? submitLogin,
+    TResult Function(CheckStatus value)? checkStatus,
+    required TResult orElse(),
+  }) {
+    if (checkStatus != null) {
+      return checkStatus(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CheckStatus implements AuthEvent {
+  const factory CheckStatus() = _$CheckStatus;
 }
