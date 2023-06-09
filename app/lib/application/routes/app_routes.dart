@@ -36,6 +36,10 @@ class AppRoutes {
         builder: (context, state) => const OnboardingScreen(),
       ),
       GoRoute(
+        path: RouteNames.main,
+        builder: (context, state) => const MainScreen(),
+      ),
+      GoRoute(
         path: RouteNames.splash,
         builder: (context, state) => BlocProvider(
           create: (context) => AuthBloc(

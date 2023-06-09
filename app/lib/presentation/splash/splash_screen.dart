@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context.go(RouteNames.onboarding);
           } else {
             if (state.authStatus is Authenticated) {
-              context.go(RouteNames.home);
+              context.go(RouteNames.main);
             } else {
               context.go(RouteNames.login);
             }

@@ -10,4 +10,6 @@ class RouteNames {
   static const String loginForm = '/login-form';
 
   static const String home = '/home';
+
+  static const String main = '/main';
 }
