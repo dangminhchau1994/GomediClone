@@ -1,4 +1,3 @@
-import 'package:app/application/routes/app_routes.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_app_bar.dart';
 import 'package:app/presentation/home/home_screen.dart';
@@ -8,7 +7,6 @@ import 'package:app/presentation/my_medications/my_medications_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-
 import '../../gen/assets.gen.dart';
 
 class MainScreen extends StatefulWidget {

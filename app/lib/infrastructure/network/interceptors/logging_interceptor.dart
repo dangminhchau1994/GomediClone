@@ -8,7 +8,7 @@ class LoggingInterceptor extends Interceptor {
     RequestInterceptorHandler handler,
   ) {
     debugPrint(
-      'REQUEST[${options.method}] => PATH: ${options.path} => BODY: ${options.data} => => QUERYPARAMS: ${options.queryParameters}',
+      'REQUEST[${options.method}] => HEADER: ${options.headers} PATH: ${options.path} => BODY: ${options.data} => => QUERYPARAMS: ${options.queryParameters}',
     );
     return super.onRequest(options, handler);
   }

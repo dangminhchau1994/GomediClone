@@ -1,7 +1,9 @@
 import 'package:app/application/constants/dimensions.dart';
+import 'package:app/application/constants/route_names.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -53,7 +55,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: kMargin),
                   child: UIButton(
                     title: 'Start',
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go(RouteNames.menuHome);
+                    },
                   ),
                 )
               ],
