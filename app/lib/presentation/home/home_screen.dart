@@ -1,9 +1,9 @@
 import 'package:app/application/constants/dimensions.dart';
-import 'package:app/application/constants/route_names.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/gen/assets.gen.dart';
+import 'package:app/presentation/menu/menu_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -56,7 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: UIButton(
                     title: 'Start',
                     onPressed: () {
-                      context.go(RouteNames.menuHome);
+                      PersistentNavBarNavigator.pushNewScreen(
+                        context,
+                        screen: const MenuScreen(),
+                        withNavBar: true, // OPTIONAL VALUE. True by default.
+                        pageTransitionAnimation:
+                            PageTransitionAnimation.cupertino,
+                      );
                     },
                   ),
                 )

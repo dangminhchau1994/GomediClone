@@ -581,12 +581,219 @@ abstract class InvalidEmailAndPassword implements AuthFailure {
 }
 
 /// @nodoc
+mixin _$DrugFailure {
+  String get errMessage => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String errMessage) serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String errMessage)? serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String errMessage)? serverError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DrugServerError value) serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DrugServerError value)? serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DrugServerError value)? serverError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $DrugFailureCopyWith<DrugFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DrugFailureCopyWith<$Res> {
+  factory $DrugFailureCopyWith(
+          DrugFailure value, $Res Function(DrugFailure) then) =
+      _$DrugFailureCopyWithImpl<$Res, DrugFailure>;
+  @useResult
+  $Res call({String errMessage});
+}
+
+/// @nodoc
+class _$DrugFailureCopyWithImpl<$Res, $Val extends DrugFailure>
+    implements $DrugFailureCopyWith<$Res> {
+  _$DrugFailureCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errMessage = null,
+  }) {
+    return _then(_value.copyWith(
+      errMessage: null == errMessage
+          ? _value.errMessage
+          : errMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DrugServerErrorCopyWith<$Res>
+    implements $DrugFailureCopyWith<$Res> {
+  factory _$$DrugServerErrorCopyWith(
+          _$DrugServerError value, $Res Function(_$DrugServerError) then) =
+      __$$DrugServerErrorCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String errMessage});
+}
+
+/// @nodoc
+class __$$DrugServerErrorCopyWithImpl<$Res>
+    extends _$DrugFailureCopyWithImpl<$Res, _$DrugServerError>
+    implements _$$DrugServerErrorCopyWith<$Res> {
+  __$$DrugServerErrorCopyWithImpl(
+      _$DrugServerError _value, $Res Function(_$DrugServerError) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errMessage = null,
+  }) {
+    return _then(_$DrugServerError(
+      null == errMessage
+          ? _value.errMessage
+          : errMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DrugServerError implements DrugServerError {
+  const _$DrugServerError(this.errMessage);
+
+  @override
+  final String errMessage;
+
+  @override
+  String toString() {
+    return 'DrugFailure.serverError(errMessage: $errMessage)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DrugServerError &&
+            (identical(other.errMessage, errMessage) ||
+                other.errMessage == errMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errMessage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DrugServerErrorCopyWith<_$DrugServerError> get copyWith =>
+      __$$DrugServerErrorCopyWithImpl<_$DrugServerError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String errMessage) serverError,
+  }) {
+    return serverError(errMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String errMessage)? serverError,
+  }) {
+    return serverError?.call(errMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String errMessage)? serverError,
+    required TResult orElse(),
+  }) {
+    if (serverError != null) {
+      return serverError(errMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DrugServerError value) serverError,
+  }) {
+    return serverError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DrugServerError value)? serverError,
+  }) {
+    return serverError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DrugServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (serverError != null) {
+      return serverError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DrugServerError implements DrugFailure {
+  const factory DrugServerError(final String errMessage) = _$DrugServerError;
+
+  @override
+  String get errMessage;
+  @override
+  @JsonKey(ignore: true)
+  _$$DrugServerErrorCopyWith<_$DrugServerError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$FormFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmail,
     required TResult Function() invalidPassword,
     required TResult Function() mismatchedPassword,
+    required TResult Function() notEnoughThreeCharactersSearchDrug,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -594,6 +801,7 @@ mixin _$FormFailure {
     TResult? Function()? invalidEmail,
     TResult? Function()? invalidPassword,
     TResult? Function()? mismatchedPassword,
+    TResult? Function()? notEnoughThreeCharactersSearchDrug,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -601,6 +809,7 @@ mixin _$FormFailure {
     TResult Function()? invalidEmail,
     TResult Function()? invalidPassword,
     TResult Function()? mismatchedPassword,
+    TResult Function()? notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -609,6 +818,8 @@ mixin _$FormFailure {
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(MismatchedPassword value) mismatchedPassword,
+    required TResult Function(NotEnoughThreeCharactersSearchDrug value)
+        notEnoughThreeCharactersSearchDrug,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -616,6 +827,8 @@ mixin _$FormFailure {
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(MismatchedPassword value)? mismatchedPassword,
+    TResult? Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -623,6 +836,8 @@ mixin _$FormFailure {
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(MismatchedPassword value)? mismatchedPassword,
+    TResult Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -687,6 +902,7 @@ class _$InvalidEmail implements InvalidEmail {
     required TResult Function() invalidEmail,
     required TResult Function() invalidPassword,
     required TResult Function() mismatchedPassword,
+    required TResult Function() notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidEmail();
   }
@@ -697,6 +913,7 @@ class _$InvalidEmail implements InvalidEmail {
     TResult? Function()? invalidEmail,
     TResult? Function()? invalidPassword,
     TResult? Function()? mismatchedPassword,
+    TResult? Function()? notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidEmail?.call();
   }
@@ -707,6 +924,7 @@ class _$InvalidEmail implements InvalidEmail {
     TResult Function()? invalidEmail,
     TResult Function()? invalidPassword,
     TResult Function()? mismatchedPassword,
+    TResult Function()? notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -721,6 +939,8 @@ class _$InvalidEmail implements InvalidEmail {
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(MismatchedPassword value) mismatchedPassword,
+    required TResult Function(NotEnoughThreeCharactersSearchDrug value)
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidEmail(this);
   }
@@ -731,6 +951,8 @@ class _$InvalidEmail implements InvalidEmail {
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(MismatchedPassword value)? mismatchedPassword,
+    TResult? Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidEmail?.call(this);
   }
@@ -741,6 +963,8 @@ class _$InvalidEmail implements InvalidEmail {
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(MismatchedPassword value)? mismatchedPassword,
+    TResult Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -795,6 +1019,7 @@ class _$InvalidPassword implements InvalidPassword {
     required TResult Function() invalidEmail,
     required TResult Function() invalidPassword,
     required TResult Function() mismatchedPassword,
+    required TResult Function() notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidPassword();
   }
@@ -805,6 +1030,7 @@ class _$InvalidPassword implements InvalidPassword {
     TResult? Function()? invalidEmail,
     TResult? Function()? invalidPassword,
     TResult? Function()? mismatchedPassword,
+    TResult? Function()? notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidPassword?.call();
   }
@@ -815,6 +1041,7 @@ class _$InvalidPassword implements InvalidPassword {
     TResult Function()? invalidEmail,
     TResult Function()? invalidPassword,
     TResult Function()? mismatchedPassword,
+    TResult Function()? notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -829,6 +1056,8 @@ class _$InvalidPassword implements InvalidPassword {
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(MismatchedPassword value) mismatchedPassword,
+    required TResult Function(NotEnoughThreeCharactersSearchDrug value)
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidPassword(this);
   }
@@ -839,6 +1068,8 @@ class _$InvalidPassword implements InvalidPassword {
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(MismatchedPassword value)? mismatchedPassword,
+    TResult? Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return invalidPassword?.call(this);
   }
@@ -849,6 +1080,8 @@ class _$InvalidPassword implements InvalidPassword {
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(MismatchedPassword value)? mismatchedPassword,
+    TResult Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -903,6 +1136,7 @@ class _$MismatchedPassword implements MismatchedPassword {
     required TResult Function() invalidEmail,
     required TResult Function() invalidPassword,
     required TResult Function() mismatchedPassword,
+    required TResult Function() notEnoughThreeCharactersSearchDrug,
   }) {
     return mismatchedPassword();
   }
@@ -913,6 +1147,7 @@ class _$MismatchedPassword implements MismatchedPassword {
     TResult? Function()? invalidEmail,
     TResult? Function()? invalidPassword,
     TResult? Function()? mismatchedPassword,
+    TResult? Function()? notEnoughThreeCharactersSearchDrug,
   }) {
     return mismatchedPassword?.call();
   }
@@ -923,6 +1158,7 @@ class _$MismatchedPassword implements MismatchedPassword {
     TResult Function()? invalidEmail,
     TResult Function()? invalidPassword,
     TResult Function()? mismatchedPassword,
+    TResult Function()? notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (mismatchedPassword != null) {
@@ -937,6 +1173,8 @@ class _$MismatchedPassword implements MismatchedPassword {
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(MismatchedPassword value) mismatchedPassword,
+    required TResult Function(NotEnoughThreeCharactersSearchDrug value)
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return mismatchedPassword(this);
   }
@@ -947,6 +1185,8 @@ class _$MismatchedPassword implements MismatchedPassword {
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidPassword value)? invalidPassword,
     TResult? Function(MismatchedPassword value)? mismatchedPassword,
+    TResult? Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
   }) {
     return mismatchedPassword?.call(this);
   }
@@ -957,6 +1197,8 @@ class _$MismatchedPassword implements MismatchedPassword {
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(MismatchedPassword value)? mismatchedPassword,
+    TResult Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
     required TResult orElse(),
   }) {
     if (mismatchedPassword != null) {
@@ -968,4 +1210,127 @@ class _$MismatchedPassword implements MismatchedPassword {
 
 abstract class MismatchedPassword implements FormFailure {
   const factory MismatchedPassword() = _$MismatchedPassword;
+}
+
+/// @nodoc
+abstract class _$$NotEnoughThreeCharactersSearchDrugCopyWith<$Res> {
+  factory _$$NotEnoughThreeCharactersSearchDrugCopyWith(
+          _$NotEnoughThreeCharactersSearchDrug value,
+          $Res Function(_$NotEnoughThreeCharactersSearchDrug) then) =
+      __$$NotEnoughThreeCharactersSearchDrugCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NotEnoughThreeCharactersSearchDrugCopyWithImpl<$Res>
+    extends _$FormFailureCopyWithImpl<$Res,
+        _$NotEnoughThreeCharactersSearchDrug>
+    implements _$$NotEnoughThreeCharactersSearchDrugCopyWith<$Res> {
+  __$$NotEnoughThreeCharactersSearchDrugCopyWithImpl(
+      _$NotEnoughThreeCharactersSearchDrug _value,
+      $Res Function(_$NotEnoughThreeCharactersSearchDrug) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NotEnoughThreeCharactersSearchDrug
+    implements NotEnoughThreeCharactersSearchDrug {
+  const _$NotEnoughThreeCharactersSearchDrug();
+
+  @override
+  String toString() {
+    return 'FormFailure.notEnoughThreeCharactersSearchDrug()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotEnoughThreeCharactersSearchDrug);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmail,
+    required TResult Function() invalidPassword,
+    required TResult Function() mismatchedPassword,
+    required TResult Function() notEnoughThreeCharactersSearchDrug,
+  }) {
+    return notEnoughThreeCharactersSearchDrug();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? invalidEmail,
+    TResult? Function()? invalidPassword,
+    TResult? Function()? mismatchedPassword,
+    TResult? Function()? notEnoughThreeCharactersSearchDrug,
+  }) {
+    return notEnoughThreeCharactersSearchDrug?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmail,
+    TResult Function()? invalidPassword,
+    TResult Function()? mismatchedPassword,
+    TResult Function()? notEnoughThreeCharactersSearchDrug,
+    required TResult orElse(),
+  }) {
+    if (notEnoughThreeCharactersSearchDrug != null) {
+      return notEnoughThreeCharactersSearchDrug();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(MismatchedPassword value) mismatchedPassword,
+    required TResult Function(NotEnoughThreeCharactersSearchDrug value)
+        notEnoughThreeCharactersSearchDrug,
+  }) {
+    return notEnoughThreeCharactersSearchDrug(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(InvalidPassword value)? invalidPassword,
+    TResult? Function(MismatchedPassword value)? mismatchedPassword,
+    TResult? Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
+  }) {
+    return notEnoughThreeCharactersSearchDrug?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(MismatchedPassword value)? mismatchedPassword,
+    TResult Function(NotEnoughThreeCharactersSearchDrug value)?
+        notEnoughThreeCharactersSearchDrug,
+    required TResult orElse(),
+  }) {
+    if (notEnoughThreeCharactersSearchDrug != null) {
+      return notEnoughThreeCharactersSearchDrug(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NotEnoughThreeCharactersSearchDrug implements FormFailure {
+  const factory NotEnoughThreeCharactersSearchDrug() =
+      _$NotEnoughThreeCharactersSearchDrug;
 }

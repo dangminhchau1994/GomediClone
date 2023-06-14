@@ -15,4 +15,8 @@ class Endpoints {
   static const String authenticate = '/authenticate';
 
   static const String regiter = '/register';
+
+  static const String getDrugs = 'drugs';
+
+  static const String ean = 'ean';
 }

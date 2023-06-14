@@ -9,11 +9,13 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
     this.showBadge,
     this.showArrow,
     this.title,
+    this.onPop,
   });
 
   final bool? showBadge;
   final bool? showArrow;
   final String? title;
+  final Function()? onPop;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
             color: Colors.black,
           ),
           onPressed: () {
-            context.pop();
+            onPop!() ?? context.pop();
           },
         ),
       ),

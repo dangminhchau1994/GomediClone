@@ -13,10 +13,18 @@ class AuthFailure with _$AuthFailure {
 }
 
 @freezed
+class DrugFailure with _$DrugFailure {
+  const factory DrugFailure.serverError(String errMessage) = DrugServerError;
+}
+
+@freezed
 class FormFailure with _$FormFailure {
   const factory FormFailure.invalidEmail() = InvalidEmail;
 
   const factory FormFailure.invalidPassword() = InvalidPassword;
 
   const factory FormFailure.mismatchedPassword() = MismatchedPassword;
+
+  const factory FormFailure.notEnoughThreeCharactersSearchDrug() =
+      NotEnoughThreeCharactersSearchDrug;
 }
