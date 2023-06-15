@@ -1,7 +1,9 @@
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/gen/assets.gen.dart';
 import 'package:app/presentation/menu/widgets/menu_row.dart';
+import 'package:app/presentation/search_drug/search_drug_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -26,7 +28,15 @@ class MenuScreen extends StatelessWidget {
               children: [
                 MenuRow(
                   title: 'Add medicine',
-                  onTap: () {},
+                  onTap: () {
+                    PersistentNavBarNavigator.pushNewScreen(
+                      context,
+                      screen: const SearchDrugScreen(),
+                      withNavBar: true,
+                      pageTransitionAnimation:
+                          PageTransitionAnimation.cupertino,
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: paddingtTop,

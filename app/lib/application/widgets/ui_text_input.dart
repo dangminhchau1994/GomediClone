@@ -4,6 +4,7 @@ class UITextInput extends StatefulWidget {
   const UITextInput({
     super.key,
     this.title,
+    this.textHint,
     this.editingController,
     this.onChanged,
     this.validator,
@@ -14,6 +15,7 @@ class UITextInput extends StatefulWidget {
   final Function(String value)? onChanged;
   final String? Function(String value)? validator;
   final String? title;
+  final String? textHint;
   final bool? isPasswordType;
 
   @override
@@ -42,6 +44,11 @@ class _UITextInputState extends State<UITextInput> {
           validator: (value) => widget.validator!(value ?? ''),
           obscureText: _passwordVisible,
           decoration: InputDecoration(
+            hintText: widget.textHint,
+            hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
             suffixIcon: Visibility(
               visible: widget.isPasswordType ?? false,
               child: IconButton(
