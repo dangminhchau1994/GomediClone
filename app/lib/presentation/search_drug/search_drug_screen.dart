@@ -1,5 +1,4 @@
 import 'package:app/application/constants/dimensions.dart';
-import 'package:app/application/widgets/ui_app_bar.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
 import 'package:app/presentation/search_drug/widgets/search_drug_bottom.dart';
 import 'package:app/presentation/search_drug/widgets/search_drug_list.dart';
@@ -24,30 +23,33 @@ class _SearchDrugScreenState extends State<SearchDrugScreen> {
               horizontal: kMargin,
               vertical: kMargin,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                UITextInput(
-                  title: 'Name of the drug',
-                  textHint: 'Enter the drug name',
-                  onChanged: (value) {},
-                  validator: (value) {
-                    return null;
-                  },
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: UITextInput(
+                    title: 'Name of the drug',
+                    textHint: 'Enter the drug name',
+                    onChanged: (value) {},
+                    validator: (value) {
+                      return null;
+                    },
+                  ),
                 ),
-                const SizedBox(
-                  height: paddingtTop,
+                const SliverToBoxAdapter(
+                  child: SizedBox(height: paddingRight),
                 ),
-                Text(
-                  'Results',
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                SliverToBoxAdapter(
+                  child: Text(
+                    'Results',
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
                 ),
-                const SizedBox(
-                  height: paddingRight,
+                const SliverToBoxAdapter(
+                  child: SizedBox(height: paddingRight),
                 ),
                 const SearchDrugList(),
               ],
