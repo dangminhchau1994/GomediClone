@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'prenancy.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class Pregnancy {
   final int? id;
   final String? name;

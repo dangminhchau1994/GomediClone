@@ -9,9 +9,9 @@ part of 'profile_substance.dart';
 ProfileSubstance _$ProfileSubstanceFromJson(Map<String, dynamic> json) =>
     ProfileSubstance(
       id: json['id'] as int?,
-      drugId: json['drug_id'] as int?,
-      profileDetailId: json['profile_detail_id'] as int?,
-      substanceId: json['substance_id'] as int?,
+      drugId: json['drugId'] as int?,
+      profileDetailId: json['profileDetailId'] as int?,
+      substanceId: json['substanceId'] as int?,
       substance: json['substance'] == null
           ? null
           : Substance.fromJson(json['substance'] as Map<String, dynamic>),
@@ -20,8 +20,8 @@ ProfileSubstance _$ProfileSubstanceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ProfileSubstanceToJson(ProfileSubstance instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'drug_id': instance.drugId,
-      'profile_detail_id': instance.profileDetailId,
-      'substance_id': instance.substanceId,
+      'drugId': instance.drugId,
+      'profileDetailId': instance.profileDetailId,
+      'substanceId': instance.substanceId,
       'substance': instance.substance?.toJson(),
     };

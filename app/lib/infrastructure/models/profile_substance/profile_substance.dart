@@ -2,7 +2,7 @@ import 'package:app/infrastructure/models/substance/substance.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'profile_substance.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class ProfileSubstance {
   final int? id;
   final int? drugId;

@@ -17,9 +17,9 @@ class DrugRepositoryImpl implements IDrugRepository {
     bool isEan = false,
   }) async {
     try {
-      final response =
-          await drugApi?.searchDrug(name, isEan: isEan) as List<dynamic>;
-      return right(response
+      final response = await drugApi?.searchDrug(name, isEan: isEan);
+      final listDrugs = response?.data as List<dynamic>;
+      return right(listDrugs
           .map((e) => Drug.fromJson(e as Map<String, dynamic>))
           .toList());
     } on DioException catch (e) {

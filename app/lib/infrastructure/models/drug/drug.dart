@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../profile_substance/profile_substance.dart';
 part 'drug.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class Drug {
   final int? id;
   final String? shortName;

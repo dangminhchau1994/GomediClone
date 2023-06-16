@@ -32,19 +32,11 @@ class SearchDrugBloc extends Bloc<SearchDrugEvent, SearchDrugState> {
           status: const BaseStatus.failure(),
           failure: failure,
         ));
-
-        emit(state.copyWith(
-          status: const BaseStatus.initial(),
-        ));
       },
       (data) {
         emit(state.copyWith(
           status: const BaseStatus.success(),
           drugs: data,
-        ));
-
-        emit(state.copyWith(
-          status: const BaseStatus.initial(),
         ));
       },
     );

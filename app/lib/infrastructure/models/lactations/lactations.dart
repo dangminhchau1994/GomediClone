@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'lactations.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class Lactations {
   final int? id;
   final String? name;
