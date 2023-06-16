@@ -1,4 +1,7 @@
+import 'package:app/domain/drug/i_drug_repository.dart';
+import 'package:app/infrastructure/network/api/drug_api.dart';
 import 'package:app/infrastructure/repositories/authenticate_respository_impl.dart';
+import 'package:app/infrastructure/repositories/drug_repository_impl.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import '../domain/token/i_authenticate_repository.dart';
@@ -22,6 +25,21 @@ Future<void> setupLocator(String url) async {
     ),
   );
 
-  getIt.registerLazySingleton<IAuthenticateRepository>(() =>
-      AuthenticateRepositoryImpl(authenticateApi: getIt<AuthenticateApi>()));
+  getIt.registerLazySingleton<IAuthenticateRepository>(
+    () => AuthenticateRepositoryImpl(
+      authenticateApi: getIt<AuthenticateApi>(),
+    ),
+  );
+
+  getIt.registerSingleton(
+    DrugApi(
+      dioClient: getIt<DioClient>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<IDrugRepository>(
+    () => DrugRepositoryImpl(
+      drugApi: getIt<DrugApi>(),
+    ),
+  );
 }

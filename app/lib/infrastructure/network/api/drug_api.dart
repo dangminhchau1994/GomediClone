@@ -16,6 +16,7 @@ class DrugApi {
         isEan ? '${Endpoints.getDrugs}/${Endpoints.ean}' : Endpoints.getDrugs,
         queryParameters: isEan ? {'ean': name} : {'shortName': name},
       );
+
       if (isEan) {
         response?.data = [response.data];
       }

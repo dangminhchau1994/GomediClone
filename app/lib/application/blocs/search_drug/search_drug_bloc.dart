@@ -11,20 +11,18 @@ class SearchDrugBloc extends Bloc<SearchDrugEvent, SearchDrugState> {
             status: BaseStatus.initial(),
           ),
         ) {
-    on<SearchDrugEvent>(_getDrug);
+    on<SearchDrug>(_getDrug);
   }
 
   final IDrugRepository repository;
 
   Future<void> _getDrug(
-    SearchDrugEvent event,
+    SearchDrug event,
     Emitter<SearchDrugState> emit,
   ) async {
-    emit(
-      state.copyWith(
-        status: const BaseStatus.loading(),
-      ),
-    );
+    emit(state.copyWith(
+      status: const BaseStatus.loading(),
+    ));
 
     final result = await repository.searchDrug(event.keyword);
 

@@ -10,6 +10,14 @@ Either<FormFailure, Unit> invalidEmail(String input) {
   }
 }
 
+Either<FormFailure, Unit> shortKeyword(String input) {
+  if (input.length < 3) {
+    return left(const FormFailure.notEnoughThreeCharactersSearchDrug());
+  } else {
+    return right(unit);
+  }
+}
+
 Either<FormFailure, Unit> invalidPassword(String input) {
   if (ValidationUtils.isPasswordValid(input)) {
     return right(unit);
