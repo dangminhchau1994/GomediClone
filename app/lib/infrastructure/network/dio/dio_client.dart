@@ -1,5 +1,6 @@
 import 'package:app/infrastructure/network/interceptors/auth_interceptor.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import '../api/endpoints.dart';
 import '../interceptors/logging_interceptor.dart';
 
@@ -10,6 +11,7 @@ class DioClient {
   DioClient(
     this._dio,
     String url,
+    GlobalKey<NavigatorState> navigatorKey,
   ) {
     _dio
       ..options.baseUrl = url
@@ -19,7 +21,7 @@ class DioClient {
           const Duration(milliseconds: Endpoints.receiveTimeout)
       ..options.responseType = ResponseType.json
       ..interceptors.add(LoggingInterceptor())
-      ..interceptors.add(AuthInterceptor(_dio));
+      ..interceptors.add(AuthInterceptor(_dio, navigatorKey));
   }
 
   // Get:-----------------------------------------------------------------------

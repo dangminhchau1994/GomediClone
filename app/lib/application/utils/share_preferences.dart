@@ -24,4 +24,8 @@ class SharePref {
   void setOnboarding(String value) {
     _sharedPrefs?.setString(StringConstants.onboarding, value);
   }
+
+  void removeToken(String value) {
+    _sharedPrefs?.remove(StringConstants.token);
+  }
 }

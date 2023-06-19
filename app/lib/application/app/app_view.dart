@@ -7,9 +7,11 @@ class App extends StatefulWidget {
   const App({
     super.key,
     this.appConfig,
+    this.navigatorKey,
   });
 
   final AppConfig? appConfig;
+  final GlobalKey<NavigatorState>? navigatorKey;
 
   @override
   State<App> createState() => _AppState();
@@ -19,6 +21,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      key: widget.navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Gomedi',
       theme: getAppTheme(context),

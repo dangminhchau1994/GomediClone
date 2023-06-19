@@ -1,4 +1,3 @@
-import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:app/application/blocs/search_drug/search_drug_bloc.dart';
 import 'package:app/application/blocs/search_drug/search_drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
@@ -61,8 +60,12 @@ class SearchDrugList extends StatelessWidget {
                 );
               }
             } else {
-              return FlushbarHelper.createError(
-                message: state.failure?.errMessage ?? '',
+              return Text(
+                'No medicine was found',
+                style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
               );
             }
           },

@@ -1,11 +1,12 @@
 import 'package:app/infrastructure/models/lactations/lactations.dart';
 import 'package:app/infrastructure/models/pregnancy/prenancy.dart';
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../profile_substance/profile_substance.dart';
 part 'drug.g.dart';
 
 @JsonSerializable()
-class Drug {
+class Drug extends Equatable {
   final int? id;
   final String? shortName;
   final double? producerId;
@@ -27,7 +28,7 @@ class Drug {
   final List<Pregnancy>? pregnancies;
   final List<Lactations>? lactations;
 
-  Drug({
+  const Drug({
     this.id,
     this.shortName,
     this.producerId,
@@ -53,4 +54,28 @@ class Drug {
   factory Drug.fromJson(Map<String, dynamic> json) => _$DrugFromJson(json);
 
   Map<String, dynamic> toJson() => _$DrugToJson(this);
+
+  @override
+  List<Object?> get props => [
+        id,
+        shortName,
+        producerId,
+        producerName,
+        compositionDescription,
+        activityDescription,
+        indicationDescription,
+        constraintIndicationDescription,
+        warningDescription,
+        pregnancyDescription,
+        sideEffectDescription,
+        interactionDescription,
+        dosageDescription,
+        noteDescription,
+        therapeuticClass,
+        isActive,
+        drugSubstance,
+        eans,
+        pregnancies,
+        lactations,
+      ];
 }
