@@ -1,4 +1,5 @@
 import 'package:app/application/constants/dimensions.dart';
+import 'package:app/application/widgets/ui_app_bar.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/gen/assets.gen.dart';
 import 'package:app/presentation/menu/menu_screen.dart';
@@ -16,6 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const UIAppbar(
+        showBadge: true,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [

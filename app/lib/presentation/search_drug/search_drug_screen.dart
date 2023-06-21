@@ -9,6 +9,7 @@ import 'package:app/presentation/search_drug/widgets/search_drug_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../application/widgets/ui_app_bar.dart';
 import '../../domain/core/form_validator.dart';
 
 class SearchDrugScreen extends StatelessWidget {
@@ -38,6 +39,12 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: UIAppbar(
+        showBadge: true,
+        showArrow: true,
+        title: 'Add Medicine',
+        onPop: () {},
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [

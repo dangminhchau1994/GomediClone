@@ -14,6 +14,8 @@ class Endpoints {
 
   static const String authenticate = '/authenticate';
 
+  static const String profile = '/profile-details';
+
   static const String regiter = '/register';
 
   static const String getDrugs = '/drugs';

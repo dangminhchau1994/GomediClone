@@ -8,7 +8,8 @@ class UITextInput extends StatefulWidget {
     this.editingController,
     this.onChanged,
     this.validator,
-    this.isPasswordType,
+    this.isPasswordType = false,
+    this.isEditType = false,
   });
 
   final TextEditingController? editingController;
@@ -17,6 +18,7 @@ class UITextInput extends StatefulWidget {
   final String? title;
   final String? textHint;
   final bool? isPasswordType;
+  final bool? isEditType;
 
   @override
   State<UITextInput> createState() => _UITextInputState();
@@ -24,6 +26,34 @@ class UITextInput extends StatefulWidget {
 
 class _UITextInputState extends State<UITextInput> {
   var _passwordVisible = false;
+
+  Widget _suffixIcon() {
+    if (widget.isEditType == true) {
+      return IconButton(
+        icon: const Icon(
+          Icons.edit,
+          color: Colors.black,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      );
+    } else if (widget.isPasswordType == true) {
+      return IconButton(
+        icon: Icon(
+          _passwordVisible ? Icons.visibility : Icons.visibility_off,
+          color: Colors.black,
+        ),
+        onPressed: () {
+          setState(() {
+            _passwordVisible = !_passwordVisible;
+          });
+        },
+      );
+    } else {
+      return Container();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,20 +79,7 @@ class _UITextInputState extends State<UITextInput> {
                   color: Colors.grey,
                   fontSize: 14,
                 ),
-            suffixIcon: Visibility(
-              visible: widget.isPasswordType ?? false,
-              child: IconButton(
-                icon: Icon(
-                  _passwordVisible ? Icons.visibility : Icons.visibility_off,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _passwordVisible = !_passwordVisible;
-                  });
-                },
-              ),
-            ),
+            suffixIcon: _suffixIcon(),
           ),
         ),
       ],

@@ -1,35 +1,40 @@
+import 'package:app/application/blocs/profile/profile_bloc.dart';
+import 'package:app/application/blocs/profile/profile_state.dart';
+import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../infrastructure/models/profile/profile.dart';
 import '../constants/dimensions.dart';
 
-class UIDropdownBottom extends StatefulWidget {
-  const UIDropdownBottom({
+class UISelectedProfile extends StatefulWidget {
+  const UISelectedProfile({
     super.key,
     this.title,
-    this.bottomItems,
     this.onUpdateItem,
   });
 
   final String? title;
-  final List<BottomItem>? bottomItems;
   final Function(BottomItem item)? onUpdateItem;
 
   @override
-  State<UIDropdownBottom> createState() => _UIDropdownBottomState();
+  State<UISelectedProfile> createState() => _UISelectedProfileState();
 }
 
-class _UIDropdownBottomState extends State<UIDropdownBottom> {
+class _UISelectedProfileState extends State<UISelectedProfile> {
   late BottomItem item;
 
   @override
   void initState() {
     super.initState();
-    item = widget.bottomItems?[0] ?? BottomItem();
   }
 
-  Future<void> _showBottomSheet() {
+  Future<void> _showBottomSheet(
+    List<BottomItem> bottomItems,
+    BottomItem item,
+  ) {
     final dialog = showModalBottomSheet(
       context: context,
       backgroundColor: Colors.white.withOpacity(1),
@@ -45,8 +50,8 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              UIDropdownBottomList(
-                bottomItems: widget.bottomItems,
+              UIProfileList(
+                bottomItems: bottomItems,
                 item: item,
                 onUpdateItem: (updatedItem) {
                   widget.onUpdateItem!(updatedItem);
@@ -122,31 +127,69 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
         const SizedBox(
           height: paddingtTop,
         ),
-        GestureDetector(
-          onTap: () async => _showBottomSheet(),
-          child: Container(
-            padding: const EdgeInsets.all(paddingAll),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.circular(borderRadius),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  item.title ?? '',
-                  style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+        BlocBuilder<ProfileBloc, ProfileState>(
+          builder: (context, state) {
+            if (state.status is Loading) {
+              return Container();
+            } else if (state.status is Success) {
+              final List<Profile> profiles = [];
+              for (var element in state.allProfiles?[0] ?? []) {
+                profiles.add(element);
+              }
+
+              for (var element in state.allProfiles?[1] ?? []) {
+                profiles.add(element);
+              }
+
+              item = profiles
+                  .map(
+                    (e) => BottomItem(
+                      title: e.name,
+                      id: e.id,
+                    ),
+                  )
+                  .toList()[0];
+
+              return GestureDetector(
+                onTap: () async => _showBottomSheet(
+                  profiles
+                      .map(
+                        (e) => BottomItem(
+                          title: e.name,
+                          id: e.id,
+                        ),
+                      )
+                      .toList(),
+                  item,
                 ),
-                const Icon(
-                  Icons.arrow_drop_down,
-                  color: Colors.black,
-                  size: 20,
-                )
-              ],
-            ),
-          ),
+                child: Container(
+                  padding: const EdgeInsets.all(paddingAll),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.circular(borderRadius),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        item.title ?? '',
+                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      const Icon(
+                        Icons.arrow_drop_down,
+                        color: Colors.black,
+                        size: 20,
+                      )
+                    ],
+                  ),
+                ),
+              );
+            } else {
+              return Container();
+            }
+          },
         )
       ],
     );
@@ -154,8 +197,8 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
 }
 
 // ignore: must_be_immutable
-class UIDropdownBottomList extends StatefulWidget {
-  UIDropdownBottomList({
+class UIProfileList extends StatefulWidget {
+  UIProfileList({
     super.key,
     this.bottomItems,
     this.item,
@@ -167,10 +210,10 @@ class UIDropdownBottomList extends StatefulWidget {
   Function(BottomItem item)? onUpdateItem;
 
   @override
-  State<UIDropdownBottomList> createState() => _UIDropdownBottomListState();
+  State<UIProfileList> createState() => _UIProfileListState();
 }
 
-class _UIDropdownBottomListState extends State<UIDropdownBottomList> {
+class _UIProfileListState extends State<UIProfileList> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(

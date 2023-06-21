@@ -2,8 +2,10 @@ import 'package:app/application/blocs/search_drug/search_drug_bloc.dart';
 import 'package:app/application/blocs/search_drug/search_drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/constants/dimensions.dart';
+import 'package:app/presentation/drug/add_drug_first_step_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class SearchDrugList extends StatelessWidget {
   const SearchDrugList({super.key});
@@ -31,17 +33,29 @@ class SearchDrugList extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final drug = state.drugs?[index];
 
-                    return Padding(
-                      padding: const EdgeInsets.only(
-                        top: paddingBottom,
-                        bottom: paddingBottom,
-                      ),
-                      child: Text(
-                        drug?.shortName ?? '',
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                              color: Colors.black,
-                              fontSize: 14,
-                            ),
+                    return InkWell(
+                      onTap: () {
+                        PersistentNavBarNavigator.pushNewScreen(
+                          context,
+                          screen: const AddDrugFirstStepScreen(),
+                          withNavBar: true,
+                          pageTransitionAnimation:
+                              PageTransitionAnimation.cupertino,
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          top: paddingBottom,
+                          bottom: paddingBottom,
+                        ),
+                        child: Text(
+                          drug?.shortName ?? '',
+                          style:
+                              Theme.of(context).textTheme.bodyText1?.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  ),
+                        ),
                       ),
                     );
                   },
