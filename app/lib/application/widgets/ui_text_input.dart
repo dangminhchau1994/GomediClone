@@ -51,7 +51,7 @@ class _UITextInputState extends State<UITextInput> {
         },
       );
     } else {
-      return Container();
+      return const SizedBox(width: 20);
     }
   }
 

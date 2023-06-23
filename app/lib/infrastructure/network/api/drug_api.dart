@@ -25,4 +25,13 @@ class DrugApi {
       rethrow;
     }
   }
+
+  Future<Response?>? drugPriorities() async {
+    try {
+      final response = await dioClient?.get(Endpoints.drugPriorities);
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

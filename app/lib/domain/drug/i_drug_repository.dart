@@ -1,5 +1,6 @@
 import 'package:app/domain/core/failures.dart';
 import 'package:app/infrastructure/models/drug/drug.dart';
+import 'package:app/infrastructure/models/drug/drug_priority.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class IDrugRepository {
@@ -7,4 +8,6 @@ abstract class IDrugRepository {
     String name, {
     bool isEan = false,
   });
+
+  Future<Either<DrugFailure, List<DrugPriority>>> getDrugPriorities();
 }

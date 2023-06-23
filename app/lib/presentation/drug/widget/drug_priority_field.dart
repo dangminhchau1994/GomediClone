@@ -1,16 +1,15 @@
-import 'package:app/application/blocs/profile/profile_bloc.dart';
-import 'package:app/application/blocs/profile/profile_state.dart';
+import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
-import 'package:app/application/theme/ui_color.dart';
-import 'package:app/application/widgets/ui_primary_button.dart';
-import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../infrastructure/models/profile/profile.dart';
-import '../constants/dimensions.dart';
+import '../../../application/constants/dimensions.dart';
+import '../../../application/theme/ui_color.dart';
+import '../../../application/widgets/ui_primary_button.dart';
+import '../../../infrastructure/models/bottom_item/bottom_item.dart';
 
-class UISelectedProfile extends StatefulWidget {
-  const UISelectedProfile({
+class DrugPriorityField extends StatefulWidget {
+  const DrugPriorityField({
     super.key,
     this.title,
     this.onUpdateItem,
@@ -20,10 +19,10 @@ class UISelectedProfile extends StatefulWidget {
   final Function(BottomItem item)? onUpdateItem;
 
   @override
-  State<UISelectedProfile> createState() => _UISelectedProfileState();
+  State<DrugPriorityField> createState() => _DrugPriorityFieldState();
 }
 
-class _UISelectedProfileState extends State<UISelectedProfile> {
+class _DrugPriorityFieldState extends State<DrugPriorityField> {
   late BottomItem item;
 
   Future<void> _showBottomSheet(
@@ -45,7 +44,7 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              UIProfileList(
+              UIDrugPrioritiesList(
                 bottomItems: bottomItems,
                 item: item,
                 onUpdateItem: (updatedItem) {
@@ -122,43 +121,28 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
         const SizedBox(
           height: paddingtTop,
         ),
-        BlocBuilder<ProfileBloc, ProfileState>(
+        BlocBuilder<DrugBloc, DrugState>(
           builder: (context, state) {
             if (state.status is Loading) {
               return Container();
             } else if (state.status is Success) {
-              final List<Profile> profiles = [];
-              for (var element in state.allProfiles?[0] ?? []) {
-                profiles.add(element);
-              }
-
-              for (var element in state.allProfiles?[1] ?? []) {
-                profiles.add(element);
-              }
-
-              item = profiles
-                  .map(
-                    (e) => BottomItem(
-                      title: e.name,
-                      id: e.id,
-                    ),
-                  )
-                  .toList()[0];
-
-              return GestureDetector(
-                onTap: () async => _showBottomSheet(
-                  profiles
-                      .map(
+              final drugPriorites = state.drugPriorities
+                      ?.map(
                         (e) => BottomItem(
                           title: e.name,
+                          description: e.description,
                           id: e.id,
                         ),
                       )
-                      .toList(),
-                  item,
-                ),
+                      .toList() ??
+                  [];
+
+              item = drugPriorites[0];
+
+              return GestureDetector(
+                onTap: () => _showBottomSheet(drugPriorites, item),
                 child: Container(
-                  padding: const EdgeInsets.all(paddingAll),
+                  padding: const EdgeInsets.all(kMargin),
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(borderRadius),
@@ -166,11 +150,31 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        item.title ?? '',
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              fontWeight: FontWeight.bold,
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              item.title ?? '',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
+                            Text(
+                              '(${item.description ?? ''})',
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                          ],
+                        ),
                       ),
                       const Icon(
                         Icons.arrow_drop_down,
@@ -192,8 +196,8 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
 }
 
 // ignore: must_be_immutable
-class UIProfileList extends StatefulWidget {
-  UIProfileList({
+class UIDrugPrioritiesList extends StatefulWidget {
+  UIDrugPrioritiesList({
     super.key,
     this.bottomItems,
     this.item,
@@ -205,10 +209,10 @@ class UIProfileList extends StatefulWidget {
   Function(BottomItem item)? onUpdateItem;
 
   @override
-  State<UIProfileList> createState() => _UIProfileListState();
+  State<UIDrugPrioritiesList> createState() => _UIDrugPrioritiesListState();
 }
 
-class _UIProfileListState extends State<UIProfileList> {
+class _UIDrugPrioritiesListState extends State<UIDrugPrioritiesList> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -218,24 +222,33 @@ class _UIProfileListState extends State<UIProfileList> {
         height: 0.5,
         color: Colors.grey,
       ),
-      itemBuilder: (context, index) => ListTile(
-        onTap: () {
-          widget.item = widget.bottomItems![index];
-          widget.onUpdateItem!(widget.item!);
-          setState(() {});
-        },
-        trailing: Visibility(
-          visible: widget.item == widget.bottomItems![index],
-          child: Icon(
-            Icons.check,
-            color: UIColors.blue,
+      itemBuilder: (context, index) => Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListTile(
+          onTap: () {
+            widget.item = widget.bottomItems![index];
+            widget.onUpdateItem!(widget.item!);
+            setState(() {});
+          },
+          trailing: Visibility(
+            visible: widget.item == widget.bottomItems![index],
+            child: Icon(
+              Icons.check,
+              color: UIColors.blue,
+            ),
           ),
-        ),
-        title: Text(
-          widget.bottomItems![index].title ?? '',
-          style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+          title: Text(
+            widget.bottomItems![index].title ?? '',
+            style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          subtitle: Text(
+            widget.bottomItems![index].description ?? '',
+            style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
       ),
     );

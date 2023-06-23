@@ -84,6 +84,8 @@ class _BodyState extends State<Body> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     UITextInput(
+                      isEditType: false,
+                      isPasswordType: false,
                       title: 'Email',
                       onChanged: (value) => context
                           .read<AuthBloc>()

@@ -1,8 +1,12 @@
+import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/widgets/ui_app_bar.dart';
 import 'package:app/application/widgets/ui_selected_profile.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
+import 'package:app/presentation/drug/widget/drug_priority_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddDrugFirstStepScreen extends StatefulWidget {
   const AddDrugFirstStepScreen({super.key});
@@ -12,6 +16,12 @@ class AddDrugFirstStepScreen extends StatefulWidget {
 }
 
 class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<DrugBloc>().add(const DrugEvent.getDrugPriorities());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +62,13 @@ class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
                     title: 'Own name of the drug',
                     onChanged: (value) {},
                   ),
+                  const SizedBox(
+                    height: mediumPaddingTOp,
+                  ),
+                  DrugPriorityField(
+                    title: 'Drug Priority',
+                    onUpdateItem: (item) {},
+                  )
                 ],
               ),
             ),

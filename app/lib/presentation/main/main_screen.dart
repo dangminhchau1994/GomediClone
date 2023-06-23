@@ -1,7 +1,9 @@
+import 'package:app/application/blocs/drug/drug_bloc.dart';
 import 'package:app/application/blocs/profile/profile_bloc.dart';
 import 'package:app/application/blocs/profile/profile_event.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:app/di/service_locator.dart';
+import 'package:app/domain/drug/i_drug_repository.dart';
 import 'package:app/domain/profile/i_profile_repository.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/map/map_screen.dart';
@@ -38,6 +40,11 @@ class _MainScreenState extends State<MainScreen> {
             create: (context) => ProfileBloc(
               getIt<IProfileRepository>(),
             )..add(const ProfileEvent.getProfile()),
+          ),
+          BlocProvider(
+            create: (context) => DrugBloc(
+              getIt<IDrugRepository>(),
+            ),
           )
         ],
         child: PersistentTabView(
