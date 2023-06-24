@@ -50,6 +50,7 @@ class _MainScreenState extends State<MainScreen> {
         child: PersistentTabView(
           context,
           controller: _tabController,
+          navBarHeight: 70,
           screens: _buildScreens,
           items: _navBarsItems,
           navBarStyle: NavBarStyle

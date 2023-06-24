@@ -17,6 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$DrugState {
   List<DrugPriority>? get drugPriorities => throw _privateConstructorUsedError;
+  List<DrugType>? get drugTypes => throw _privateConstructorUsedError;
+  List<DrugIcon>? get drugIcons => throw _privateConstructorUsedError;
+  List<DrugColor>? get drugColors => throw _privateConstructorUsedError;
   DrugFailure? get failure => throw _privateConstructorUsedError;
   BaseStatus? get status => throw _privateConstructorUsedError;
 
@@ -32,6 +35,9 @@ abstract class $DrugStateCopyWith<$Res> {
   @useResult
   $Res call(
       {List<DrugPriority>? drugPriorities,
+      List<DrugType>? drugTypes,
+      List<DrugIcon>? drugIcons,
+      List<DrugColor>? drugColors,
       DrugFailure? failure,
       BaseStatus? status});
 
@@ -53,6 +59,9 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
   @override
   $Res call({
     Object? drugPriorities = freezed,
+    Object? drugTypes = freezed,
+    Object? drugIcons = freezed,
+    Object? drugColors = freezed,
     Object? failure = freezed,
     Object? status = freezed,
   }) {
@@ -61,6 +70,18 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
           ? _value.drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
               as List<DrugPriority>?,
+      drugTypes: freezed == drugTypes
+          ? _value.drugTypes
+          : drugTypes // ignore: cast_nullable_to_non_nullable
+              as List<DrugType>?,
+      drugIcons: freezed == drugIcons
+          ? _value.drugIcons
+          : drugIcons // ignore: cast_nullable_to_non_nullable
+              as List<DrugIcon>?,
+      drugColors: freezed == drugColors
+          ? _value.drugColors
+          : drugColors // ignore: cast_nullable_to_non_nullable
+              as List<DrugColor>?,
       failure: freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -106,6 +127,9 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
   @useResult
   $Res call(
       {List<DrugPriority>? drugPriorities,
+      List<DrugType>? drugTypes,
+      List<DrugIcon>? drugIcons,
+      List<DrugColor>? drugColors,
       DrugFailure? failure,
       BaseStatus? status});
 
@@ -127,6 +151,9 @@ class __$$_DrugStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? drugPriorities = freezed,
+    Object? drugTypes = freezed,
+    Object? drugIcons = freezed,
+    Object? drugColors = freezed,
     Object? failure = freezed,
     Object? status = freezed,
   }) {
@@ -135,6 +162,18 @@ class __$$_DrugStateCopyWithImpl<$Res>
           ? _value._drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
               as List<DrugPriority>?,
+      drugTypes: freezed == drugTypes
+          ? _value._drugTypes
+          : drugTypes // ignore: cast_nullable_to_non_nullable
+              as List<DrugType>?,
+      drugIcons: freezed == drugIcons
+          ? _value._drugIcons
+          : drugIcons // ignore: cast_nullable_to_non_nullable
+              as List<DrugIcon>?,
+      drugColors: freezed == drugColors
+          ? _value._drugColors
+          : drugColors // ignore: cast_nullable_to_non_nullable
+              as List<DrugColor>?,
       failure: freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -151,8 +190,16 @@ class __$$_DrugStateCopyWithImpl<$Res>
 
 class _$_DrugState implements _DrugState {
   const _$_DrugState(
-      {final List<DrugPriority>? drugPriorities, this.failure, this.status})
-      : _drugPriorities = drugPriorities;
+      {final List<DrugPriority>? drugPriorities,
+      final List<DrugType>? drugTypes,
+      final List<DrugIcon>? drugIcons,
+      final List<DrugColor>? drugColors,
+      this.failure,
+      this.status})
+      : _drugPriorities = drugPriorities,
+        _drugTypes = drugTypes,
+        _drugIcons = drugIcons,
+        _drugColors = drugColors;
 
   final List<DrugPriority>? _drugPriorities;
   @override
@@ -164,6 +211,36 @@ class _$_DrugState implements _DrugState {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<DrugType>? _drugTypes;
+  @override
+  List<DrugType>? get drugTypes {
+    final value = _drugTypes;
+    if (value == null) return null;
+    if (_drugTypes is EqualUnmodifiableListView) return _drugTypes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<DrugIcon>? _drugIcons;
+  @override
+  List<DrugIcon>? get drugIcons {
+    final value = _drugIcons;
+    if (value == null) return null;
+    if (_drugIcons is EqualUnmodifiableListView) return _drugIcons;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<DrugColor>? _drugColors;
+  @override
+  List<DrugColor>? get drugColors {
+    final value = _drugColors;
+    if (value == null) return null;
+    if (_drugColors is EqualUnmodifiableListView) return _drugColors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final DrugFailure? failure;
   @override
@@ -171,7 +248,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(drugPriorities: $drugPriorities, failure: $failure, status: $status)';
+    return 'DrugState(drugPriorities: $drugPriorities, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -181,13 +258,25 @@ class _$_DrugState implements _DrugState {
             other is _$_DrugState &&
             const DeepCollectionEquality()
                 .equals(other._drugPriorities, _drugPriorities) &&
+            const DeepCollectionEquality()
+                .equals(other._drugTypes, _drugTypes) &&
+            const DeepCollectionEquality()
+                .equals(other._drugIcons, _drugIcons) &&
+            const DeepCollectionEquality()
+                .equals(other._drugColors, _drugColors) &&
             (identical(other.failure, failure) || other.failure == failure) &&
             (identical(other.status, status) || other.status == status));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_drugPriorities), failure, status);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_drugPriorities),
+      const DeepCollectionEquality().hash(_drugTypes),
+      const DeepCollectionEquality().hash(_drugIcons),
+      const DeepCollectionEquality().hash(_drugColors),
+      failure,
+      status);
 
   @JsonKey(ignore: true)
   @override
@@ -199,11 +288,20 @@ class _$_DrugState implements _DrugState {
 abstract class _DrugState implements DrugState {
   const factory _DrugState(
       {final List<DrugPriority>? drugPriorities,
+      final List<DrugType>? drugTypes,
+      final List<DrugIcon>? drugIcons,
+      final List<DrugColor>? drugColors,
       final DrugFailure? failure,
       final BaseStatus? status}) = _$_DrugState;
 
   @override
   List<DrugPriority>? get drugPriorities;
+  @override
+  List<DrugType>? get drugTypes;
+  @override
+  List<DrugIcon>? get drugIcons;
+  @override
+  List<DrugColor>? get drugColors;
   @override
   DrugFailure? get failure;
   @override

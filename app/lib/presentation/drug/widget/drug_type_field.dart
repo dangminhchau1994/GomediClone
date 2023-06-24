@@ -4,8 +4,8 @@ import '../../../application/theme/ui_color.dart';
 import '../../../application/widgets/ui_primary_button.dart';
 import '../../../infrastructure/models/bottom_item/bottom_item.dart';
 
-class DrugPriorityField extends StatefulWidget {
-  const DrugPriorityField({
+class DrugTypeField extends StatefulWidget {
+  const DrugTypeField({
     super.key,
     this.title,
     this.bottomItems,
@@ -17,10 +17,10 @@ class DrugPriorityField extends StatefulWidget {
   final Function(BottomItem item)? onUpdateItem;
 
   @override
-  State<DrugPriorityField> createState() => _DrugPriorityFieldState();
+  State<DrugTypeField> createState() => _DrugTypeFieldState();
 }
 
-class _DrugPriorityFieldState extends State<DrugPriorityField> {
+class _DrugTypeFieldState extends State<DrugTypeField> {
   late BottomItem item;
 
   Future<void> _showBottomSheet(
@@ -153,13 +153,6 @@ class _DrugPriorityFieldState extends State<DrugPriorityField> {
                               fontWeight: FontWeight.bold,
                             ),
                       ),
-                      Text(
-                        '(${item.description ?? ''})',
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
                     ],
                   ),
                 ),
@@ -223,12 +216,6 @@ class _UIDrugPrioritiesListState extends State<UIDrugPrioritiesList> {
             ),
             title: Text(
               widget.bottomItems![index].title ?? '',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            subtitle: Text(
-              widget.bottomItems![index].description ?? '',
               style: Theme.of(context).textTheme.subtitle1?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

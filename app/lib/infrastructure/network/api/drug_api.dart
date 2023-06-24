@@ -34,4 +34,31 @@ class DrugApi {
       rethrow;
     }
   }
+
+  Future<Response?>? getDrugTypes() async {
+    try {
+      final response = await dioClient?.get(Endpoints.drugTypes);
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<Response?>? getDrugIcons() async {
+    try {
+      final response = await dioClient?.get(Endpoints.drugIconTypes);
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<Response?>? getDrugColors() async {
+    try {
+      final response = await dioClient?.get(Endpoints.getDrugColors);
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

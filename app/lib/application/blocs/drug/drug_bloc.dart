@@ -12,6 +12,12 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
           ),
         ) {
     on<GetDrugPriorites>(_getDrugPriorities);
+    on<GetDrugTypes>(_getDrugTypes);
+    on<GetDrugIcons>(_getDrugIcons);
+    on<GetDrugColors>(_getDrugColors);
+    add(const GetDrugPriorites());
+    add(const GetDrugTypes());
+    add(const GetDrugColors());
   }
 
   final IDrugRepository repository;
@@ -38,6 +44,91 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
           state.copyWith(
             status: const BaseStatus.success(),
             drugPriorities: data,
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> _getDrugTypes(
+    GetDrugTypes event,
+    Emitter<DrugState> emit,
+  ) async {
+    emit(state.copyWith(status: const BaseStatus.loading()));
+
+    final result = await repository.getDrugTypes();
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.failure(),
+            failure: failure,
+          ),
+        );
+      },
+      (data) {
+        add(const GetDrugIcons());
+        emit(
+          state.copyWith(
+            status: const BaseStatus.success(),
+            drugTypes: data,
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> _getDrugIcons(
+    GetDrugIcons event,
+    Emitter<DrugState> emit,
+  ) async {
+    emit(state.copyWith(status: const BaseStatus.loading()));
+
+    final result = await repository.getDrugIcons();
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.failure(),
+            failure: failure,
+          ),
+        );
+      },
+      (data) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.success(),
+            drugIcons: data,
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> _getDrugColors(
+    GetDrugColors event,
+    Emitter<DrugState> emit,
+  ) async {
+    emit(state.copyWith(status: const BaseStatus.loading()));
+
+    final result = await repository.getDrugColors();
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.failure(),
+            failure: failure,
+          ),
+        );
+      },
+      (data) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.success(),
+            drugColors: data,
           ),
         );
       },

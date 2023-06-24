@@ -63,8 +63,8 @@ ThemeData getAppTheme(BuildContext context) {
                 fontFamily: FontFamily.robotoMono,
               ),
           bodyText1: Theme.of(context).textTheme.bodyText1?.copyWith(
-                color: UIColors.lightGrey,
-                fontWeight: FontWeight.w400,
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
                 fontSize: 16,
                 fontFamily: FontFamily.robotoMono,
               ),
