@@ -30,7 +30,7 @@ class UIAppbar extends StatelessWidget implements PreferredSize {
           ),
           onPressed: () {
             if (onPop != null) {
-              Navigator.of(context).pop();
+              Navigator.pop(context);
             } else {
               context.pop();
             }

@@ -16,6 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$DrugState {
+  int? get drugTypeId => throw _privateConstructorUsedError;
+  int? get iconSelected => throw _privateConstructorUsedError;
+  int? get firstColorSelected => throw _privateConstructorUsedError;
+  int? get secondColorSelected => throw _privateConstructorUsedError;
+  bool? get isDivisible => throw _privateConstructorUsedError;
   List<DrugPriority>? get drugPriorities => throw _privateConstructorUsedError;
   List<DrugType>? get drugTypes => throw _privateConstructorUsedError;
   List<DrugIcon>? get drugIcons => throw _privateConstructorUsedError;
@@ -34,7 +39,12 @@ abstract class $DrugStateCopyWith<$Res> {
       _$DrugStateCopyWithImpl<$Res, DrugState>;
   @useResult
   $Res call(
-      {List<DrugPriority>? drugPriorities,
+      {int? drugTypeId,
+      int? iconSelected,
+      int? firstColorSelected,
+      int? secondColorSelected,
+      bool? isDivisible,
+      List<DrugPriority>? drugPriorities,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -58,6 +68,11 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? drugTypeId = freezed,
+    Object? iconSelected = freezed,
+    Object? firstColorSelected = freezed,
+    Object? secondColorSelected = freezed,
+    Object? isDivisible = freezed,
     Object? drugPriorities = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
@@ -66,6 +81,26 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
     Object? status = freezed,
   }) {
     return _then(_value.copyWith(
+      drugTypeId: freezed == drugTypeId
+          ? _value.drugTypeId
+          : drugTypeId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      iconSelected: freezed == iconSelected
+          ? _value.iconSelected
+          : iconSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      firstColorSelected: freezed == firstColorSelected
+          ? _value.firstColorSelected
+          : firstColorSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      secondColorSelected: freezed == secondColorSelected
+          ? _value.secondColorSelected
+          : secondColorSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      isDivisible: freezed == isDivisible
+          ? _value.isDivisible
+          : isDivisible // ignore: cast_nullable_to_non_nullable
+              as bool?,
       drugPriorities: freezed == drugPriorities
           ? _value.drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
@@ -126,7 +161,12 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {List<DrugPriority>? drugPriorities,
+      {int? drugTypeId,
+      int? iconSelected,
+      int? firstColorSelected,
+      int? secondColorSelected,
+      bool? isDivisible,
+      List<DrugPriority>? drugPriorities,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -150,6 +190,11 @@ class __$$_DrugStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? drugTypeId = freezed,
+    Object? iconSelected = freezed,
+    Object? firstColorSelected = freezed,
+    Object? secondColorSelected = freezed,
+    Object? isDivisible = freezed,
     Object? drugPriorities = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
@@ -158,6 +203,26 @@ class __$$_DrugStateCopyWithImpl<$Res>
     Object? status = freezed,
   }) {
     return _then(_$_DrugState(
+      drugTypeId: freezed == drugTypeId
+          ? _value.drugTypeId
+          : drugTypeId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      iconSelected: freezed == iconSelected
+          ? _value.iconSelected
+          : iconSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      firstColorSelected: freezed == firstColorSelected
+          ? _value.firstColorSelected
+          : firstColorSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      secondColorSelected: freezed == secondColorSelected
+          ? _value.secondColorSelected
+          : secondColorSelected // ignore: cast_nullable_to_non_nullable
+              as int?,
+      isDivisible: freezed == isDivisible
+          ? _value.isDivisible
+          : isDivisible // ignore: cast_nullable_to_non_nullable
+              as bool?,
       drugPriorities: freezed == drugPriorities
           ? _value._drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
@@ -190,7 +255,12 @@ class __$$_DrugStateCopyWithImpl<$Res>
 
 class _$_DrugState implements _DrugState {
   const _$_DrugState(
-      {final List<DrugPriority>? drugPriorities,
+      {this.drugTypeId,
+      this.iconSelected,
+      this.firstColorSelected,
+      this.secondColorSelected,
+      this.isDivisible,
+      final List<DrugPriority>? drugPriorities,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
@@ -201,6 +271,16 @@ class _$_DrugState implements _DrugState {
         _drugIcons = drugIcons,
         _drugColors = drugColors;
 
+  @override
+  final int? drugTypeId;
+  @override
+  final int? iconSelected;
+  @override
+  final int? firstColorSelected;
+  @override
+  final int? secondColorSelected;
+  @override
+  final bool? isDivisible;
   final List<DrugPriority>? _drugPriorities;
   @override
   List<DrugPriority>? get drugPriorities {
@@ -248,7 +328,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(drugPriorities: $drugPriorities, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, drugPriorities: $drugPriorities, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -256,6 +336,16 @@ class _$_DrugState implements _DrugState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DrugState &&
+            (identical(other.drugTypeId, drugTypeId) ||
+                other.drugTypeId == drugTypeId) &&
+            (identical(other.iconSelected, iconSelected) ||
+                other.iconSelected == iconSelected) &&
+            (identical(other.firstColorSelected, firstColorSelected) ||
+                other.firstColorSelected == firstColorSelected) &&
+            (identical(other.secondColorSelected, secondColorSelected) ||
+                other.secondColorSelected == secondColorSelected) &&
+            (identical(other.isDivisible, isDivisible) ||
+                other.isDivisible == isDivisible) &&
             const DeepCollectionEquality()
                 .equals(other._drugPriorities, _drugPriorities) &&
             const DeepCollectionEquality()
@@ -271,6 +361,11 @@ class _$_DrugState implements _DrugState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      drugTypeId,
+      iconSelected,
+      firstColorSelected,
+      secondColorSelected,
+      isDivisible,
       const DeepCollectionEquality().hash(_drugPriorities),
       const DeepCollectionEquality().hash(_drugTypes),
       const DeepCollectionEquality().hash(_drugIcons),
@@ -287,13 +382,28 @@ class _$_DrugState implements _DrugState {
 
 abstract class _DrugState implements DrugState {
   const factory _DrugState(
-      {final List<DrugPriority>? drugPriorities,
+      {final int? drugTypeId,
+      final int? iconSelected,
+      final int? firstColorSelected,
+      final int? secondColorSelected,
+      final bool? isDivisible,
+      final List<DrugPriority>? drugPriorities,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
       final DrugFailure? failure,
       final BaseStatus? status}) = _$_DrugState;
 
+  @override
+  int? get drugTypeId;
+  @override
+  int? get iconSelected;
+  @override
+  int? get firstColorSelected;
+  @override
+  int? get secondColorSelected;
+  @override
+  bool? get isDivisible;
   @override
   List<DrugPriority>? get drugPriorities;
   @override

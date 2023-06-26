@@ -15,6 +15,31 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     on<GetDrugTypes>(_getDrugTypes);
     on<GetDrugIcons>(_getDrugIcons);
     on<GetDrugColors>(_getDrugColors);
+    on<AddDrugTypeId>(
+      (event, emit) => emit(
+        state.copyWith(drugTypeId: event.drugTypeId),
+      ),
+    );
+    on<DrugIconSelected>(
+      (event, emit) => emit(
+        state.copyWith(iconSelected: event.iconSelected),
+      ),
+    );
+    on<DrugFirstColorSelected>(
+      (event, emit) => emit(
+        state.copyWith(firstColorSelected: event.colorSelected),
+      ),
+    );
+    on<DrugSecondColorSelected>(
+      (event, emit) => emit(
+        state.copyWith(secondColorSelected: event.secondColorSelected),
+      ),
+    );
+    on<DrugDivisible>(
+      (event, emit) => emit(
+        state.copyWith(isDivisible: event.isDrugDivisible),
+      ),
+    );
     add(const GetDrugPriorites());
     add(const GetDrugTypes());
     add(const GetDrugColors());
@@ -69,6 +94,8 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
       },
       (data) {
         add(const GetDrugIcons());
+        add(AddDrugTypeId(state.drugTypeId ?? data.first.id!));
+        add(DrugIconSelected(state.iconSelected ?? 0));
         emit(
           state.copyWith(
             status: const BaseStatus.success(),

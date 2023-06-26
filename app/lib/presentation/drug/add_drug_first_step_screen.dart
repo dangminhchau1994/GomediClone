@@ -1,4 +1,5 @@
 import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/constants/dimensions.dart';
@@ -8,19 +9,41 @@ import 'package:app/application/widgets/ui_text_input.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:app/presentation/drug/widget/drug_list_colors.dart';
 import 'package:app/presentation/drug/widget/drug_list_icon.dart';
+import 'package:app/presentation/drug/widget/drug_list_second_colors.dart';
 import 'package:app/presentation/drug/widget/drug_priority_field.dart';
 import 'package:app/presentation/drug/widget/drug_type_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../di/service_locator.dart';
+import '../../domain/drug/i_drug_repository.dart';
 
 class AddDrugFirstStepScreen extends StatefulWidget {
   const AddDrugFirstStepScreen({super.key});
 
   @override
-  State<AddDrugFirstStepScreen> createState() => _AddDrugFirstStepScreenState();
+  State<AddDrugFirstStepScreen> createState() => _AddDrugFirstStepScreen();
 }
 
-class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
+class _AddDrugFirstStepScreen extends State<AddDrugFirstStepScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => DrugBloc(
+        getIt<IDrugRepository>(),
+      ),
+      child: const Body(),
+    );
+  }
+}
+
+class Body extends StatefulWidget {
+  const Body({super.key});
+
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,7 +120,17 @@ class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
                       } else if (state.status is Success) {
                         return DrugTypeField(
                           title: 'Type of drug',
-                          onUpdateItem: (item) {},
+                          onUpdateItem: (item) {
+                            context
+                                .read<DrugBloc>()
+                                .add(const DrugEvent.drugIconSelected(0));
+                            context
+                                .read<DrugBloc>()
+                                .add(const DrugEvent.isDrugDivisible(false));
+                            context
+                                .read<DrugBloc>()
+                                .add(DrugEvent.addDrugTypeId(item.id ?? 1));
+                          },
                           bottomItems: state.drugTypes
                               ?.map(
                                 (e) => BottomItem(
@@ -127,8 +160,13 @@ class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
                       if (state.status is Loading) {
                         return Container();
                       } else if (state.status is Success) {
+                        final drugIcons = state.drugIcons
+                            ?.where((element) =>
+                                element.drugTypeId == state.drugTypeId)
+                            .toList();
+
                         return DrugListIcon(
-                          drugIcons: state.drugIcons,
+                          drugIcons: drugIcons,
                         );
                       } else {
                         return Container();
@@ -152,6 +190,37 @@ class _AddDrugFirstStepScreenState extends State<AddDrugFirstStepScreen> {
                       } else if (state.status is Success) {
                         return DrugListColors(
                           drugColors: state.drugColors,
+                        );
+                      } else {
+                        return Container();
+                      }
+                    },
+                  ),
+                  const SizedBox(
+                    height: mediumPaddingTOp,
+                  ),
+                  BlocBuilder<DrugBloc, DrugState>(
+                    builder: (context, state) {
+                      if (state.status is Loading) {
+                        return Container();
+                      } else if (state.status is Success) {
+                        return Visibility(
+                          visible: state.isDivisible ?? false,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Choose color 2:',
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                              const SizedBox(
+                                height: paddingtTop,
+                              ),
+                              DrugSecondListColors(
+                                drugColors: state.drugColors,
+                              ),
+                            ],
+                          ),
                         );
                       } else {
                         return Container();

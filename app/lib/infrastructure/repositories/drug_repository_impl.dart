@@ -10,7 +10,7 @@ import 'package:app/infrastructure/network/dio/dio_exception.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class DrugRepositoryImpl implements IDrugRepository {
+class DrugRepositoryImpl extends IDrugRepository {
   final DrugApi? drugApi;
 
   DrugRepositoryImpl({required this.drugApi});

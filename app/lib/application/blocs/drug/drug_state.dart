@@ -10,6 +10,11 @@ part 'drug_state.freezed.dart';
 @freezed
 class DrugState with _$DrugState {
   const factory DrugState({
+    int? drugTypeId,
+    int? iconSelected,
+    int? firstColorSelected,
+    int? secondColorSelected,
+    bool? isDivisible,
     List<DrugPriority>? drugPriorities,
     List<DrugType>? drugTypes,
     List<DrugIcon>? drugIcons,
