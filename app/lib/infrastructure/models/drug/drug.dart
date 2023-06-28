@@ -1,3 +1,4 @@
+import 'package:app/infrastructure/models/drug/drug_eans.dart';
 import 'package:app/infrastructure/models/lactations/lactations.dart';
 import 'package:app/infrastructure/models/pregnancy/prenancy.dart';
 import 'package:equatable/equatable.dart';
@@ -25,6 +26,7 @@ class Drug extends Equatable {
   final bool? isActive;
   final List<ProfileSubstance>? drugSubstance;
   final List<String>? eans;
+  final List<DrugEans>? drugEans;
   final List<Pregnancy>? pregnancies;
   final List<Lactations>? lactations;
 
@@ -47,6 +49,7 @@ class Drug extends Equatable {
     this.isActive,
     this.drugSubstance,
     this.eans,
+    this.drugEans,
     this.pregnancies,
     this.lactations,
   });
@@ -75,6 +78,7 @@ class Drug extends Equatable {
         isActive,
         drugSubstance,
         eans,
+        drugEans,
         pregnancies,
         lactations,
       ];

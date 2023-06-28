@@ -1,15 +1,16 @@
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'prenancy.g.dart';
 
 @JsonSerializable()
-class Pregnancy {
+class Pregnancy extends Equatable {
   final int? id;
   final String? name;
   final String? description;
   final String? enumKey;
   final bool? isActive;
 
-  Pregnancy({
+  const Pregnancy({
     this.id,
     this.name,
     this.description,
@@ -21,4 +22,13 @@ class Pregnancy {
       _$PregnancyFromJson(json);
 
   Map<String, dynamic> toJson() => _$PregnancyToJson(this);
+
+  @override
+  List<Object?> get props => [
+        id,
+        name,
+        description,
+        enumKey,
+        isActive,
+      ];
 }

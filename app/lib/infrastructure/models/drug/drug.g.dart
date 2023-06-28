@@ -28,6 +28,9 @@ Drug _$DrugFromJson(Map<String, dynamic> json) => Drug(
           ?.map((e) => ProfileSubstance.fromJson(e as Map<String, dynamic>))
           .toList(),
       eans: (json['eans'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      drugEans: (json['drugEans'] as List<dynamic>?)
+          ?.map((e) => DrugEans.fromJson(e as Map<String, dynamic>))
+          .toList(),
       pregnancies: (json['pregnancies'] as List<dynamic>?)
           ?.map((e) => Pregnancy.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -56,6 +59,7 @@ Map<String, dynamic> _$DrugToJson(Drug instance) => <String, dynamic>{
       'isActive': instance.isActive,
       'drugSubstance': instance.drugSubstance?.map((e) => e.toJson()).toList(),
       'eans': instance.eans,
+      'drugEans': instance.drugEans?.map((e) => e.toJson()).toList(),
       'pregnancies': instance.pregnancies?.map((e) => e.toJson()).toList(),
       'lactations': instance.lactations?.map((e) => e.toJson()).toList(),
     };
