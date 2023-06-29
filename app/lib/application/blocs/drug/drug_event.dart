@@ -1,3 +1,4 @@
+import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'drug_event.freezed.dart';
 
@@ -23,4 +24,7 @@ class DrugEvent with _$DrugEvent {
       DrugSecondColorSelected;
 
   const factory DrugEvent.isDrugDivisible(bool isDrugDivisible) = DrugDivisible;
+
+  const factory DrugEvent.addDrugSchedule(
+      List<DrugScheduleDefinitions> drugSchedules) = AddDrugSchedule;
 }

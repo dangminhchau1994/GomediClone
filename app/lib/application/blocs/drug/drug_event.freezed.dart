@@ -27,6 +27,8 @@ mixin _$DrugEvent {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +42,8 @@ mixin _$DrugEvent {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +57,8 @@ mixin _$DrugEvent {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,6 +75,7 @@ mixin _$DrugEvent {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +89,7 @@ mixin _$DrugEvent {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +103,7 @@ mixin _$DrugEvent {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -164,6 +173,8 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return getDrugPriorities();
   }
@@ -180,6 +191,8 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return getDrugPriorities?.call();
   }
@@ -196,6 +209,8 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -218,6 +233,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return getDrugPriorities(this);
   }
@@ -234,6 +250,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return getDrugPriorities?.call(this);
   }
@@ -250,6 +267,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -310,6 +328,8 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return getDrugTypes();
   }
@@ -326,6 +346,8 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return getDrugTypes?.call();
   }
@@ -342,6 +364,8 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -364,6 +388,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return getDrugTypes(this);
   }
@@ -380,6 +405,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return getDrugTypes?.call(this);
   }
@@ -396,6 +422,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -456,6 +483,8 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return getDrugIcons();
   }
@@ -472,6 +501,8 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return getDrugIcons?.call();
   }
@@ -488,6 +519,8 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -510,6 +543,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return getDrugIcons(this);
   }
@@ -526,6 +560,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return getDrugIcons?.call(this);
   }
@@ -542,6 +577,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -602,6 +638,8 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return getDrugColors();
   }
@@ -618,6 +656,8 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return getDrugColors?.call();
   }
@@ -634,6 +674,8 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -656,6 +698,7 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return getDrugColors(this);
   }
@@ -672,6 +715,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return getDrugColors?.call(this);
   }
@@ -688,6 +732,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -775,6 +820,8 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return addDrugTypeId(drugTypeId);
   }
@@ -791,6 +838,8 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return addDrugTypeId?.call(drugTypeId);
   }
@@ -807,6 +856,8 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -829,6 +880,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return addDrugTypeId(this);
   }
@@ -845,6 +897,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return addDrugTypeId?.call(this);
   }
@@ -861,6 +914,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -953,6 +1007,8 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return drugIconSelected(iconSelected);
   }
@@ -969,6 +1025,8 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return drugIconSelected?.call(iconSelected);
   }
@@ -985,6 +1043,8 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1007,6 +1067,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return drugIconSelected(this);
   }
@@ -1023,6 +1084,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return drugIconSelected?.call(this);
   }
@@ -1039,6 +1101,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1132,6 +1195,8 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return drugFirstColorSelected(colorSelected);
   }
@@ -1148,6 +1213,8 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return drugFirstColorSelected?.call(colorSelected);
   }
@@ -1164,6 +1231,8 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1186,6 +1255,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return drugFirstColorSelected(this);
   }
@@ -1202,6 +1272,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return drugFirstColorSelected?.call(this);
   }
@@ -1218,6 +1289,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1312,6 +1384,8 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return drugSecondColorSelected(secondColorSelected);
   }
@@ -1328,6 +1402,8 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return drugSecondColorSelected?.call(secondColorSelected);
   }
@@ -1344,6 +1420,8 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1366,6 +1444,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return drugSecondColorSelected(this);
   }
@@ -1382,6 +1461,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return drugSecondColorSelected?.call(this);
   }
@@ -1398,6 +1478,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1491,6 +1572,8 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
   }) {
     return isDrugDivisible(this.isDrugDivisible);
   }
@@ -1507,6 +1590,8 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
   }) {
     return isDrugDivisible?.call(this.isDrugDivisible);
   }
@@ -1523,6 +1608,8 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -1545,6 +1632,7 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(DrugSecondColorSelected value)
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
   }) {
     return isDrugDivisible(this);
   }
@@ -1561,6 +1649,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
   }) {
     return isDrugDivisible?.call(this);
   }
@@ -1577,6 +1666,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -1592,5 +1682,200 @@ abstract class DrugDivisible implements DrugEvent {
   bool get isDrugDivisible;
   @JsonKey(ignore: true)
   _$$DrugDivisibleCopyWith<_$DrugDivisible> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDrugScheduleCopyWith<$Res> {
+  factory _$$AddDrugScheduleCopyWith(
+          _$AddDrugSchedule value, $Res Function(_$AddDrugSchedule) then) =
+      __$$AddDrugScheduleCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<DrugScheduleDefinitions> drugSchedules});
+}
+
+/// @nodoc
+class __$$AddDrugScheduleCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDrugSchedule>
+    implements _$$AddDrugScheduleCopyWith<$Res> {
+  __$$AddDrugScheduleCopyWithImpl(
+      _$AddDrugSchedule _value, $Res Function(_$AddDrugSchedule) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? drugSchedules = null,
+  }) {
+    return _then(_$AddDrugSchedule(
+      null == drugSchedules
+          ? _value._drugSchedules
+          : drugSchedules // ignore: cast_nullable_to_non_nullable
+              as List<DrugScheduleDefinitions>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDrugSchedule implements AddDrugSchedule {
+  const _$AddDrugSchedule(final List<DrugScheduleDefinitions> drugSchedules)
+      : _drugSchedules = drugSchedules;
+
+  final List<DrugScheduleDefinitions> _drugSchedules;
+  @override
+  List<DrugScheduleDefinitions> get drugSchedules {
+    if (_drugSchedules is EqualUnmodifiableListView) return _drugSchedules;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_drugSchedules);
+  }
+
+  @override
+  String toString() {
+    return 'DrugEvent.addDrugSchedule(drugSchedules: $drugSchedules)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDrugSchedule &&
+            const DeepCollectionEquality()
+                .equals(other._drugSchedules, _drugSchedules));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_drugSchedules));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDrugScheduleCopyWith<_$AddDrugSchedule> get copyWith =>
+      __$$AddDrugScheduleCopyWithImpl<_$AddDrugSchedule>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+  }) {
+    return addDrugSchedule(drugSchedules);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+  }) {
+    return addDrugSchedule?.call(drugSchedules);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    required TResult orElse(),
+  }) {
+    if (addDrugSchedule != null) {
+      return addDrugSchedule(drugSchedules);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+  }) {
+    return addDrugSchedule(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+  }) {
+    return addDrugSchedule?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    required TResult orElse(),
+  }) {
+    if (addDrugSchedule != null) {
+      return addDrugSchedule(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDrugSchedule implements DrugEvent {
+  const factory AddDrugSchedule(
+      final List<DrugScheduleDefinitions> drugSchedules) = _$AddDrugSchedule;
+
+  List<DrugScheduleDefinitions> get drugSchedules;
+  @JsonKey(ignore: true)
+  _$$AddDrugScheduleCopyWith<_$AddDrugSchedule> get copyWith =>
       throw _privateConstructorUsedError;
 }

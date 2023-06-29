@@ -8,6 +8,7 @@ class UITextInput extends StatefulWidget {
     this.editingController,
     this.onChanged,
     this.validator,
+    this.textInputType,
     this.isPasswordType = false,
     this.isEditType = false,
   });
@@ -15,6 +16,7 @@ class UITextInput extends StatefulWidget {
   final TextEditingController? editingController;
   final Function(String value)? onChanged;
   final String? Function(String value)? validator;
+  final TextInputType? textInputType;
   final String? title;
   final String? textHint;
   final bool? isPasswordType;
@@ -67,6 +69,7 @@ class _UITextInputState extends State<UITextInput> {
               ),
         ),
         TextFormField(
+          keyboardType: widget.textInputType,
           controller: widget.editingController,
           onChanged: (value) {
             widget.onChanged!(value);

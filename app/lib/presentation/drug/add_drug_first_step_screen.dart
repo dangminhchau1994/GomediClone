@@ -261,7 +261,9 @@ class _BodyState extends State<Body> {
                   onPressed: () {
                     PersistentNavBarNavigator.pushNewScreen(
                       context,
-                      screen: const AddDrugSecondStep(),
+                      screen: AddDrugSecondStep(
+                        drugBloc: context.read<DrugBloc>(),
+                      ),
                       withNavBar: true,
                       pageTransitionAnimation:
                           PageTransitionAnimation.cupertino,

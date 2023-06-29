@@ -3,6 +3,7 @@ import 'package:app/domain/core/failures.dart';
 import 'package:app/infrastructure/models/drug/drug_color.dart';
 import 'package:app/infrastructure/models/drug/drug_icon.dart';
 import 'package:app/infrastructure/models/drug/drug_type.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../infrastructure/models/drug/drug_priority.dart';
 part 'drug_state.freezed.dart';
@@ -16,6 +17,7 @@ class DrugState with _$DrugState {
     int? secondColorSelected,
     bool? isDivisible,
     List<DrugPriority>? drugPriorities,
+    List<DrugScheduleDefinitions>? drugScheduleDefinitions,
     List<DrugType>? drugTypes,
     List<DrugIcon>? drugIcons,
     List<DrugColor>? drugColors,

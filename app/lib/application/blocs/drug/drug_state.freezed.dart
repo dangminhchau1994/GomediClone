@@ -22,6 +22,8 @@ mixin _$DrugState {
   int? get secondColorSelected => throw _privateConstructorUsedError;
   bool? get isDivisible => throw _privateConstructorUsedError;
   List<DrugPriority>? get drugPriorities => throw _privateConstructorUsedError;
+  List<DrugScheduleDefinitions>? get drugScheduleDefinitions =>
+      throw _privateConstructorUsedError;
   List<DrugType>? get drugTypes => throw _privateConstructorUsedError;
   List<DrugIcon>? get drugIcons => throw _privateConstructorUsedError;
   List<DrugColor>? get drugColors => throw _privateConstructorUsedError;
@@ -45,6 +47,7 @@ abstract class $DrugStateCopyWith<$Res> {
       int? secondColorSelected,
       bool? isDivisible,
       List<DrugPriority>? drugPriorities,
+      List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -74,6 +77,7 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
     Object? secondColorSelected = freezed,
     Object? isDivisible = freezed,
     Object? drugPriorities = freezed,
+    Object? drugScheduleDefinitions = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
     Object? drugColors = freezed,
@@ -105,6 +109,10 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
           ? _value.drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
               as List<DrugPriority>?,
+      drugScheduleDefinitions: freezed == drugScheduleDefinitions
+          ? _value.drugScheduleDefinitions
+          : drugScheduleDefinitions // ignore: cast_nullable_to_non_nullable
+              as List<DrugScheduleDefinitions>?,
       drugTypes: freezed == drugTypes
           ? _value.drugTypes
           : drugTypes // ignore: cast_nullable_to_non_nullable
@@ -167,6 +175,7 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
       int? secondColorSelected,
       bool? isDivisible,
       List<DrugPriority>? drugPriorities,
+      List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -196,6 +205,7 @@ class __$$_DrugStateCopyWithImpl<$Res>
     Object? secondColorSelected = freezed,
     Object? isDivisible = freezed,
     Object? drugPriorities = freezed,
+    Object? drugScheduleDefinitions = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
     Object? drugColors = freezed,
@@ -227,6 +237,10 @@ class __$$_DrugStateCopyWithImpl<$Res>
           ? _value._drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
               as List<DrugPriority>?,
+      drugScheduleDefinitions: freezed == drugScheduleDefinitions
+          ? _value._drugScheduleDefinitions
+          : drugScheduleDefinitions // ignore: cast_nullable_to_non_nullable
+              as List<DrugScheduleDefinitions>?,
       drugTypes: freezed == drugTypes
           ? _value._drugTypes
           : drugTypes // ignore: cast_nullable_to_non_nullable
@@ -261,12 +275,14 @@ class _$_DrugState implements _DrugState {
       this.secondColorSelected,
       this.isDivisible,
       final List<DrugPriority>? drugPriorities,
+      final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
       this.failure,
       this.status})
       : _drugPriorities = drugPriorities,
+        _drugScheduleDefinitions = drugScheduleDefinitions,
         _drugTypes = drugTypes,
         _drugIcons = drugIcons,
         _drugColors = drugColors;
@@ -287,6 +303,17 @@ class _$_DrugState implements _DrugState {
     final value = _drugPriorities;
     if (value == null) return null;
     if (_drugPriorities is EqualUnmodifiableListView) return _drugPriorities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<DrugScheduleDefinitions>? _drugScheduleDefinitions;
+  @override
+  List<DrugScheduleDefinitions>? get drugScheduleDefinitions {
+    final value = _drugScheduleDefinitions;
+    if (value == null) return null;
+    if (_drugScheduleDefinitions is EqualUnmodifiableListView)
+      return _drugScheduleDefinitions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -328,7 +355,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, drugPriorities: $drugPriorities, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -348,6 +375,8 @@ class _$_DrugState implements _DrugState {
                 other.isDivisible == isDivisible) &&
             const DeepCollectionEquality()
                 .equals(other._drugPriorities, _drugPriorities) &&
+            const DeepCollectionEquality().equals(
+                other._drugScheduleDefinitions, _drugScheduleDefinitions) &&
             const DeepCollectionEquality()
                 .equals(other._drugTypes, _drugTypes) &&
             const DeepCollectionEquality()
@@ -367,6 +396,7 @@ class _$_DrugState implements _DrugState {
       secondColorSelected,
       isDivisible,
       const DeepCollectionEquality().hash(_drugPriorities),
+      const DeepCollectionEquality().hash(_drugScheduleDefinitions),
       const DeepCollectionEquality().hash(_drugTypes),
       const DeepCollectionEquality().hash(_drugIcons),
       const DeepCollectionEquality().hash(_drugColors),
@@ -388,6 +418,7 @@ abstract class _DrugState implements DrugState {
       final int? secondColorSelected,
       final bool? isDivisible,
       final List<DrugPriority>? drugPriorities,
+      final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
@@ -406,6 +437,8 @@ abstract class _DrugState implements DrugState {
   bool? get isDivisible;
   @override
   List<DrugPriority>? get drugPriorities;
+  @override
+  List<DrugScheduleDefinitions>? get drugScheduleDefinitions;
   @override
   List<DrugType>? get drugTypes;
   @override
