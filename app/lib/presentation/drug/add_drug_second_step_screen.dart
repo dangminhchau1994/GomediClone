@@ -1,9 +1,7 @@
 import 'package:app/application/blocs/drug/drug_bloc.dart';
-import 'package:app/application/blocs/drug/drug_event.dart';
-import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
-import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
+import 'package:app/presentation/drug/widget/drug_duration_input.dart';
 import 'package:app/presentation/drug/widget/drug_time_dose_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,6 +33,8 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  var timeCounts = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,32 +58,22 @@ class _BodyState extends State<Body> {
                     title: 'How many times a day?',
                     textInputType: TextInputType.number,
                     onChanged: (value) {
-                      if (value.isEmpty) {
-                        return;
-                      }
-                      final times = int.parse(value);
-                      final drugSchedules = <DrugScheduleDefinitions>[];
-                      for (var i = 0; i < times; i++) {
-                        drugSchedules.add(DrugScheduleDefinitions());
-                        context.read<DrugBloc>().add(
-                              DrugEvent.addDrugSchedule(drugSchedules),
-                            );
-                      }
+                      if (value.isEmpty) return;
+                      setState(() {
+                        timeCounts = int.parse(value);
+                      });
                     },
                   ),
                   const SizedBox(
                     height: mediumPaddingTOp,
                   ),
-                  BlocBuilder<DrugBloc, DrugState>(
-                    builder: (context, state) => DrugTimeDoseInput(
-                      drugSchedules: state.drugScheduleDefinitions ?? [],
-                      updateSchedule: (drugSchedules) {
-                        context.read<DrugBloc>().add(
-                              DrugEvent.addDrugSchedule(drugSchedules ?? []),
-                            );
-                      },
-                    ),
-                  )
+                  DrugTimeDoseInput(
+                    timeCounts: timeCounts,
+                  ),
+                  const SizedBox(
+                    height: mediumPaddingTOp,
+                  ),
+                  const DrugDurationInput()
                 ],
               ),
             ),

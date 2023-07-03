@@ -16,9 +16,10 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     on<GetDrugIcons>(_getDrugIcons);
     on<GetDrugColors>(_getDrugColors);
     on<AddDrugSchedule>(
-      (event, emit) => emit(
-        state.copyWith(drugScheduleDefinitions: event.drugSchedules),
-      ),
+      (event, emit) {
+        emit(state.copyWith(drugScheduleDefinitions: []));
+        emit(state.copyWith(drugScheduleDefinitions: event.drugSchedules));
+      },
     );
     on<AddDrugTypeId>(
       (event, emit) => emit(

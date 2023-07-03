@@ -1,22 +1,20 @@
-import 'package:app/application/constants/string_constanst.dart';
-import 'package:app/application/utils/time_utils.dart';
+import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:app/presentation/drug/widget/drug_time_dose_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../application/blocs/drug/drug_event.dart';
 import '../../../application/constants/dimensions.dart';
 import '../../../application/widgets/ui_primary_button.dart';
-import '../../../application/widgets/ui_text_input.dart';
 
-// ignore: must_be_immutable
 class DrugTimeDoseInput extends StatefulWidget {
-  DrugTimeDoseInput({
+  const DrugTimeDoseInput({
     super.key,
-    required this.drugSchedules,
-    this.updateSchedule,
+    this.timeCounts = 0,
   });
 
-  List<DrugScheduleDefinitions> drugSchedules;
-  final Function(List<DrugScheduleDefinitions>? drugSchedules)? updateSchedule;
+  final int? timeCounts;
 
   @override
   State<DrugTimeDoseInput> createState() => _DrugTimeDoseInputState();
@@ -24,6 +22,7 @@ class DrugTimeDoseInput extends StatefulWidget {
 
 class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
   var formKey = GlobalKey<FormState>();
+  var drugSchedules = <DrugScheduleDefinitions>[];
 
   Future<void> _showBottomSheet() {
     final dialog = showModalBottomSheet(
@@ -35,7 +34,7 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
           topRight: Radius.circular(borderRadius),
         ),
       ),
-      builder: (context) {
+      builder: (buidContext) {
         return SizedBox(
           height: 400,
           child: Form(
@@ -44,12 +43,10 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
               fit: StackFit.expand,
               children: [
                 Positioned.fill(
-                  child: DrugTimeDose(
-                    drugSchedules: widget.drugSchedules,
-                    updateSchedule: (schedules) {
-                      setState(() {
-                        widget.drugSchedules = schedules!;
-                      });
+                  child: DrugTimeDoseList(
+                    drugSchedules: drugSchedules,
+                    updateDrugSchedules: (newSchedules) {
+                      drugSchedules = newSchedules;
                     },
                   ),
                 ),
@@ -92,6 +89,8 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
                               onPressed: () {
                                 if (formKey.currentState!.validate()) {
                                   Navigator.of(context).pop();
+                                  context.read<DrugBloc>().add(
+                                      DrugEvent.addDrugSchedule(drugSchedules));
                                 }
                               },
                             ),
@@ -112,11 +111,9 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
 
   @override
   Widget build(BuildContext context) {
-    var times = '';
-
-    for (var i = 0; i < widget.drugSchedules.length; i++) {
-      times +=
-          ' ${widget.drugSchedules[i].drugTime} - ${widget.drugSchedules[i].doseQuantity}x dose,';
+    drugSchedules = <DrugScheduleDefinitions>[];
+    for (var i = 0; i < widget.timeCounts!; i++) {
+      drugSchedules.add(DrugScheduleDefinitions());
     }
 
     return Column(
@@ -131,192 +128,50 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
         const SizedBox(
           height: paddingtTop,
         ),
-        GestureDetector(
-          onTap: () async => _showBottomSheet(),
-          child: Container(
-            padding: const EdgeInsets.all(paddingAll),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.circular(borderRadius),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(
-                  child: Text(
-                    times,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
+        BlocBuilder<DrugBloc, DrugState>(
+          builder: (context, state) {
+            var times = '';
+            var drugScheduleDefinitions = state.drugScheduleDefinitions ?? [];
+
+            for (var i = 0; i < drugScheduleDefinitions.length; i++) {
+              if (drugScheduleDefinitions[i].doseQuantity != null) {
+                times +=
+                    ' ${drugScheduleDefinitions[i].drugTime ?? '00:00:00'} - ${drugScheduleDefinitions[i].doseQuantity}x dose,';
+              }
+            }
+
+            return GestureDetector(
+              onTap: () async => _showBottomSheet(),
+              child: Container(
+                padding: const EdgeInsets.all(paddingAll),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(borderRadius),
                 ),
-                const Icon(
-                  Icons.arrow_drop_down,
-                  color: Colors.black,
-                  size: 20,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        times,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.black,
+                      size: 20,
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         )
       ],
     );
   }
-}
-
-class DrugTimeDose extends StatefulWidget {
-  const DrugTimeDose({
-    super.key,
-    this.drugSchedules,
-    this.updateSchedule,
-  });
-
-  final List<DrugScheduleDefinitions>? drugSchedules;
-  final Function(List<DrugScheduleDefinitions>? drugSchedules)? updateSchedule;
-
-  @override
-  State<DrugTimeDose> createState() => _DrugTimeDoseState();
-}
-
-class _DrugTimeDoseState extends State<DrugTimeDose> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                'Time and dose',
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-            ),
-            const Divider(
-              height: 0.5,
-              color: Colors.grey,
-            )
-          ],
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height / 3.5,
-          child: ListView.builder(
-            itemCount: widget.drugSchedules?.length ?? 0,
-            physics: const AlwaysScrollableScrollPhysics(),
-            scrollDirection: Axis.vertical,
-            itemBuilder: (context, index) => Container(
-              margin: const EdgeInsets.symmetric(
-                horizontal: paddingLeft,
-                vertical: paddingLeft,
-              ),
-              child: DrugTimeInputDoseRow(
-                index: index,
-                drugSchedule: widget.drugSchedules?[index],
-                drugSchedules: widget.drugSchedules,
-                updateSchedule: widget.updateSchedule,
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// ignore: must_be_immutable
-class DrugTimeInputDoseRow extends StatefulWidget {
-  DrugTimeInputDoseRow({
-    super.key,
-    this.index,
-    this.drugSchedule,
-    this.drugSchedules,
-    this.updateSchedule,
-  });
-
-  int? index;
-  DrugScheduleDefinitions? drugSchedule;
-  List<DrugScheduleDefinitions>? drugSchedules;
-  Function(List<DrugScheduleDefinitions>? drugSchedules)? updateSchedule;
-
-  @override
-  State<DrugTimeInputDoseRow> createState() => _DrugTimeInputDoseRowState();
-}
-
-class _DrugTimeInputDoseRowState extends State<DrugTimeInputDoseRow>
-    with AutomaticKeepAliveClientMixin {
-  DrugScheduleDefinitions? drugSchedule;
-
-  @override
-  void initState() {
-    super.initState();
-    drugSchedule = widget.drugSchedule;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    super.build(context);
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Dose: ${widget.index! + 1}',
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: 200,
-                height: 100,
-                child: CupertinoTimerPicker(
-                  mode: CupertinoTimerPickerMode.hm,
-                  onTimerDurationChanged: (Duration value) {
-                    drugSchedule?.drugTime = TimeUtils.convertDuration(value);
-                    widget.updateSchedule!(widget.drugSchedules);
-                  },
-                ),
-              ),
-              const SizedBox(
-                width: paddingLeft,
-              ),
-              SizedBox(
-                width: 100,
-                child: UITextInput(
-                  textHint: 'dose',
-                  onChanged: (value) {
-                    if (value.isEmpty) return;
-                    drugSchedule?.doseQuantity = int.parse(value);
-                    widget.updateSchedule!(widget.drugSchedules);
-                  },
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return StringConstants.emptyInput;
-                    } else {
-                      return null;
-                    }
-                  },
-                ),
-              )
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-  @override
-  bool get wantKeepAlive => true;
 }
