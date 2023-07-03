@@ -6,7 +6,6 @@ import 'application/utils/share_preferences.dart';
 import 'di/service_locator.dart';
 
 void main() async {
-  final navigatorKey = GlobalKey<NavigatorState>();
   final appConfig = AppConfig.create(
     appName: "Gomedi Prod",
     baseUrl: Endpoints.prodUrl,
@@ -14,9 +13,6 @@ void main() async {
   );
   WidgetsFlutterBinding.ensureInitialized();
   await SharePref().init();
-  setupLocator(appConfig.baseUrl, navigatorKey);
-  runApp(App(
-    appConfig: appConfig,
-    navigatorKey: navigatorKey,
-  ));
+  setupLocator(appConfig.baseUrl);
+  runApp(App(appConfig: appConfig));
 }
