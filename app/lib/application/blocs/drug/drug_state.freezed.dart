@@ -22,6 +22,10 @@ mixin _$DrugState {
   int? get firstColorSelected => throw _privateConstructorUsedError;
   int? get secondColorSelected => throw _privateConstructorUsedError;
   bool? get isDivisible => throw _privateConstructorUsedError;
+  bool? get showEndDatePicker => throw _privateConstructorUsedError;
+  String? get startDate => throw _privateConstructorUsedError;
+  String? get endDate => throw _privateConstructorUsedError;
+  String? get durationDate => throw _privateConstructorUsedError;
   List<DrugPriority>? get drugPriorities => throw _privateConstructorUsedError;
   List<DrugScheduleDefinitions>? get drugScheduleDefinitions =>
       throw _privateConstructorUsedError;
@@ -48,6 +52,10 @@ abstract class $DrugStateCopyWith<$Res> {
       int? firstColorSelected,
       int? secondColorSelected,
       bool? isDivisible,
+      bool? showEndDatePicker,
+      String? startDate,
+      String? endDate,
+      String? durationDate,
       List<DrugPriority>? drugPriorities,
       List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       List<DrugType>? drugTypes,
@@ -79,6 +87,10 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
     Object? firstColorSelected = freezed,
     Object? secondColorSelected = freezed,
     Object? isDivisible = freezed,
+    Object? showEndDatePicker = freezed,
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+    Object? durationDate = freezed,
     Object? drugPriorities = freezed,
     Object? drugScheduleDefinitions = freezed,
     Object? drugTypes = freezed,
@@ -112,6 +124,22 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
           ? _value.isDivisible
           : isDivisible // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showEndDatePicker: freezed == showEndDatePicker
+          ? _value.showEndDatePicker
+          : showEndDatePicker // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      startDate: freezed == startDate
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      endDate: freezed == endDate
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      durationDate: freezed == durationDate
+          ? _value.durationDate
+          : durationDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       drugPriorities: freezed == drugPriorities
           ? _value.drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
@@ -182,6 +210,10 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
       int? firstColorSelected,
       int? secondColorSelected,
       bool? isDivisible,
+      bool? showEndDatePicker,
+      String? startDate,
+      String? endDate,
+      String? durationDate,
       List<DrugPriority>? drugPriorities,
       List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       List<DrugType>? drugTypes,
@@ -213,6 +245,10 @@ class __$$_DrugStateCopyWithImpl<$Res>
     Object? firstColorSelected = freezed,
     Object? secondColorSelected = freezed,
     Object? isDivisible = freezed,
+    Object? showEndDatePicker = freezed,
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+    Object? durationDate = freezed,
     Object? drugPriorities = freezed,
     Object? drugScheduleDefinitions = freezed,
     Object? drugTypes = freezed,
@@ -246,6 +282,22 @@ class __$$_DrugStateCopyWithImpl<$Res>
           ? _value.isDivisible
           : isDivisible // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showEndDatePicker: freezed == showEndDatePicker
+          ? _value.showEndDatePicker
+          : showEndDatePicker // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      startDate: freezed == startDate
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      endDate: freezed == endDate
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      durationDate: freezed == durationDate
+          ? _value.durationDate
+          : durationDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       drugPriorities: freezed == drugPriorities
           ? _value._drugPriorities
           : drugPriorities // ignore: cast_nullable_to_non_nullable
@@ -288,6 +340,10 @@ class _$_DrugState implements _DrugState {
       this.firstColorSelected,
       this.secondColorSelected,
       this.isDivisible,
+      this.showEndDatePicker,
+      this.startDate,
+      this.endDate,
+      this.durationDate,
       final List<DrugPriority>? drugPriorities,
       final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       final List<DrugType>? drugTypes,
@@ -313,6 +369,14 @@ class _$_DrugState implements _DrugState {
   final int? secondColorSelected;
   @override
   final bool? isDivisible;
+  @override
+  final bool? showEndDatePicker;
+  @override
+  final String? startDate;
+  @override
+  final String? endDate;
+  @override
+  final String? durationDate;
   final List<DrugPriority>? _drugPriorities;
   @override
   List<DrugPriority>? get drugPriorities {
@@ -371,7 +435,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(times: $times, drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(times: $times, drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -390,6 +454,13 @@ class _$_DrugState implements _DrugState {
                 other.secondColorSelected == secondColorSelected) &&
             (identical(other.isDivisible, isDivisible) ||
                 other.isDivisible == isDivisible) &&
+            (identical(other.showEndDatePicker, showEndDatePicker) ||
+                other.showEndDatePicker == showEndDatePicker) &&
+            (identical(other.startDate, startDate) ||
+                other.startDate == startDate) &&
+            (identical(other.endDate, endDate) || other.endDate == endDate) &&
+            (identical(other.durationDate, durationDate) ||
+                other.durationDate == durationDate) &&
             const DeepCollectionEquality()
                 .equals(other._drugPriorities, _drugPriorities) &&
             const DeepCollectionEquality().equals(
@@ -413,6 +484,10 @@ class _$_DrugState implements _DrugState {
       firstColorSelected,
       secondColorSelected,
       isDivisible,
+      showEndDatePicker,
+      startDate,
+      endDate,
+      durationDate,
       const DeepCollectionEquality().hash(_drugPriorities),
       const DeepCollectionEquality().hash(_drugScheduleDefinitions),
       const DeepCollectionEquality().hash(_drugTypes),
@@ -436,6 +511,10 @@ abstract class _DrugState implements DrugState {
       final int? firstColorSelected,
       final int? secondColorSelected,
       final bool? isDivisible,
+      final bool? showEndDatePicker,
+      final String? startDate,
+      final String? endDate,
+      final String? durationDate,
       final List<DrugPriority>? drugPriorities,
       final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
       final List<DrugType>? drugTypes,
@@ -456,6 +535,14 @@ abstract class _DrugState implements DrugState {
   int? get secondColorSelected;
   @override
   bool? get isDivisible;
+  @override
+  bool? get showEndDatePicker;
+  @override
+  String? get startDate;
+  @override
+  String? get endDate;
+  @override
+  String? get durationDate;
   @override
   List<DrugPriority>? get drugPriorities;
   @override

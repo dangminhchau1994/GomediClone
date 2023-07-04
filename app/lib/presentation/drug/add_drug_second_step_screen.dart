@@ -3,6 +3,7 @@ import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
 import 'package:app/presentation/drug/widget/drug_duration_input.dart';
 import 'package:app/presentation/drug/widget/drug_time_dose_input.dart';
+import 'package:app/presentation/drug/widget/drug_weekdays_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -73,7 +74,13 @@ class _BodyState extends State<Body> {
                   const SizedBox(
                     height: mediumPaddingTOp,
                   ),
-                  const DrugDurationInput()
+                  DrugDurationInput(
+                    bloc: context.read<DrugBloc>(),
+                  ),
+                  const SizedBox(
+                    height: mediumPaddingTOp,
+                  ),
+                  const DrugWeekdaysInput(),
                 ],
               ),
             ),

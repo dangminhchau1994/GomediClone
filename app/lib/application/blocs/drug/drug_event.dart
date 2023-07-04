@@ -27,4 +27,12 @@ class DrugEvent with _$DrugEvent {
 
   const factory DrugEvent.addDrugSchedule(
       List<DrugScheduleDefinitions> drugSchedules) = AddDrugSchedule;
+
+  const factory DrugEvent.addStartDate(String startDate) = AddStartDate;
+
+  const factory DrugEvent.addEndDate(String endDate) = AddEndDate;
+
+  const factory DrugEvent.showEndDatePicker(bool isShow) = ShowEndDatePicker;
+
+  const factory DrugEvent.addDateDuration(String duration) = AddDateDuration;
 }

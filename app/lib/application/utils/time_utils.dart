@@ -13,6 +13,10 @@ class TimeUtils {
     );
   }
 
+  static String convertToDate(DateTime date) {
+    return DateFormat('dd-MM-yyyy').format(date);
+  }
+
   static String convertDuration(Duration duration) {
     return duration.toString().split('.').first.padLeft(8, "0");
   }

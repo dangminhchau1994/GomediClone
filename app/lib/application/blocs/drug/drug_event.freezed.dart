@@ -29,6 +29,10 @@ mixin _$DrugEvent {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +48,10 @@ mixin _$DrugEvent {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +67,10 @@ mixin _$DrugEvent {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -76,6 +88,10 @@ mixin _$DrugEvent {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -90,6 +106,10 @@ mixin _$DrugEvent {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -104,6 +124,10 @@ mixin _$DrugEvent {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -175,6 +199,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return getDrugPriorities();
   }
@@ -193,6 +221,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return getDrugPriorities?.call();
   }
@@ -211,6 +243,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -234,6 +270,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return getDrugPriorities(this);
   }
@@ -251,6 +291,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return getDrugPriorities?.call(this);
   }
@@ -268,6 +312,10 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -330,6 +378,10 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return getDrugTypes();
   }
@@ -348,6 +400,10 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return getDrugTypes?.call();
   }
@@ -366,6 +422,10 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -389,6 +449,10 @@ class _$GetDrugTypes implements GetDrugTypes {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return getDrugTypes(this);
   }
@@ -406,6 +470,10 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return getDrugTypes?.call(this);
   }
@@ -423,6 +491,10 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -485,6 +557,10 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return getDrugIcons();
   }
@@ -503,6 +579,10 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return getDrugIcons?.call();
   }
@@ -521,6 +601,10 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -544,6 +628,10 @@ class _$GetDrugIcons implements GetDrugIcons {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return getDrugIcons(this);
   }
@@ -561,6 +649,10 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return getDrugIcons?.call(this);
   }
@@ -578,6 +670,10 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -640,6 +736,10 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return getDrugColors();
   }
@@ -658,6 +758,10 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return getDrugColors?.call();
   }
@@ -676,6 +780,10 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -699,6 +807,10 @@ class _$GetDrugColors implements GetDrugColors {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return getDrugColors(this);
   }
@@ -716,6 +828,10 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return getDrugColors?.call(this);
   }
@@ -733,6 +849,10 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -822,6 +942,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return addDrugTypeId(drugTypeId);
   }
@@ -840,6 +964,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return addDrugTypeId?.call(drugTypeId);
   }
@@ -858,6 +986,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -881,6 +1013,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return addDrugTypeId(this);
   }
@@ -898,6 +1034,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return addDrugTypeId?.call(this);
   }
@@ -915,6 +1055,10 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -1009,6 +1153,10 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return drugIconSelected(iconSelected);
   }
@@ -1027,6 +1175,10 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return drugIconSelected?.call(iconSelected);
   }
@@ -1045,6 +1197,10 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1068,6 +1224,10 @@ class _$DrugIconSelected implements DrugIconSelected {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return drugIconSelected(this);
   }
@@ -1085,6 +1245,10 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return drugIconSelected?.call(this);
   }
@@ -1102,6 +1266,10 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1197,6 +1365,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return drugFirstColorSelected(colorSelected);
   }
@@ -1215,6 +1387,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return drugFirstColorSelected?.call(colorSelected);
   }
@@ -1233,6 +1409,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1256,6 +1436,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return drugFirstColorSelected(this);
   }
@@ -1273,6 +1457,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return drugFirstColorSelected?.call(this);
   }
@@ -1290,6 +1478,10 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1386,6 +1578,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return drugSecondColorSelected(secondColorSelected);
   }
@@ -1404,6 +1600,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return drugSecondColorSelected?.call(secondColorSelected);
   }
@@ -1422,6 +1622,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1445,6 +1649,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return drugSecondColorSelected(this);
   }
@@ -1462,6 +1670,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return drugSecondColorSelected?.call(this);
   }
@@ -1479,6 +1691,10 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1574,6 +1790,10 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return isDrugDivisible(this.isDrugDivisible);
   }
@@ -1592,6 +1812,10 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return isDrugDivisible?.call(this.isDrugDivisible);
   }
@@ -1610,6 +1834,10 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -1633,6 +1861,10 @@ class _$DrugDivisible implements DrugDivisible {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return isDrugDivisible(this);
   }
@@ -1650,6 +1882,10 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return isDrugDivisible?.call(this);
   }
@@ -1667,6 +1903,10 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -1768,6 +2008,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
     required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
         addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
   }) {
     return addDrugSchedule(drugSchedules);
   }
@@ -1786,6 +2030,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
     TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
   }) {
     return addDrugSchedule?.call(drugSchedules);
   }
@@ -1804,6 +2052,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
     TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
         addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
     required TResult orElse(),
   }) {
     if (addDrugSchedule != null) {
@@ -1827,6 +2079,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
         drugSecondColorSelected,
     required TResult Function(DrugDivisible value) isDrugDivisible,
     required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
   }) {
     return addDrugSchedule(this);
   }
@@ -1844,6 +2100,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
     TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
   }) {
     return addDrugSchedule?.call(this);
   }
@@ -1861,6 +2121,10 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
     TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
     required TResult orElse(),
   }) {
     if (addDrugSchedule != null) {
@@ -1877,5 +2141,847 @@ abstract class AddDrugSchedule implements DrugEvent {
   List<DrugScheduleDefinitions> get drugSchedules;
   @JsonKey(ignore: true)
   _$$AddDrugScheduleCopyWith<_$AddDrugSchedule> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddStartDateCopyWith<$Res> {
+  factory _$$AddStartDateCopyWith(
+          _$AddStartDate value, $Res Function(_$AddStartDate) then) =
+      __$$AddStartDateCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String startDate});
+}
+
+/// @nodoc
+class __$$AddStartDateCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddStartDate>
+    implements _$$AddStartDateCopyWith<$Res> {
+  __$$AddStartDateCopyWithImpl(
+      _$AddStartDate _value, $Res Function(_$AddStartDate) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? startDate = null,
+  }) {
+    return _then(_$AddStartDate(
+      null == startDate
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddStartDate implements AddStartDate {
+  const _$AddStartDate(this.startDate);
+
+  @override
+  final String startDate;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addStartDate(startDate: $startDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddStartDate &&
+            (identical(other.startDate, startDate) ||
+                other.startDate == startDate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, startDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddStartDateCopyWith<_$AddStartDate> get copyWith =>
+      __$$AddStartDateCopyWithImpl<_$AddStartDate>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+  }) {
+    return addStartDate(startDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+  }) {
+    return addStartDate?.call(startDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addStartDate != null) {
+      return addStartDate(startDate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+  }) {
+    return addStartDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+  }) {
+    return addStartDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addStartDate != null) {
+      return addStartDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddStartDate implements DrugEvent {
+  const factory AddStartDate(final String startDate) = _$AddStartDate;
+
+  String get startDate;
+  @JsonKey(ignore: true)
+  _$$AddStartDateCopyWith<_$AddStartDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddEndDateCopyWith<$Res> {
+  factory _$$AddEndDateCopyWith(
+          _$AddEndDate value, $Res Function(_$AddEndDate) then) =
+      __$$AddEndDateCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String endDate});
+}
+
+/// @nodoc
+class __$$AddEndDateCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddEndDate>
+    implements _$$AddEndDateCopyWith<$Res> {
+  __$$AddEndDateCopyWithImpl(
+      _$AddEndDate _value, $Res Function(_$AddEndDate) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? endDate = null,
+  }) {
+    return _then(_$AddEndDate(
+      null == endDate
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddEndDate implements AddEndDate {
+  const _$AddEndDate(this.endDate);
+
+  @override
+  final String endDate;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addEndDate(endDate: $endDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddEndDate &&
+            (identical(other.endDate, endDate) || other.endDate == endDate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, endDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddEndDateCopyWith<_$AddEndDate> get copyWith =>
+      __$$AddEndDateCopyWithImpl<_$AddEndDate>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+  }) {
+    return addEndDate(endDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+  }) {
+    return addEndDate?.call(endDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addEndDate != null) {
+      return addEndDate(endDate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+  }) {
+    return addEndDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+  }) {
+    return addEndDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addEndDate != null) {
+      return addEndDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddEndDate implements DrugEvent {
+  const factory AddEndDate(final String endDate) = _$AddEndDate;
+
+  String get endDate;
+  @JsonKey(ignore: true)
+  _$$AddEndDateCopyWith<_$AddEndDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowEndDatePickerCopyWith<$Res> {
+  factory _$$ShowEndDatePickerCopyWith(
+          _$ShowEndDatePicker value, $Res Function(_$ShowEndDatePicker) then) =
+      __$$ShowEndDatePickerCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isShow});
+}
+
+/// @nodoc
+class __$$ShowEndDatePickerCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$ShowEndDatePicker>
+    implements _$$ShowEndDatePickerCopyWith<$Res> {
+  __$$ShowEndDatePickerCopyWithImpl(
+      _$ShowEndDatePicker _value, $Res Function(_$ShowEndDatePicker) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isShow = null,
+  }) {
+    return _then(_$ShowEndDatePicker(
+      null == isShow
+          ? _value.isShow
+          : isShow // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShowEndDatePicker implements ShowEndDatePicker {
+  const _$ShowEndDatePicker(this.isShow);
+
+  @override
+  final bool isShow;
+
+  @override
+  String toString() {
+    return 'DrugEvent.showEndDatePicker(isShow: $isShow)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowEndDatePicker &&
+            (identical(other.isShow, isShow) || other.isShow == isShow));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isShow);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowEndDatePickerCopyWith<_$ShowEndDatePicker> get copyWith =>
+      __$$ShowEndDatePickerCopyWithImpl<_$ShowEndDatePicker>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+  }) {
+    return showEndDatePicker(isShow);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+  }) {
+    return showEndDatePicker?.call(isShow);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (showEndDatePicker != null) {
+      return showEndDatePicker(isShow);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+  }) {
+    return showEndDatePicker(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+  }) {
+    return showEndDatePicker?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (showEndDatePicker != null) {
+      return showEndDatePicker(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowEndDatePicker implements DrugEvent {
+  const factory ShowEndDatePicker(final bool isShow) = _$ShowEndDatePicker;
+
+  bool get isShow;
+  @JsonKey(ignore: true)
+  _$$ShowEndDatePickerCopyWith<_$ShowEndDatePicker> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDateDurationCopyWith<$Res> {
+  factory _$$AddDateDurationCopyWith(
+          _$AddDateDuration value, $Res Function(_$AddDateDuration) then) =
+      __$$AddDateDurationCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String duration});
+}
+
+/// @nodoc
+class __$$AddDateDurationCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDateDuration>
+    implements _$$AddDateDurationCopyWith<$Res> {
+  __$$AddDateDurationCopyWithImpl(
+      _$AddDateDuration _value, $Res Function(_$AddDateDuration) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? duration = null,
+  }) {
+    return _then(_$AddDateDuration(
+      null == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDateDuration implements AddDateDuration {
+  const _$AddDateDuration(this.duration);
+
+  @override
+  final String duration;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addDateDuration(duration: $duration)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDateDuration &&
+            (identical(other.duration, duration) ||
+                other.duration == duration));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, duration);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDateDurationCopyWith<_$AddDateDuration> get copyWith =>
+      __$$AddDateDurationCopyWithImpl<_$AddDateDuration>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+  }) {
+    return addDateDuration(duration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+  }) {
+    return addDateDuration?.call(duration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addDateDuration != null) {
+      return addDateDuration(duration);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+  }) {
+    return addDateDuration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+  }) {
+    return addDateDuration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    required TResult orElse(),
+  }) {
+    if (addDateDuration != null) {
+      return addDateDuration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDateDuration implements DrugEvent {
+  const factory AddDateDuration(final String duration) = _$AddDateDuration;
+
+  String get duration;
+  @JsonKey(ignore: true)
+  _$$AddDateDurationCopyWith<_$AddDateDuration> get copyWith =>
       throw _privateConstructorUsedError;
 }

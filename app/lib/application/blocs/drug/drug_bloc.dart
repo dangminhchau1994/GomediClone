@@ -21,9 +21,29 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
         emit(state.copyWith(drugScheduleDefinitions: event.drugSchedules));
       },
     );
+    on<AddStartDate>(
+      (event, emit) {
+        emit(state.copyWith(startDate: event.startDate));
+      },
+    );
+    on<AddEndDate>(
+      (event, emit) {
+        emit(state.copyWith(endDate: event.endDate));
+      },
+    );
+    on<AddDateDuration>(
+      (event, emit) {
+        emit(state.copyWith(durationDate: event.duration));
+      },
+    );
     on<AddDrugTypeId>(
       (event, emit) => emit(
         state.copyWith(drugTypeId: event.drugTypeId),
+      ),
+    );
+    on<ShowEndDatePicker>(
+      (event, emit) => emit(
+        state.copyWith(showEndDatePicker: event.isShow),
       ),
     );
     on<DrugIconSelected>(
