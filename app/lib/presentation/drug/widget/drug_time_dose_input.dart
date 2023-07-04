@@ -132,7 +132,6 @@ class _DrugTimeDoseInputState extends State<DrugTimeDoseInput> {
           builder: (context, state) {
             var times = '';
             var drugScheduleDefinitions = state.drugScheduleDefinitions ?? [];
-
             for (var i = 0; i < drugScheduleDefinitions.length; i++) {
               if (drugScheduleDefinitions[i].doseQuantity != null) {
                 times +=

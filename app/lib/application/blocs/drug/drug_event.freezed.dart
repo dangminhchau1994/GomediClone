@@ -33,6 +33,7 @@ mixin _$DrugEvent {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +53,7 @@ mixin _$DrugEvent {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +73,7 @@ mixin _$DrugEvent {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -92,6 +95,7 @@ mixin _$DrugEvent {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -110,6 +114,7 @@ mixin _$DrugEvent {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -128,6 +133,7 @@ mixin _$DrugEvent {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -203,6 +209,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return getDrugPriorities();
   }
@@ -225,6 +232,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return getDrugPriorities?.call();
   }
@@ -247,6 +255,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -274,6 +283,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return getDrugPriorities(this);
   }
@@ -295,6 +305,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return getDrugPriorities?.call(this);
   }
@@ -316,6 +327,7 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugPriorities != null) {
@@ -382,6 +394,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return getDrugTypes();
   }
@@ -404,6 +417,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return getDrugTypes?.call();
   }
@@ -426,6 +440,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -453,6 +468,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return getDrugTypes(this);
   }
@@ -474,6 +490,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return getDrugTypes?.call(this);
   }
@@ -495,6 +512,7 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugTypes != null) {
@@ -561,6 +579,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return getDrugIcons();
   }
@@ -583,6 +602,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return getDrugIcons?.call();
   }
@@ -605,6 +625,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -632,6 +653,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return getDrugIcons(this);
   }
@@ -653,6 +675,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return getDrugIcons?.call(this);
   }
@@ -674,6 +697,7 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugIcons != null) {
@@ -740,6 +764,7 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return getDrugColors();
   }
@@ -762,6 +787,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return getDrugColors?.call();
   }
@@ -784,6 +810,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -811,6 +838,7 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return getDrugColors(this);
   }
@@ -832,6 +860,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return getDrugColors?.call(this);
   }
@@ -853,6 +882,7 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (getDrugColors != null) {
@@ -946,6 +976,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return addDrugTypeId(drugTypeId);
   }
@@ -968,6 +999,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return addDrugTypeId?.call(drugTypeId);
   }
@@ -990,6 +1022,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -1017,6 +1050,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return addDrugTypeId(this);
   }
@@ -1038,6 +1072,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return addDrugTypeId?.call(this);
   }
@@ -1059,6 +1094,7 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDrugTypeId != null) {
@@ -1157,6 +1193,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return drugIconSelected(iconSelected);
   }
@@ -1179,6 +1216,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return drugIconSelected?.call(iconSelected);
   }
@@ -1201,6 +1239,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1228,6 +1267,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return drugIconSelected(this);
   }
@@ -1249,6 +1289,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return drugIconSelected?.call(this);
   }
@@ -1270,6 +1311,7 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugIconSelected != null) {
@@ -1369,6 +1411,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return drugFirstColorSelected(colorSelected);
   }
@@ -1391,6 +1434,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return drugFirstColorSelected?.call(colorSelected);
   }
@@ -1413,6 +1457,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1440,6 +1485,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return drugFirstColorSelected(this);
   }
@@ -1461,6 +1507,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return drugFirstColorSelected?.call(this);
   }
@@ -1482,6 +1529,7 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugFirstColorSelected != null) {
@@ -1582,6 +1630,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return drugSecondColorSelected(secondColorSelected);
   }
@@ -1604,6 +1653,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return drugSecondColorSelected?.call(secondColorSelected);
   }
@@ -1626,6 +1676,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1653,6 +1704,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return drugSecondColorSelected(this);
   }
@@ -1674,6 +1726,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return drugSecondColorSelected?.call(this);
   }
@@ -1695,6 +1748,7 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (drugSecondColorSelected != null) {
@@ -1794,6 +1848,7 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return isDrugDivisible(this.isDrugDivisible);
   }
@@ -1816,6 +1871,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return isDrugDivisible?.call(this.isDrugDivisible);
   }
@@ -1838,6 +1894,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -1865,6 +1922,7 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return isDrugDivisible(this);
   }
@@ -1886,6 +1944,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return isDrugDivisible?.call(this);
   }
@@ -1907,6 +1966,7 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (isDrugDivisible != null) {
@@ -2012,6 +2072,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return addDrugSchedule(drugSchedules);
   }
@@ -2034,6 +2095,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return addDrugSchedule?.call(drugSchedules);
   }
@@ -2056,6 +2118,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDrugSchedule != null) {
@@ -2083,6 +2146,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return addDrugSchedule(this);
   }
@@ -2104,6 +2168,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return addDrugSchedule?.call(this);
   }
@@ -2125,6 +2190,7 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDrugSchedule != null) {
@@ -2224,6 +2290,7 @@ class _$AddStartDate implements AddStartDate {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return addStartDate(startDate);
   }
@@ -2246,6 +2313,7 @@ class _$AddStartDate implements AddStartDate {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return addStartDate?.call(startDate);
   }
@@ -2268,6 +2336,7 @@ class _$AddStartDate implements AddStartDate {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addStartDate != null) {
@@ -2295,6 +2364,7 @@ class _$AddStartDate implements AddStartDate {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return addStartDate(this);
   }
@@ -2316,6 +2386,7 @@ class _$AddStartDate implements AddStartDate {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return addStartDate?.call(this);
   }
@@ -2337,6 +2408,7 @@ class _$AddStartDate implements AddStartDate {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addStartDate != null) {
@@ -2434,6 +2506,7 @@ class _$AddEndDate implements AddEndDate {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return addEndDate(endDate);
   }
@@ -2456,6 +2529,7 @@ class _$AddEndDate implements AddEndDate {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return addEndDate?.call(endDate);
   }
@@ -2478,6 +2552,7 @@ class _$AddEndDate implements AddEndDate {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addEndDate != null) {
@@ -2505,6 +2580,7 @@ class _$AddEndDate implements AddEndDate {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return addEndDate(this);
   }
@@ -2526,6 +2602,7 @@ class _$AddEndDate implements AddEndDate {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return addEndDate?.call(this);
   }
@@ -2547,6 +2624,7 @@ class _$AddEndDate implements AddEndDate {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addEndDate != null) {
@@ -2644,6 +2722,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return showEndDatePicker(isShow);
   }
@@ -2666,6 +2745,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return showEndDatePicker?.call(isShow);
   }
@@ -2688,6 +2768,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (showEndDatePicker != null) {
@@ -2715,6 +2796,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return showEndDatePicker(this);
   }
@@ -2736,6 +2818,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return showEndDatePicker?.call(this);
   }
@@ -2757,6 +2840,7 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (showEndDatePicker != null) {
@@ -2855,6 +2939,7 @@ class _$AddDateDuration implements AddDateDuration {
     required TResult Function(String endDate) addEndDate,
     required TResult Function(bool isShow) showEndDatePicker,
     required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
   }) {
     return addDateDuration(duration);
   }
@@ -2877,6 +2962,7 @@ class _$AddDateDuration implements AddDateDuration {
     TResult? Function(String endDate)? addEndDate,
     TResult? Function(bool isShow)? showEndDatePicker,
     TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
   }) {
     return addDateDuration?.call(duration);
   }
@@ -2899,6 +2985,7 @@ class _$AddDateDuration implements AddDateDuration {
     TResult Function(String endDate)? addEndDate,
     TResult Function(bool isShow)? showEndDatePicker,
     TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDateDuration != null) {
@@ -2926,6 +3013,7 @@ class _$AddDateDuration implements AddDateDuration {
     required TResult Function(AddEndDate value) addEndDate,
     required TResult Function(ShowEndDatePicker value) showEndDatePicker,
     required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
   }) {
     return addDateDuration(this);
   }
@@ -2947,6 +3035,7 @@ class _$AddDateDuration implements AddDateDuration {
     TResult? Function(AddEndDate value)? addEndDate,
     TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
   }) {
     return addDateDuration?.call(this);
   }
@@ -2968,6 +3057,7 @@ class _$AddDateDuration implements AddDateDuration {
     TResult Function(AddEndDate value)? addEndDate,
     TResult Function(ShowEndDatePicker value)? showEndDatePicker,
     TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
     required TResult orElse(),
   }) {
     if (addDateDuration != null) {
@@ -2983,5 +3073,229 @@ abstract class AddDateDuration implements DrugEvent {
   String get duration;
   @JsonKey(ignore: true)
   _$$AddDateDurationCopyWith<_$AddDateDuration> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDrugWeekdaysCopyWith<$Res> {
+  factory _$$AddDrugWeekdaysCopyWith(
+          _$AddDrugWeekdays value, $Res Function(_$AddDrugWeekdays) then) =
+      __$$AddDrugWeekdaysCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<DrugProfileWeekDays> weekdays});
+}
+
+/// @nodoc
+class __$$AddDrugWeekdaysCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDrugWeekdays>
+    implements _$$AddDrugWeekdaysCopyWith<$Res> {
+  __$$AddDrugWeekdaysCopyWithImpl(
+      _$AddDrugWeekdays _value, $Res Function(_$AddDrugWeekdays) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? weekdays = null,
+  }) {
+    return _then(_$AddDrugWeekdays(
+      null == weekdays
+          ? _value._weekdays
+          : weekdays // ignore: cast_nullable_to_non_nullable
+              as List<DrugProfileWeekDays>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDrugWeekdays implements AddDrugWeekdays {
+  const _$AddDrugWeekdays(final List<DrugProfileWeekDays> weekdays)
+      : _weekdays = weekdays;
+
+  final List<DrugProfileWeekDays> _weekdays;
+  @override
+  List<DrugProfileWeekDays> get weekdays {
+    if (_weekdays is EqualUnmodifiableListView) return _weekdays;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_weekdays);
+  }
+
+  @override
+  String toString() {
+    return 'DrugEvent.addWeekdays(weekdays: $weekdays)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDrugWeekdays &&
+            const DeepCollectionEquality().equals(other._weekdays, _weekdays));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_weekdays));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDrugWeekdaysCopyWith<_$AddDrugWeekdays> get copyWith =>
+      __$$AddDrugWeekdaysCopyWithImpl<_$AddDrugWeekdays>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addWeekdays(weekdays);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addWeekdays?.call(weekdays);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addWeekdays != null) {
+      return addWeekdays(weekdays);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addWeekdays(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addWeekdays?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addWeekdays != null) {
+      return addWeekdays(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDrugWeekdays implements DrugEvent {
+  const factory AddDrugWeekdays(final List<DrugProfileWeekDays> weekdays) =
+      _$AddDrugWeekdays;
+
+  List<DrugProfileWeekDays> get weekdays;
+  @JsonKey(ignore: true)
+  _$$AddDrugWeekdaysCopyWith<_$AddDrugWeekdays> get copyWith =>
       throw _privateConstructorUsedError;
 }

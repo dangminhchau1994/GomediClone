@@ -1,3 +1,4 @@
+import 'package:app/infrastructure/models/drug_profile/drug_profile_weekday.dart';
 import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'drug_event.freezed.dart';
@@ -35,4 +36,7 @@ class DrugEvent with _$DrugEvent {
   const factory DrugEvent.showEndDatePicker(bool isShow) = ShowEndDatePicker;
 
   const factory DrugEvent.addDateDuration(String duration) = AddDateDuration;
+
+  const factory DrugEvent.addWeekdays(List<DrugProfileWeekDays> weekdays) =
+      AddDrugWeekdays;
 }

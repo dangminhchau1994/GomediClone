@@ -10,6 +10,7 @@ DrugProfileWeekDays _$DrugProfileWeekDaysFromJson(Map<String, dynamic> json) =>
     DrugProfileWeekDays(
       id: json['id'] as int?,
       weekDayId: json['weekDayId'] as int?,
+      title: json['title'] as String?,
     );
 
 Map<String, dynamic> _$DrugProfileWeekDaysToJson(
@@ -17,4 +18,5 @@ Map<String, dynamic> _$DrugProfileWeekDaysToJson(
     <String, dynamic>{
       'id': instance.id,
       'weekDayId': instance.weekDayId,
+      'title': instance.title,
     };

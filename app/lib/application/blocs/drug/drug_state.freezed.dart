@@ -29,6 +29,8 @@ mixin _$DrugState {
   List<DrugPriority>? get drugPriorities => throw _privateConstructorUsedError;
   List<DrugScheduleDefinitions>? get drugScheduleDefinitions =>
       throw _privateConstructorUsedError;
+  List<DrugProfileWeekDays>? get drugProfieWeekdays =>
+      throw _privateConstructorUsedError;
   List<DrugType>? get drugTypes => throw _privateConstructorUsedError;
   List<DrugIcon>? get drugIcons => throw _privateConstructorUsedError;
   List<DrugColor>? get drugColors => throw _privateConstructorUsedError;
@@ -58,6 +60,7 @@ abstract class $DrugStateCopyWith<$Res> {
       String? durationDate,
       List<DrugPriority>? drugPriorities,
       List<DrugScheduleDefinitions>? drugScheduleDefinitions,
+      List<DrugProfileWeekDays>? drugProfieWeekdays,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -93,6 +96,7 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
     Object? durationDate = freezed,
     Object? drugPriorities = freezed,
     Object? drugScheduleDefinitions = freezed,
+    Object? drugProfieWeekdays = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
     Object? drugColors = freezed,
@@ -148,6 +152,10 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
           ? _value.drugScheduleDefinitions
           : drugScheduleDefinitions // ignore: cast_nullable_to_non_nullable
               as List<DrugScheduleDefinitions>?,
+      drugProfieWeekdays: freezed == drugProfieWeekdays
+          ? _value.drugProfieWeekdays
+          : drugProfieWeekdays // ignore: cast_nullable_to_non_nullable
+              as List<DrugProfileWeekDays>?,
       drugTypes: freezed == drugTypes
           ? _value.drugTypes
           : drugTypes // ignore: cast_nullable_to_non_nullable
@@ -216,6 +224,7 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
       String? durationDate,
       List<DrugPriority>? drugPriorities,
       List<DrugScheduleDefinitions>? drugScheduleDefinitions,
+      List<DrugProfileWeekDays>? drugProfieWeekdays,
       List<DrugType>? drugTypes,
       List<DrugIcon>? drugIcons,
       List<DrugColor>? drugColors,
@@ -251,6 +260,7 @@ class __$$_DrugStateCopyWithImpl<$Res>
     Object? durationDate = freezed,
     Object? drugPriorities = freezed,
     Object? drugScheduleDefinitions = freezed,
+    Object? drugProfieWeekdays = freezed,
     Object? drugTypes = freezed,
     Object? drugIcons = freezed,
     Object? drugColors = freezed,
@@ -306,6 +316,10 @@ class __$$_DrugStateCopyWithImpl<$Res>
           ? _value._drugScheduleDefinitions
           : drugScheduleDefinitions // ignore: cast_nullable_to_non_nullable
               as List<DrugScheduleDefinitions>?,
+      drugProfieWeekdays: freezed == drugProfieWeekdays
+          ? _value._drugProfieWeekdays
+          : drugProfieWeekdays // ignore: cast_nullable_to_non_nullable
+              as List<DrugProfileWeekDays>?,
       drugTypes: freezed == drugTypes
           ? _value._drugTypes
           : drugTypes // ignore: cast_nullable_to_non_nullable
@@ -346,6 +360,7 @@ class _$_DrugState implements _DrugState {
       this.durationDate,
       final List<DrugPriority>? drugPriorities,
       final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
+      final List<DrugProfileWeekDays>? drugProfieWeekdays,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
@@ -353,6 +368,7 @@ class _$_DrugState implements _DrugState {
       this.status})
       : _drugPriorities = drugPriorities,
         _drugScheduleDefinitions = drugScheduleDefinitions,
+        _drugProfieWeekdays = drugProfieWeekdays,
         _drugTypes = drugTypes,
         _drugIcons = drugIcons,
         _drugColors = drugColors;
@@ -398,6 +414,17 @@ class _$_DrugState implements _DrugState {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<DrugProfileWeekDays>? _drugProfieWeekdays;
+  @override
+  List<DrugProfileWeekDays>? get drugProfieWeekdays {
+    final value = _drugProfieWeekdays;
+    if (value == null) return null;
+    if (_drugProfieWeekdays is EqualUnmodifiableListView)
+      return _drugProfieWeekdays;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<DrugType>? _drugTypes;
   @override
   List<DrugType>? get drugTypes {
@@ -435,7 +462,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(times: $times, drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(times: $times, drugTypeId: $drugTypeId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugProfieWeekdays: $drugProfieWeekdays, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -466,6 +493,8 @@ class _$_DrugState implements _DrugState {
             const DeepCollectionEquality().equals(
                 other._drugScheduleDefinitions, _drugScheduleDefinitions) &&
             const DeepCollectionEquality()
+                .equals(other._drugProfieWeekdays, _drugProfieWeekdays) &&
+            const DeepCollectionEquality()
                 .equals(other._drugTypes, _drugTypes) &&
             const DeepCollectionEquality()
                 .equals(other._drugIcons, _drugIcons) &&
@@ -490,6 +519,7 @@ class _$_DrugState implements _DrugState {
       durationDate,
       const DeepCollectionEquality().hash(_drugPriorities),
       const DeepCollectionEquality().hash(_drugScheduleDefinitions),
+      const DeepCollectionEquality().hash(_drugProfieWeekdays),
       const DeepCollectionEquality().hash(_drugTypes),
       const DeepCollectionEquality().hash(_drugIcons),
       const DeepCollectionEquality().hash(_drugColors),
@@ -517,6 +547,7 @@ abstract class _DrugState implements DrugState {
       final String? durationDate,
       final List<DrugPriority>? drugPriorities,
       final List<DrugScheduleDefinitions>? drugScheduleDefinitions,
+      final List<DrugProfileWeekDays>? drugProfieWeekdays,
       final List<DrugType>? drugTypes,
       final List<DrugIcon>? drugIcons,
       final List<DrugColor>? drugColors,
@@ -547,6 +578,8 @@ abstract class _DrugState implements DrugState {
   List<DrugPriority>? get drugPriorities;
   @override
   List<DrugScheduleDefinitions>? get drugScheduleDefinitions;
+  @override
+  List<DrugProfileWeekDays>? get drugProfieWeekdays;
   @override
   List<DrugType>? get drugTypes;
   @override
