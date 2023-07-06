@@ -9,6 +9,7 @@ class UITextInput extends StatefulWidget {
     this.onChanged,
     this.validator,
     this.textInputType,
+    this.maxLine,
     this.isPasswordType = false,
     this.isEditType = false,
   });
@@ -21,6 +22,7 @@ class UITextInput extends StatefulWidget {
   final String? textHint;
   final bool? isPasswordType;
   final bool? isEditType;
+  final int? maxLine;
 
   @override
   State<UITextInput> createState() => _UITextInputState();
@@ -69,6 +71,7 @@ class _UITextInputState extends State<UITextInput> {
               ),
         ),
         TextFormField(
+          maxLines: widget.maxLine,
           keyboardType: widget.textInputType,
           controller: widget.editingController,
           onChanged: (value) {

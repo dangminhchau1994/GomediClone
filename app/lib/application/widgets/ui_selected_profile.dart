@@ -1,12 +1,7 @@
-import 'package:app/application/blocs/profile/profile_bloc.dart';
-import 'package:app/application/blocs/profile/profile_state.dart';
-import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../infrastructure/models/profile/profile.dart';
 import '../constants/dimensions.dart';
 
 class UISelectedProfile extends StatefulWidget {
@@ -14,9 +9,11 @@ class UISelectedProfile extends StatefulWidget {
     super.key,
     this.title,
     this.onUpdateItem,
+    this.bottomItems,
   });
 
   final String? title;
+  final List<BottomItem>? bottomItems;
   final Function(BottomItem item)? onUpdateItem;
 
   @override
@@ -29,6 +26,7 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
   Future<void> _showBottomSheet(
     List<BottomItem> bottomItems,
     BottomItem item,
+    Function(BottomItem item) itemChoosedFromDialog,
   ) {
     final dialog = showModalBottomSheet(
       context: context,
@@ -49,9 +47,7 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
                 bottomItems: bottomItems,
                 item: item,
                 onUpdateItem: (updatedItem) {
-                  widget.onUpdateItem!(updatedItem);
-                  item = updatedItem;
-                  setState(() {});
+                  itemChoosedFromDialog(updatedItem);
                 },
               ),
               Positioned(
@@ -109,6 +105,12 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    item = widget.bottomItems?[0] ?? BottomItem();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,69 +124,40 @@ class _UISelectedProfileState extends State<UISelectedProfile> {
         const SizedBox(
           height: paddingtTop,
         ),
-        BlocBuilder<ProfileBloc, ProfileState>(
-          builder: (context, state) {
-            if (state.status is Loading) {
-              return Container();
-            } else if (state.status is Success) {
-              final List<Profile> profiles = [];
-              for (var element in state.allProfiles?[0] ?? []) {
-                profiles.add(element);
-              }
-
-              for (var element in state.allProfiles?[1] ?? []) {
-                profiles.add(element);
-              }
-
-              item = profiles
-                  .map(
-                    (e) => BottomItem(
-                      title: e.name,
-                      id: e.id,
-                    ),
-                  )
-                  .toList()[0];
-
-              return GestureDetector(
-                onTap: () async => _showBottomSheet(
-                  profiles
-                      .map(
-                        (e) => BottomItem(
-                          title: e.name,
-                          id: e.id,
-                        ),
-                      )
-                      .toList(),
-                  item,
-                ),
-                child: Container(
-                  padding: const EdgeInsets.all(paddingAll),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(borderRadius),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        item.title ?? '',
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+        GestureDetector(
+          onTap: () async => _showBottomSheet(
+            widget.bottomItems ?? [],
+            item,
+            (updatedItem) {
+              widget.onUpdateItem!(updatedItem);
+              item = updatedItem;
+              setState(() {});
+            },
+          ),
+          child: Container(
+            padding: const EdgeInsets.all(paddingAll),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+              borderRadius: BorderRadius.circular(borderRadius),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  item.title ?? '',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
                       ),
-                      const Icon(
-                        Icons.arrow_drop_down,
-                        color: Colors.black,
-                        size: 20,
-                      )
-                    ],
-                  ),
                 ),
-              );
-            } else {
-              return Container();
-            }
-          },
+                const Icon(
+                  Icons.arrow_drop_down,
+                  color: Colors.black,
+                  size: 20,
+                )
+              ],
+            ),
+          ),
         )
       ],
     );
@@ -233,8 +206,9 @@ class _UIProfileListState extends State<UIProfileList> {
         ),
         title: Text(
           widget.bottomItems![index].title ?? '',
-          style: Theme.of(context).textTheme.subtitle1?.copyWith(
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.bold,
+                fontSize: 14,
               ),
         ),
       ),

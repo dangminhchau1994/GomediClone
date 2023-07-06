@@ -1,6 +1,8 @@
 import 'package:app/application/blocs/drug/drug_bloc.dart';
 import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/blocs/drug/drug_state.dart';
+import 'package:app/application/blocs/profile/profile_bloc.dart';
+import 'package:app/application/blocs/profile/profile_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/widgets/ui_app_bar.dart';
@@ -8,6 +10,7 @@ import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/application/widgets/ui_selected_profile.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_profile.dart';
 import 'package:app/presentation/drug/add_drug_second_step_screen.dart';
 import 'package:app/presentation/drug/widget/drug_list_colors.dart';
 import 'package:app/presentation/drug/widget/drug_list_icon.dart';
@@ -19,9 +22,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../di/service_locator.dart';
 import '../../domain/drug/i_drug_repository.dart';
+import '../../infrastructure/models/profile/profile.dart';
 
 class AddDrugFirstStepScreen extends StatefulWidget {
-  const AddDrugFirstStepScreen({super.key});
+  const AddDrugFirstStepScreen({
+    super.key,
+    this.drugProfile,
+  });
+
+  final DrugProfile? drugProfile;
 
   @override
   State<AddDrugFirstStepScreen> createState() => _AddDrugFirstStepScreen();
@@ -34,19 +43,36 @@ class _AddDrugFirstStepScreen extends State<AddDrugFirstStepScreen> {
       create: (context) => DrugBloc(
         getIt<IDrugRepository>(),
       ),
-      child: const Body(),
+      child: Body(
+        drugProfile: widget.drugProfile,
+      ),
     );
   }
 }
 
 class Body extends StatefulWidget {
-  const Body({super.key});
+  const Body({
+    super.key,
+    this.drugProfile,
+  });
+
+  final DrugProfile? drugProfile;
 
   @override
   State<Body> createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
+  final _drugNameController = TextEditingController();
+  final _drugOwnNameController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _drugNameController.text = widget.drugProfile?.name ?? '';
+    _drugOwnNameController.text = widget.drugProfile?.drugOwnName ?? '';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,15 +97,41 @@ class _BodyState extends State<Body> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      UISelectedProfile(
-                        title: 'Choose a profile',
-                        onUpdateItem: (item) {},
+                      BlocBuilder<ProfileBloc, ProfileState>(
+                        builder: (context, state) {
+                          if (state.status is Loading) {
+                            return Container();
+                          } else if (state.status is Success) {
+                            final List<Profile> profiles = [];
+                            for (var element in state.allProfiles?[0] ?? []) {
+                              profiles.add(element);
+                            }
+
+                            for (var element in state.allProfiles?[1] ?? []) {
+                              profiles.add(element);
+                            }
+
+                            return UISelectedProfile(
+                              title: 'Choose a profile',
+                              bottomItems: profiles
+                                  .map((e) => BottomItem(
+                                        id: e.id,
+                                        title: e.name,
+                                      ))
+                                  .toList(),
+                              onUpdateItem: (item) {},
+                            );
+                          } else {
+                            return Container();
+                          }
+                        },
                       ),
                       const SizedBox(
                         height: mediumPaddingTOp,
                       ),
                       UITextInput(
                         title: 'Name of the drug',
+                        editingController: _drugNameController,
                         isEditType: true,
                         onChanged: (value) {},
                       ),
@@ -88,6 +140,7 @@ class _BodyState extends State<Body> {
                       ),
                       UITextInput(
                         title: 'Own name of the drug',
+                        editingController: _drugOwnNameController,
                         onChanged: (value) {},
                       ),
                       const SizedBox(
@@ -127,14 +180,15 @@ class _BodyState extends State<Body> {
                             return DrugTypeField(
                               title: 'Type of drug',
                               onUpdateItem: (item) {
-                                context
-                                    .read<DrugBloc>()
-                                    .add(const DrugEvent.drugIconSelected(0));
                                 context.read<DrugBloc>().add(
-                                    const DrugEvent.isDrugDivisible(false));
-                                context
-                                    .read<DrugBloc>()
-                                    .add(DrugEvent.addDrugTypeId(item.id ?? 1));
+                                      const DrugEvent.drugIconSelected(0),
+                                    );
+                                context.read<DrugBloc>().add(
+                                      const DrugEvent.isDrugDivisible(false),
+                                    );
+                                context.read<DrugBloc>().add(
+                                      DrugEvent.addDrugTypeId(item.id ?? 1),
+                                    );
                               },
                               bottomItems: state.drugTypes
                                   ?.map(
@@ -232,6 +286,16 @@ class _BodyState extends State<Body> {
                             return Container();
                           }
                         },
+                      ),
+                      const SizedBox(
+                        height: paddingtTop,
+                      ),
+                      Text(
+                        'For half -shaped tablets, it is possible to choose two colors',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                      const SizedBox(
+                        height: paddingtTop + 70,
                       ),
                     ],
                   ),

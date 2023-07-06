@@ -2,6 +2,7 @@ import 'package:app/application/blocs/search_drug/search_drug_bloc.dart';
 import 'package:app/application/blocs/search_drug/search_drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/application/constants/dimensions.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_profile.dart';
 import 'package:app/presentation/drug/add_drug_first_step_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,10 +38,16 @@ class SearchDrugList extends StatelessWidget {
                       onTap: () {
                         PersistentNavBarNavigator.pushNewScreen(
                           context,
-                          screen: const AddDrugFirstStepScreen(),
                           withNavBar: true,
                           pageTransitionAnimation:
                               PageTransitionAnimation.cupertino,
+                          screen: AddDrugFirstStepScreen(
+                            drugProfile: DrugProfile(
+                              id: drug?.id,
+                              name: drug?.shortName,
+                              drugOwnName: drug?.shortName,
+                            ),
+                          ),
                         );
                       },
                       child: Padding(
