@@ -1,7 +1,10 @@
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../application/blocs/drug/drug_bloc.dart';
+import '../../../application/blocs/drug/drug_event.dart';
 import '../../../application/widgets/ui_text_input.dart';
 
 class DrugTotalAlert extends StatefulWidget {
@@ -22,6 +25,9 @@ class _DrugTotalAlertState extends State<DrugTotalAlert> {
           textInputType: TextInputType.number,
           onChanged: (value) {
             if (value.isEmpty) return;
+            context
+                .read<DrugBloc>()
+                .add(DrugEvent.addDrugAlertQuantity(int.parse(value)));
           },
         ),
         const SizedBox(

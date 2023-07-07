@@ -12,9 +12,11 @@ class DrugListColors extends StatefulWidget {
   const DrugListColors({
     super.key,
     this.drugColors,
+    this.updateFirstDrugColor,
   });
 
   final List<DrugColor>? drugColors;
+  final Function(DrugColor drugColor)? updateFirstDrugColor;
 
   @override
   State<DrugListColors> createState() => _DrugListColorsState();
@@ -27,9 +29,13 @@ class _DrugListColorsState extends State<DrugListColors> {
       children: List.generate(
         widget.drugColors?.length ?? 0,
         (index) => GestureDetector(
-          onTap: () => context.read<DrugBloc>().add(
-                DrugEvent.drugFirstColorSelected(index),
-              ),
+          onTap: () {
+            widget.updateFirstDrugColor!(
+                widget.drugColors?[index] ?? const DrugColor());
+            context.read<DrugBloc>().add(
+                  DrugEvent.drugFirstColorSelected(index),
+                );
+          },
           child: BlocBuilder<DrugBloc, DrugState>(
             builder: (context, state) => Container(
               margin: const EdgeInsets.all(8),

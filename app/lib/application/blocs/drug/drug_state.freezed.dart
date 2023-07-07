@@ -26,6 +26,8 @@ mixin _$DrugState {
   int? get drugIconTypeId => throw _privateConstructorUsedError;
   int? get drugColorId => throw _privateConstructorUsedError;
   int? get drugSecondColorId => throw _privateConstructorUsedError;
+  int? get totalDoses => throw _privateConstructorUsedError;
+  int? get alertDrugQuantity => throw _privateConstructorUsedError;
   bool? get isDivisible => throw _privateConstructorUsedError;
   bool? get showEndDatePicker => throw _privateConstructorUsedError;
   String? get drugShortName => throw _privateConstructorUsedError;
@@ -66,6 +68,8 @@ abstract class $DrugStateCopyWith<$Res> {
       int? drugIconTypeId,
       int? drugColorId,
       int? drugSecondColorId,
+      int? totalDoses,
+      int? alertDrugQuantity,
       bool? isDivisible,
       bool? showEndDatePicker,
       String? drugShortName,
@@ -110,6 +114,8 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
     Object? drugIconTypeId = freezed,
     Object? drugColorId = freezed,
     Object? drugSecondColorId = freezed,
+    Object? totalDoses = freezed,
+    Object? alertDrugQuantity = freezed,
     Object? isDivisible = freezed,
     Object? showEndDatePicker = freezed,
     Object? drugShortName = freezed,
@@ -167,6 +173,14 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
       drugSecondColorId: freezed == drugSecondColorId
           ? _value.drugSecondColorId
           : drugSecondColorId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalDoses: freezed == totalDoses
+          ? _value.totalDoses
+          : totalDoses // ignore: cast_nullable_to_non_nullable
+              as int?,
+      alertDrugQuantity: freezed == alertDrugQuantity
+          ? _value.alertDrugQuantity
+          : alertDrugQuantity // ignore: cast_nullable_to_non_nullable
               as int?,
       isDivisible: freezed == isDivisible
           ? _value.isDivisible
@@ -278,6 +292,8 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
       int? drugIconTypeId,
       int? drugColorId,
       int? drugSecondColorId,
+      int? totalDoses,
+      int? alertDrugQuantity,
       bool? isDivisible,
       bool? showEndDatePicker,
       String? drugShortName,
@@ -322,6 +338,8 @@ class __$$_DrugStateCopyWithImpl<$Res>
     Object? drugIconTypeId = freezed,
     Object? drugColorId = freezed,
     Object? drugSecondColorId = freezed,
+    Object? totalDoses = freezed,
+    Object? alertDrugQuantity = freezed,
     Object? isDivisible = freezed,
     Object? showEndDatePicker = freezed,
     Object? drugShortName = freezed,
@@ -379,6 +397,14 @@ class __$$_DrugStateCopyWithImpl<$Res>
       drugSecondColorId: freezed == drugSecondColorId
           ? _value.drugSecondColorId
           : drugSecondColorId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalDoses: freezed == totalDoses
+          ? _value.totalDoses
+          : totalDoses // ignore: cast_nullable_to_non_nullable
+              as int?,
+      alertDrugQuantity: freezed == alertDrugQuantity
+          ? _value.alertDrugQuantity
+          : alertDrugQuantity // ignore: cast_nullable_to_non_nullable
               as int?,
       isDivisible: freezed == isDivisible
           ? _value.isDivisible
@@ -462,6 +488,8 @@ class _$_DrugState implements _DrugState {
       this.drugIconTypeId,
       this.drugColorId,
       this.drugSecondColorId,
+      this.totalDoses,
+      this.alertDrugQuantity,
       this.isDivisible,
       this.showEndDatePicker,
       this.drugShortName,
@@ -505,6 +533,10 @@ class _$_DrugState implements _DrugState {
   final int? drugColorId;
   @override
   final int? drugSecondColorId;
+  @override
+  final int? totalDoses;
+  @override
+  final int? alertDrugQuantity;
   @override
   final bool? isDivisible;
   @override
@@ -590,7 +622,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(times: $times, drugTypeId: $drugTypeId, profileDetailId: $profileDetailId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, drugPriorityId: $drugPriorityId, drugIconTypeId: $drugIconTypeId, drugColorId: $drugColorId, drugSecondColorId: $drugSecondColorId, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, drugShortName: $drugShortName, drugOwnName: $drugOwnName, doctorRecommendation: $doctorRecommendation, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugProfieWeekdays: $drugProfieWeekdays, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(times: $times, drugTypeId: $drugTypeId, profileDetailId: $profileDetailId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, drugPriorityId: $drugPriorityId, drugIconTypeId: $drugIconTypeId, drugColorId: $drugColorId, drugSecondColorId: $drugSecondColorId, totalDoses: $totalDoses, alertDrugQuantity: $alertDrugQuantity, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, drugShortName: $drugShortName, drugOwnName: $drugOwnName, doctorRecommendation: $doctorRecommendation, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugProfieWeekdays: $drugProfieWeekdays, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -617,6 +649,10 @@ class _$_DrugState implements _DrugState {
                 other.drugColorId == drugColorId) &&
             (identical(other.drugSecondColorId, drugSecondColorId) ||
                 other.drugSecondColorId == drugSecondColorId) &&
+            (identical(other.totalDoses, totalDoses) ||
+                other.totalDoses == totalDoses) &&
+            (identical(other.alertDrugQuantity, alertDrugQuantity) ||
+                other.alertDrugQuantity == alertDrugQuantity) &&
             (identical(other.isDivisible, isDivisible) ||
                 other.isDivisible == isDivisible) &&
             (identical(other.showEndDatePicker, showEndDatePicker) ||
@@ -661,6 +697,8 @@ class _$_DrugState implements _DrugState {
         drugIconTypeId,
         drugColorId,
         drugSecondColorId,
+        totalDoses,
+        alertDrugQuantity,
         isDivisible,
         showEndDatePicker,
         drugShortName,
@@ -698,6 +736,8 @@ abstract class _DrugState implements DrugState {
       final int? drugIconTypeId,
       final int? drugColorId,
       final int? drugSecondColorId,
+      final int? totalDoses,
+      final int? alertDrugQuantity,
       final bool? isDivisible,
       final bool? showEndDatePicker,
       final String? drugShortName,
@@ -735,6 +775,10 @@ abstract class _DrugState implements DrugState {
   int? get drugColorId;
   @override
   int? get drugSecondColorId;
+  @override
+  int? get totalDoses;
+  @override
+  int? get alertDrugQuantity;
   @override
   bool? get isDivisible;
   @override

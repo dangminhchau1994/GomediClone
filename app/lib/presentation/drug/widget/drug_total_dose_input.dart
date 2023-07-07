@@ -1,6 +1,9 @@
+import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/theme/ui_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../application/widgets/ui_text_input.dart';
 
@@ -22,6 +25,9 @@ class _DrugTotalDosesState extends State<DrugTotalDoses> {
           textInputType: TextInputType.number,
           onChanged: (value) {
             if (value.isEmpty) return;
+            context
+                .read<DrugBloc>()
+                .add(DrugEvent.addTotalDoses(int.parse(value)));
           },
         ),
         const SizedBox(

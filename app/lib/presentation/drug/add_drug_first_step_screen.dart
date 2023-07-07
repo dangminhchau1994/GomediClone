@@ -71,6 +71,16 @@ class _BodyState extends State<Body> {
     super.initState();
     _drugNameController.text = widget.drugProfile?.name ?? '';
     _drugOwnNameController.text = widget.drugProfile?.drugOwnName ?? '';
+    _initData();
+  }
+
+  void _initData() {
+    context
+        .read<DrugBloc>()
+        .add(DrugEvent.addNameDrug(widget.drugProfile?.name ?? ''));
+    context
+        .read<DrugBloc>()
+        .add(DrugEvent.addOwnNameDrug(widget.drugProfile?.drugOwnName ?? ''));
   }
 
   @override
@@ -119,7 +129,11 @@ class _BodyState extends State<Body> {
                                         title: e.name,
                                       ))
                                   .toList(),
-                              onUpdateItem: (item) {},
+                              onUpdateItem: (item) {
+                                context.read<DrugBloc>().add(
+                                      DrugEvent.chooseProfileId(item.id ?? 0),
+                                    );
+                              },
                             );
                           } else {
                             return Container();
@@ -133,7 +147,9 @@ class _BodyState extends State<Body> {
                         title: 'Name of the drug',
                         editingController: _drugNameController,
                         isEditType: true,
-                        onChanged: (value) {},
+                        onChanged: (value) => context
+                            .read<DrugBloc>()
+                            .add(DrugEvent.addNameDrug(value)),
                       ),
                       const SizedBox(
                         height: mediumPaddingTOp,
@@ -141,7 +157,9 @@ class _BodyState extends State<Body> {
                       UITextInput(
                         title: 'Own name of the drug',
                         editingController: _drugOwnNameController,
-                        onChanged: (value) {},
+                        onChanged: (value) => context
+                            .read<DrugBloc>()
+                            .add(DrugEvent.addOwnNameDrug(value)),
                       ),
                       const SizedBox(
                         height: mediumPaddingTOp,
@@ -153,7 +171,10 @@ class _BodyState extends State<Body> {
                           } else if (state.status is Success) {
                             return DrugPriorityField(
                               title: 'Drug Priority',
-                              onUpdateItem: (item) {},
+                              onUpdateItem: (item) => context
+                                  .read<DrugBloc>()
+                                  .add(DrugEvent.chooseDrugPriorityId(
+                                      item.id ?? 0)),
                               bottomItems: state.drugPriorities
                                   ?.map(
                                     (e) => BottomItem(
@@ -226,6 +247,10 @@ class _BodyState extends State<Body> {
 
                             return DrugListIcon(
                               drugIcons: drugIcons,
+                              updateDrugIcon: (drugIcon) => context
+                                  .read<DrugBloc>()
+                                  .add(DrugEvent.addDrugIconId(
+                                      drugIcon.id ?? 0)),
                             );
                           } else {
                             return Container();
@@ -249,6 +274,10 @@ class _BodyState extends State<Body> {
                           } else if (state.status is Success) {
                             return DrugListColors(
                               drugColors: state.drugColors,
+                              updateFirstDrugColor: (drugColor) => context
+                                  .read<DrugBloc>()
+                                  .add(DrugEvent.chooseFirstColorId(
+                                      drugColor.id)),
                             );
                           } else {
                             return Container();
@@ -278,6 +307,10 @@ class _BodyState extends State<Body> {
                                   ),
                                   DrugSecondListColors(
                                     drugColors: state.drugColors,
+                                    updateSecondColor: (drugColor) => context
+                                        .read<DrugBloc>()
+                                        .add(DrugEvent.chooseSecondColorId(
+                                            drugColor.id)),
                                   ),
                                 ],
                               ),

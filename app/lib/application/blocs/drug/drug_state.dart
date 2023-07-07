@@ -22,6 +22,8 @@ class DrugState with _$DrugState {
     int? drugIconTypeId,
     int? drugColorId,
     int? drugSecondColorId,
+    int? totalDoses,
+    int? alertDrugQuantity,
     bool? isDivisible,
     bool? showEndDatePicker,
     String? drugShortName,

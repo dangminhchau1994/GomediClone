@@ -1,4 +1,5 @@
 import 'package:app/application/blocs/drug/drug_bloc.dart';
+import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/constants/dimensions.dart';
 import 'package:app/application/widgets/ui_text_input.dart';
 import 'package:app/presentation/drug/add_drug_third_step_screen.dart';
@@ -67,9 +68,11 @@ class _BodyState extends State<Body> {
                       textInputType: TextInputType.number,
                       onChanged: (value) {
                         if (value.isEmpty) return;
-                        setState(() {
-                          timeCounts = int.parse(value);
-                        });
+                        context
+                            .read<DrugBloc>()
+                            .add(DrugEvent.addFrequency(int.parse(value)));
+                        timeCounts = int.parse(value);
+                        setState(() {});
                       },
                     ),
                     const SizedBox(

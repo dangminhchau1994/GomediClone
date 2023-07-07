@@ -23,13 +23,21 @@ mixin _$DrugEvent {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -49,13 +57,20 @@ mixin _$DrugEvent {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -75,13 +90,20 @@ mixin _$DrugEvent {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -102,14 +124,22 @@ mixin _$DrugEvent {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -130,13 +160,20 @@ mixin _$DrugEvent {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -155,13 +192,20 @@ mixin _$DrugEvent {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -236,13 +280,21 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -265,13 +317,20 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -294,13 +353,20 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -327,14 +393,22 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -358,13 +432,20 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -386,13 +467,20 @@ class _$GetDrugPriorites implements GetDrugPriorites {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -458,13 +546,21 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -487,13 +583,20 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -516,13 +619,20 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -549,14 +659,22 @@ class _$GetDrugTypes implements GetDrugTypes {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -580,13 +698,20 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -608,13 +733,20 @@ class _$GetDrugTypes implements GetDrugTypes {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -680,13 +812,21 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -709,13 +849,20 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -738,13 +885,20 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -771,14 +925,22 @@ class _$GetDrugIcons implements GetDrugIcons {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -802,13 +964,20 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -830,13 +999,20 @@ class _$GetDrugIcons implements GetDrugIcons {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -902,13 +1078,21 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -931,13 +1115,20 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -960,13 +1151,20 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -993,14 +1191,22 @@ class _$GetDrugColors implements GetDrugColors {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -1024,13 +1230,20 @@ class _$GetDrugColors implements GetDrugColors {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -1052,13 +1265,20 @@ class _$GetDrugColors implements GetDrugColors {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -1151,13 +1371,21 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -1180,13 +1408,20 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1209,13 +1444,20 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1242,14 +1484,22 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -1273,13 +1523,20 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -1301,13 +1558,20 @@ class _$AddDrugTypeId implements AddDrugTypeId {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -1332,6 +1596,303 @@ abstract class AddDrugTypeId implements DrugEvent {
   int get drugTypeId;
   @JsonKey(ignore: true)
   _$$AddDrugTypeIdCopyWith<_$AddDrugTypeId> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDrugIconIdCopyWith<$Res> {
+  factory _$$AddDrugIconIdCopyWith(
+          _$AddDrugIconId value, $Res Function(_$AddDrugIconId) then) =
+      __$$AddDrugIconIdCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int iconId});
+}
+
+/// @nodoc
+class __$$AddDrugIconIdCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDrugIconId>
+    implements _$$AddDrugIconIdCopyWith<$Res> {
+  __$$AddDrugIconIdCopyWithImpl(
+      _$AddDrugIconId _value, $Res Function(_$AddDrugIconId) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? iconId = null,
+  }) {
+    return _then(_$AddDrugIconId(
+      null == iconId
+          ? _value.iconId
+          : iconId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDrugIconId implements AddDrugIconId {
+  const _$AddDrugIconId(this.iconId);
+
+  @override
+  final int iconId;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addDrugIconId(iconId: $iconId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDrugIconId &&
+            (identical(other.iconId, iconId) || other.iconId == iconId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, iconId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDrugIconIdCopyWith<_$AddDrugIconId> get copyWith =>
+      __$$AddDrugIconIdCopyWithImpl<_$AddDrugIconId>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addDrugIconId(iconId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addDrugIconId?.call(iconId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDrugIconId != null) {
+      return addDrugIconId(iconId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addDrugIconId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addDrugIconId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDrugIconId != null) {
+      return addDrugIconId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDrugIconId implements DrugEvent {
+  const factory AddDrugIconId(final int iconId) = _$AddDrugIconId;
+
+  int get iconId;
+  @JsonKey(ignore: true)
+  _$$AddDrugIconIdCopyWith<_$AddDrugIconId> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1405,13 +1966,21 @@ class _$ChooseProfileId implements ChooseProfileId {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -1434,13 +2003,20 @@ class _$ChooseProfileId implements ChooseProfileId {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1463,13 +2039,20 @@ class _$ChooseProfileId implements ChooseProfileId {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1496,14 +2079,22 @@ class _$ChooseProfileId implements ChooseProfileId {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -1527,13 +2118,20 @@ class _$ChooseProfileId implements ChooseProfileId {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -1555,13 +2153,20 @@ class _$ChooseProfileId implements ChooseProfileId {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -1659,13 +2264,21 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -1688,13 +2301,20 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1717,13 +2337,20 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1750,14 +2377,22 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -1781,13 +2416,20 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -1809,13 +2451,20 @@ class _$AddDrugPriorityId implements AddDrugPriorityId {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -1914,13 +2563,21 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -1943,13 +2600,20 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -1972,13 +2636,20 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2005,14 +2676,22 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -2036,13 +2715,20 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -2064,13 +2750,20 @@ class _$ChooseDrugColorId implements ChooseDrugColorId {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -2169,13 +2862,21 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -2198,13 +2899,20 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2227,13 +2935,20 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2260,14 +2975,22 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -2291,13 +3014,20 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -2319,13 +3049,20 @@ class _$ChooseDrugSecondColorId implements ChooseDrugSecondColorId {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -2351,6 +3088,1202 @@ abstract class ChooseDrugSecondColorId implements DrugEvent {
   int get drugSecondColorId;
   @JsonKey(ignore: true)
   _$$ChooseDrugSecondColorIdCopyWith<_$ChooseDrugSecondColorId> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddFrequencyCopyWith<$Res> {
+  factory _$$AddFrequencyCopyWith(
+          _$AddFrequency value, $Res Function(_$AddFrequency) then) =
+      __$$AddFrequencyCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int frequency});
+}
+
+/// @nodoc
+class __$$AddFrequencyCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddFrequency>
+    implements _$$AddFrequencyCopyWith<$Res> {
+  __$$AddFrequencyCopyWithImpl(
+      _$AddFrequency _value, $Res Function(_$AddFrequency) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? frequency = null,
+  }) {
+    return _then(_$AddFrequency(
+      null == frequency
+          ? _value.frequency
+          : frequency // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddFrequency implements AddFrequency {
+  const _$AddFrequency(this.frequency);
+
+  @override
+  final int frequency;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addFrequency(frequency: $frequency)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddFrequency &&
+            (identical(other.frequency, frequency) ||
+                other.frequency == frequency));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, frequency);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddFrequencyCopyWith<_$AddFrequency> get copyWith =>
+      __$$AddFrequencyCopyWithImpl<_$AddFrequency>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addFrequency(frequency);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addFrequency?.call(frequency);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addFrequency != null) {
+      return addFrequency(frequency);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addFrequency(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addFrequency?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addFrequency != null) {
+      return addFrequency(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddFrequency implements DrugEvent {
+  const factory AddFrequency(final int frequency) = _$AddFrequency;
+
+  int get frequency;
+  @JsonKey(ignore: true)
+  _$$AddFrequencyCopyWith<_$AddFrequency> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddTotalDosesCopyWith<$Res> {
+  factory _$$AddTotalDosesCopyWith(
+          _$AddTotalDoses value, $Res Function(_$AddTotalDoses) then) =
+      __$$AddTotalDosesCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int totalDoses});
+}
+
+/// @nodoc
+class __$$AddTotalDosesCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddTotalDoses>
+    implements _$$AddTotalDosesCopyWith<$Res> {
+  __$$AddTotalDosesCopyWithImpl(
+      _$AddTotalDoses _value, $Res Function(_$AddTotalDoses) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? totalDoses = null,
+  }) {
+    return _then(_$AddTotalDoses(
+      null == totalDoses
+          ? _value.totalDoses
+          : totalDoses // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddTotalDoses implements AddTotalDoses {
+  const _$AddTotalDoses(this.totalDoses);
+
+  @override
+  final int totalDoses;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addTotalDoses(totalDoses: $totalDoses)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddTotalDoses &&
+            (identical(other.totalDoses, totalDoses) ||
+                other.totalDoses == totalDoses));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, totalDoses);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddTotalDosesCopyWith<_$AddTotalDoses> get copyWith =>
+      __$$AddTotalDosesCopyWithImpl<_$AddTotalDoses>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addTotalDoses(totalDoses);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addTotalDoses?.call(totalDoses);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addTotalDoses != null) {
+      return addTotalDoses(totalDoses);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addTotalDoses(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addTotalDoses?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addTotalDoses != null) {
+      return addTotalDoses(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddTotalDoses implements DrugEvent {
+  const factory AddTotalDoses(final int totalDoses) = _$AddTotalDoses;
+
+  int get totalDoses;
+  @JsonKey(ignore: true)
+  _$$AddTotalDosesCopyWith<_$AddTotalDoses> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDrugAlertQuantityCopyWith<$Res> {
+  factory _$$AddDrugAlertQuantityCopyWith(_$AddDrugAlertQuantity value,
+          $Res Function(_$AddDrugAlertQuantity) then) =
+      __$$AddDrugAlertQuantityCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int drugAlertQuantity});
+}
+
+/// @nodoc
+class __$$AddDrugAlertQuantityCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDrugAlertQuantity>
+    implements _$$AddDrugAlertQuantityCopyWith<$Res> {
+  __$$AddDrugAlertQuantityCopyWithImpl(_$AddDrugAlertQuantity _value,
+      $Res Function(_$AddDrugAlertQuantity) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? drugAlertQuantity = null,
+  }) {
+    return _then(_$AddDrugAlertQuantity(
+      null == drugAlertQuantity
+          ? _value.drugAlertQuantity
+          : drugAlertQuantity // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDrugAlertQuantity implements AddDrugAlertQuantity {
+  const _$AddDrugAlertQuantity(this.drugAlertQuantity);
+
+  @override
+  final int drugAlertQuantity;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addDrugAlertQuantity(drugAlertQuantity: $drugAlertQuantity)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDrugAlertQuantity &&
+            (identical(other.drugAlertQuantity, drugAlertQuantity) ||
+                other.drugAlertQuantity == drugAlertQuantity));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, drugAlertQuantity);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDrugAlertQuantityCopyWith<_$AddDrugAlertQuantity> get copyWith =>
+      __$$AddDrugAlertQuantityCopyWithImpl<_$AddDrugAlertQuantity>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addDrugAlertQuantity(drugAlertQuantity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addDrugAlertQuantity?.call(drugAlertQuantity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDrugAlertQuantity != null) {
+      return addDrugAlertQuantity(drugAlertQuantity);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addDrugAlertQuantity(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addDrugAlertQuantity?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDrugAlertQuantity != null) {
+      return addDrugAlertQuantity(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDrugAlertQuantity implements DrugEvent {
+  const factory AddDrugAlertQuantity(final int drugAlertQuantity) =
+      _$AddDrugAlertQuantity;
+
+  int get drugAlertQuantity;
+  @JsonKey(ignore: true)
+  _$$AddDrugAlertQuantityCopyWith<_$AddDrugAlertQuantity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDoctorRecommendationCopyWith<$Res> {
+  factory _$$AddDoctorRecommendationCopyWith(_$AddDoctorRecommendation value,
+          $Res Function(_$AddDoctorRecommendation) then) =
+      __$$AddDoctorRecommendationCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String doctorRecommendation});
+}
+
+/// @nodoc
+class __$$AddDoctorRecommendationCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$AddDoctorRecommendation>
+    implements _$$AddDoctorRecommendationCopyWith<$Res> {
+  __$$AddDoctorRecommendationCopyWithImpl(_$AddDoctorRecommendation _value,
+      $Res Function(_$AddDoctorRecommendation) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? doctorRecommendation = null,
+  }) {
+    return _then(_$AddDoctorRecommendation(
+      null == doctorRecommendation
+          ? _value.doctorRecommendation
+          : doctorRecommendation // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDoctorRecommendation implements AddDoctorRecommendation {
+  const _$AddDoctorRecommendation(this.doctorRecommendation);
+
+  @override
+  final String doctorRecommendation;
+
+  @override
+  String toString() {
+    return 'DrugEvent.addDoctorRecommendation(doctorRecommendation: $doctorRecommendation)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDoctorRecommendation &&
+            (identical(other.doctorRecommendation, doctorRecommendation) ||
+                other.doctorRecommendation == doctorRecommendation));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, doctorRecommendation);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDoctorRecommendationCopyWith<_$AddDoctorRecommendation> get copyWith =>
+      __$$AddDoctorRecommendationCopyWithImpl<_$AddDoctorRecommendation>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return addDoctorRecommendation(doctorRecommendation);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return addDoctorRecommendation?.call(doctorRecommendation);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDoctorRecommendation != null) {
+      return addDoctorRecommendation(doctorRecommendation);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return addDoctorRecommendation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return addDoctorRecommendation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (addDoctorRecommendation != null) {
+      return addDoctorRecommendation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddDoctorRecommendation implements DrugEvent {
+  const factory AddDoctorRecommendation(final String doctorRecommendation) =
+      _$AddDoctorRecommendation;
+
+  String get doctorRecommendation;
+  @JsonKey(ignore: true)
+  _$$AddDoctorRecommendationCopyWith<_$AddDoctorRecommendation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2424,13 +4357,21 @@ class _$AddNameDrug implements AddNameDrug {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -2453,13 +4394,20 @@ class _$AddNameDrug implements AddNameDrug {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2482,13 +4430,20 @@ class _$AddNameDrug implements AddNameDrug {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2515,14 +4470,22 @@ class _$AddNameDrug implements AddNameDrug {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -2546,13 +4509,20 @@ class _$AddNameDrug implements AddNameDrug {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -2574,13 +4544,20 @@ class _$AddNameDrug implements AddNameDrug {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -2678,13 +4655,21 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -2707,13 +4692,20 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2736,13 +4728,20 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2769,14 +4768,22 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -2800,13 +4807,20 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -2828,13 +4842,20 @@ class _$AddOwnNameDrug implements AddOwnNameDrug {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -2932,13 +4953,21 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -2961,13 +4990,20 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -2990,13 +5026,20 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3023,14 +5066,22 @@ class _$DrugIconSelected implements DrugIconSelected {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -3054,13 +5105,20 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -3082,13 +5140,20 @@ class _$DrugIconSelected implements DrugIconSelected {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -3113,6 +5178,606 @@ abstract class DrugIconSelected implements DrugEvent {
   int? get iconSelected;
   @JsonKey(ignore: true)
   _$$DrugIconSelectedCopyWith<_$DrugIconSelected> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChooseFirstColorIdCopyWith<$Res> {
+  factory _$$ChooseFirstColorIdCopyWith(_$ChooseFirstColorId value,
+          $Res Function(_$ChooseFirstColorId) then) =
+      __$$ChooseFirstColorIdCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? firstColorId});
+}
+
+/// @nodoc
+class __$$ChooseFirstColorIdCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$ChooseFirstColorId>
+    implements _$$ChooseFirstColorIdCopyWith<$Res> {
+  __$$ChooseFirstColorIdCopyWithImpl(
+      _$ChooseFirstColorId _value, $Res Function(_$ChooseFirstColorId) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstColorId = freezed,
+  }) {
+    return _then(_$ChooseFirstColorId(
+      freezed == firstColorId
+          ? _value.firstColorId
+          : firstColorId // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChooseFirstColorId implements ChooseFirstColorId {
+  const _$ChooseFirstColorId(this.firstColorId);
+
+  @override
+  final int? firstColorId;
+
+  @override
+  String toString() {
+    return 'DrugEvent.chooseFirstColorId(firstColorId: $firstColorId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChooseFirstColorId &&
+            (identical(other.firstColorId, firstColorId) ||
+                other.firstColorId == firstColorId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, firstColorId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChooseFirstColorIdCopyWith<_$ChooseFirstColorId> get copyWith =>
+      __$$ChooseFirstColorIdCopyWithImpl<_$ChooseFirstColorId>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return chooseFirstColorId(firstColorId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return chooseFirstColorId?.call(firstColorId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (chooseFirstColorId != null) {
+      return chooseFirstColorId(firstColorId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return chooseFirstColorId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return chooseFirstColorId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (chooseFirstColorId != null) {
+      return chooseFirstColorId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChooseFirstColorId implements DrugEvent {
+  const factory ChooseFirstColorId(final int? firstColorId) =
+      _$ChooseFirstColorId;
+
+  int? get firstColorId;
+  @JsonKey(ignore: true)
+  _$$ChooseFirstColorIdCopyWith<_$ChooseFirstColorId> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChooseSecondColorIdCopyWith<$Res> {
+  factory _$$ChooseSecondColorIdCopyWith(_$ChooseSecondColorId value,
+          $Res Function(_$ChooseSecondColorId) then) =
+      __$$ChooseSecondColorIdCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? secondColorId});
+}
+
+/// @nodoc
+class __$$ChooseSecondColorIdCopyWithImpl<$Res>
+    extends _$DrugEventCopyWithImpl<$Res, _$ChooseSecondColorId>
+    implements _$$ChooseSecondColorIdCopyWith<$Res> {
+  __$$ChooseSecondColorIdCopyWithImpl(
+      _$ChooseSecondColorId _value, $Res Function(_$ChooseSecondColorId) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? secondColorId = freezed,
+  }) {
+    return _then(_$ChooseSecondColorId(
+      freezed == secondColorId
+          ? _value.secondColorId
+          : secondColorId // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChooseSecondColorId implements ChooseSecondColorId {
+  const _$ChooseSecondColorId(this.secondColorId);
+
+  @override
+  final int? secondColorId;
+
+  @override
+  String toString() {
+    return 'DrugEvent.chooseSecondColorId(secondColorId: $secondColorId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChooseSecondColorId &&
+            (identical(other.secondColorId, secondColorId) ||
+                other.secondColorId == secondColorId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, secondColorId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChooseSecondColorIdCopyWith<_$ChooseSecondColorId> get copyWith =>
+      __$$ChooseSecondColorIdCopyWithImpl<_$ChooseSecondColorId>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDrugPriorities,
+    required TResult Function() getDrugTypes,
+    required TResult Function() getDrugIcons,
+    required TResult Function() getDrugColors,
+    required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
+    required TResult Function(int profileId) chooseProfileId,
+    required TResult Function(int drugPriorityId) chooseDrugPriorityId,
+    required TResult Function(int drugColorId) chooseDrugColorId,
+    required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
+    required TResult Function(String nameDrug) addNameDrug,
+    required TResult Function(String ownNameDrug) addOwnNameDrug,
+    required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
+    required TResult Function(int? colorSelected) drugFirstColorSelected,
+    required TResult Function(int? secondColorSelected) drugSecondColorSelected,
+    required TResult Function(bool isDrugDivisible) isDrugDivisible,
+    required TResult Function(List<DrugScheduleDefinitions> drugSchedules)
+        addDrugSchedule,
+    required TResult Function(String startDate) addStartDate,
+    required TResult Function(String endDate) addEndDate,
+    required TResult Function(bool isShow) showEndDatePicker,
+    required TResult Function(String duration) addDateDuration,
+    required TResult Function(List<DrugProfileWeekDays> weekdays) addWeekdays,
+  }) {
+    return chooseSecondColorId(secondColorId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDrugPriorities,
+    TResult? Function()? getDrugTypes,
+    TResult? Function()? getDrugIcons,
+    TResult? Function()? getDrugColors,
+    TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
+    TResult? Function(int profileId)? chooseProfileId,
+    TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult? Function(int drugColorId)? chooseDrugColorId,
+    TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult? Function(String nameDrug)? addNameDrug,
+    TResult? Function(String ownNameDrug)? addOwnNameDrug,
+    TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
+    TResult? Function(int? colorSelected)? drugFirstColorSelected,
+    TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult? Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult? Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult? Function(String startDate)? addStartDate,
+    TResult? Function(String endDate)? addEndDate,
+    TResult? Function(bool isShow)? showEndDatePicker,
+    TResult? Function(String duration)? addDateDuration,
+    TResult? Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+  }) {
+    return chooseSecondColorId?.call(secondColorId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDrugPriorities,
+    TResult Function()? getDrugTypes,
+    TResult Function()? getDrugIcons,
+    TResult Function()? getDrugColors,
+    TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
+    TResult Function(int profileId)? chooseProfileId,
+    TResult Function(int drugPriorityId)? chooseDrugPriorityId,
+    TResult Function(int drugColorId)? chooseDrugColorId,
+    TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
+    TResult Function(String nameDrug)? addNameDrug,
+    TResult Function(String ownNameDrug)? addOwnNameDrug,
+    TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
+    TResult Function(int? colorSelected)? drugFirstColorSelected,
+    TResult Function(int? secondColorSelected)? drugSecondColorSelected,
+    TResult Function(bool isDrugDivisible)? isDrugDivisible,
+    TResult Function(List<DrugScheduleDefinitions> drugSchedules)?
+        addDrugSchedule,
+    TResult Function(String startDate)? addStartDate,
+    TResult Function(String endDate)? addEndDate,
+    TResult Function(bool isShow)? showEndDatePicker,
+    TResult Function(String duration)? addDateDuration,
+    TResult Function(List<DrugProfileWeekDays> weekdays)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (chooseSecondColorId != null) {
+      return chooseSecondColorId(secondColorId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetDrugPriorites value) getDrugPriorities,
+    required TResult Function(GetDrugTypes value) getDrugTypes,
+    required TResult Function(GetDrugIcons value) getDrugIcons,
+    required TResult Function(GetDrugColors value) getDrugColors,
+    required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
+    required TResult Function(ChooseProfileId value) chooseProfileId,
+    required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
+    required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
+    required TResult Function(ChooseDrugSecondColorId value)
+        chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
+    required TResult Function(AddNameDrug value) addNameDrug,
+    required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
+    required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
+    required TResult Function(DrugFirstColorSelected value)
+        drugFirstColorSelected,
+    required TResult Function(DrugSecondColorSelected value)
+        drugSecondColorSelected,
+    required TResult Function(DrugDivisible value) isDrugDivisible,
+    required TResult Function(AddDrugSchedule value) addDrugSchedule,
+    required TResult Function(AddStartDate value) addStartDate,
+    required TResult Function(AddEndDate value) addEndDate,
+    required TResult Function(ShowEndDatePicker value) showEndDatePicker,
+    required TResult Function(AddDateDuration value) addDateDuration,
+    required TResult Function(AddDrugWeekdays value) addWeekdays,
+  }) {
+    return chooseSecondColorId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult? Function(GetDrugTypes value)? getDrugTypes,
+    TResult? Function(GetDrugIcons value)? getDrugIcons,
+    TResult? Function(GetDrugColors value)? getDrugColors,
+    TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
+    TResult? Function(ChooseProfileId value)? chooseProfileId,
+    TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult? Function(AddNameDrug value)? addNameDrug,
+    TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult? Function(DrugDivisible value)? isDrugDivisible,
+    TResult? Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult? Function(AddStartDate value)? addStartDate,
+    TResult? Function(AddEndDate value)? addEndDate,
+    TResult? Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult? Function(AddDateDuration value)? addDateDuration,
+    TResult? Function(AddDrugWeekdays value)? addWeekdays,
+  }) {
+    return chooseSecondColorId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetDrugPriorites value)? getDrugPriorities,
+    TResult Function(GetDrugTypes value)? getDrugTypes,
+    TResult Function(GetDrugIcons value)? getDrugIcons,
+    TResult Function(GetDrugColors value)? getDrugColors,
+    TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
+    TResult Function(ChooseProfileId value)? chooseProfileId,
+    TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
+    TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
+    TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
+    TResult Function(AddNameDrug value)? addNameDrug,
+    TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
+    TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
+    TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
+    TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
+    TResult Function(DrugDivisible value)? isDrugDivisible,
+    TResult Function(AddDrugSchedule value)? addDrugSchedule,
+    TResult Function(AddStartDate value)? addStartDate,
+    TResult Function(AddEndDate value)? addEndDate,
+    TResult Function(ShowEndDatePicker value)? showEndDatePicker,
+    TResult Function(AddDateDuration value)? addDateDuration,
+    TResult Function(AddDrugWeekdays value)? addWeekdays,
+    required TResult orElse(),
+  }) {
+    if (chooseSecondColorId != null) {
+      return chooseSecondColorId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChooseSecondColorId implements DrugEvent {
+  const factory ChooseSecondColorId(final int? secondColorId) =
+      _$ChooseSecondColorId;
+
+  int? get secondColorId;
+  @JsonKey(ignore: true)
+  _$$ChooseSecondColorIdCopyWith<_$ChooseSecondColorId> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3187,13 +5852,21 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -3216,13 +5889,20 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3245,13 +5925,20 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3278,14 +5965,22 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -3309,13 +6004,20 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -3337,13 +6039,20 @@ class _$DrugFirstColorSelected implements DrugFirstColorSelected {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -3443,13 +6152,21 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -3472,13 +6189,20 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3501,13 +6225,20 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3534,14 +6265,22 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -3565,13 +6304,20 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -3593,13 +6339,20 @@ class _$DrugSecondColorSelected implements DrugSecondColorSelected {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -3698,13 +6451,21 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -3727,13 +6488,20 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3756,13 +6524,20 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -3789,14 +6564,22 @@ class _$DrugDivisible implements DrugDivisible {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -3820,13 +6603,20 @@ class _$DrugDivisible implements DrugDivisible {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -3848,13 +6638,20 @@ class _$DrugDivisible implements DrugDivisible {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -3959,13 +6756,21 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -3988,13 +6793,20 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4017,13 +6829,20 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4050,14 +6869,22 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -4081,13 +6908,20 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -4109,13 +6943,20 @@ class _$AddDrugSchedule implements AddDrugSchedule {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -4214,13 +7055,21 @@ class _$AddStartDate implements AddStartDate {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -4243,13 +7092,20 @@ class _$AddStartDate implements AddStartDate {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4272,13 +7128,20 @@ class _$AddStartDate implements AddStartDate {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4305,14 +7168,22 @@ class _$AddStartDate implements AddStartDate {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -4336,13 +7207,20 @@ class _$AddStartDate implements AddStartDate {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -4364,13 +7242,20 @@ class _$AddStartDate implements AddStartDate {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -4467,13 +7352,21 @@ class _$AddEndDate implements AddEndDate {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -4496,13 +7389,20 @@ class _$AddEndDate implements AddEndDate {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4525,13 +7425,20 @@ class _$AddEndDate implements AddEndDate {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4558,14 +7465,22 @@ class _$AddEndDate implements AddEndDate {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -4589,13 +7504,20 @@ class _$AddEndDate implements AddEndDate {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -4617,13 +7539,20 @@ class _$AddEndDate implements AddEndDate {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -4720,13 +7649,21 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -4749,13 +7686,20 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4778,13 +7722,20 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -4811,14 +7762,22 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -4842,13 +7801,20 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -4870,13 +7836,20 @@ class _$ShowEndDatePicker implements ShowEndDatePicker {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -4974,13 +7947,21 @@ class _$AddDateDuration implements AddDateDuration {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -5003,13 +7984,20 @@ class _$AddDateDuration implements AddDateDuration {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -5032,13 +8020,20 @@ class _$AddDateDuration implements AddDateDuration {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -5065,14 +8060,22 @@ class _$AddDateDuration implements AddDateDuration {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -5096,13 +8099,20 @@ class _$AddDateDuration implements AddDateDuration {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -5124,13 +8134,20 @@ class _$AddDateDuration implements AddDateDuration {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,
@@ -5234,13 +8251,21 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     required TResult Function() getDrugIcons,
     required TResult Function() getDrugColors,
     required TResult Function(int drugTypeId) addDrugTypeId,
+    required TResult Function(int iconId) addDrugIconId,
     required TResult Function(int profileId) chooseProfileId,
     required TResult Function(int drugPriorityId) chooseDrugPriorityId,
     required TResult Function(int drugColorId) chooseDrugColorId,
     required TResult Function(int drugSecondColorId) chooseDrugSecondColorId,
+    required TResult Function(int frequency) addFrequency,
+    required TResult Function(int totalDoses) addTotalDoses,
+    required TResult Function(int drugAlertQuantity) addDrugAlertQuantity,
+    required TResult Function(String doctorRecommendation)
+        addDoctorRecommendation,
     required TResult Function(String nameDrug) addNameDrug,
     required TResult Function(String ownNameDrug) addOwnNameDrug,
     required TResult Function(int? iconSelected) drugIconSelected,
+    required TResult Function(int? firstColorId) chooseFirstColorId,
+    required TResult Function(int? secondColorId) chooseSecondColorId,
     required TResult Function(int? colorSelected) drugFirstColorSelected,
     required TResult Function(int? secondColorSelected) drugSecondColorSelected,
     required TResult Function(bool isDrugDivisible) isDrugDivisible,
@@ -5263,13 +8288,20 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     TResult? Function()? getDrugIcons,
     TResult? Function()? getDrugColors,
     TResult? Function(int drugTypeId)? addDrugTypeId,
+    TResult? Function(int iconId)? addDrugIconId,
     TResult? Function(int profileId)? chooseProfileId,
     TResult? Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult? Function(int drugColorId)? chooseDrugColorId,
     TResult? Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult? Function(int frequency)? addFrequency,
+    TResult? Function(int totalDoses)? addTotalDoses,
+    TResult? Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult? Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult? Function(String nameDrug)? addNameDrug,
     TResult? Function(String ownNameDrug)? addOwnNameDrug,
     TResult? Function(int? iconSelected)? drugIconSelected,
+    TResult? Function(int? firstColorId)? chooseFirstColorId,
+    TResult? Function(int? secondColorId)? chooseSecondColorId,
     TResult? Function(int? colorSelected)? drugFirstColorSelected,
     TResult? Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult? Function(bool isDrugDivisible)? isDrugDivisible,
@@ -5292,13 +8324,20 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     TResult Function()? getDrugIcons,
     TResult Function()? getDrugColors,
     TResult Function(int drugTypeId)? addDrugTypeId,
+    TResult Function(int iconId)? addDrugIconId,
     TResult Function(int profileId)? chooseProfileId,
     TResult Function(int drugPriorityId)? chooseDrugPriorityId,
     TResult Function(int drugColorId)? chooseDrugColorId,
     TResult Function(int drugSecondColorId)? chooseDrugSecondColorId,
+    TResult Function(int frequency)? addFrequency,
+    TResult Function(int totalDoses)? addTotalDoses,
+    TResult Function(int drugAlertQuantity)? addDrugAlertQuantity,
+    TResult Function(String doctorRecommendation)? addDoctorRecommendation,
     TResult Function(String nameDrug)? addNameDrug,
     TResult Function(String ownNameDrug)? addOwnNameDrug,
     TResult Function(int? iconSelected)? drugIconSelected,
+    TResult Function(int? firstColorId)? chooseFirstColorId,
+    TResult Function(int? secondColorId)? chooseSecondColorId,
     TResult Function(int? colorSelected)? drugFirstColorSelected,
     TResult Function(int? secondColorSelected)? drugSecondColorSelected,
     TResult Function(bool isDrugDivisible)? isDrugDivisible,
@@ -5325,14 +8364,22 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     required TResult Function(GetDrugIcons value) getDrugIcons,
     required TResult Function(GetDrugColors value) getDrugColors,
     required TResult Function(AddDrugTypeId value) addDrugTypeId,
+    required TResult Function(AddDrugIconId value) addDrugIconId,
     required TResult Function(ChooseProfileId value) chooseProfileId,
     required TResult Function(AddDrugPriorityId value) chooseDrugPriorityId,
     required TResult Function(ChooseDrugColorId value) chooseDrugColorId,
     required TResult Function(ChooseDrugSecondColorId value)
         chooseDrugSecondColorId,
+    required TResult Function(AddFrequency value) addFrequency,
+    required TResult Function(AddTotalDoses value) addTotalDoses,
+    required TResult Function(AddDrugAlertQuantity value) addDrugAlertQuantity,
+    required TResult Function(AddDoctorRecommendation value)
+        addDoctorRecommendation,
     required TResult Function(AddNameDrug value) addNameDrug,
     required TResult Function(AddOwnNameDrug value) addOwnNameDrug,
     required TResult Function(DrugIconSelected value) drugIconSelected,
+    required TResult Function(ChooseFirstColorId value) chooseFirstColorId,
+    required TResult Function(ChooseSecondColorId value) chooseSecondColorId,
     required TResult Function(DrugFirstColorSelected value)
         drugFirstColorSelected,
     required TResult Function(DrugSecondColorSelected value)
@@ -5356,13 +8403,20 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     TResult? Function(GetDrugIcons value)? getDrugIcons,
     TResult? Function(GetDrugColors value)? getDrugColors,
     TResult? Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult? Function(AddDrugIconId value)? addDrugIconId,
     TResult? Function(ChooseProfileId value)? chooseProfileId,
     TResult? Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult? Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult? Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult? Function(AddFrequency value)? addFrequency,
+    TResult? Function(AddTotalDoses value)? addTotalDoses,
+    TResult? Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult? Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult? Function(AddNameDrug value)? addNameDrug,
     TResult? Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult? Function(DrugIconSelected value)? drugIconSelected,
+    TResult? Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult? Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult? Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult? Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult? Function(DrugDivisible value)? isDrugDivisible,
@@ -5384,13 +8438,20 @@ class _$AddDrugWeekdays implements AddDrugWeekdays {
     TResult Function(GetDrugIcons value)? getDrugIcons,
     TResult Function(GetDrugColors value)? getDrugColors,
     TResult Function(AddDrugTypeId value)? addDrugTypeId,
+    TResult Function(AddDrugIconId value)? addDrugIconId,
     TResult Function(ChooseProfileId value)? chooseProfileId,
     TResult Function(AddDrugPriorityId value)? chooseDrugPriorityId,
     TResult Function(ChooseDrugColorId value)? chooseDrugColorId,
     TResult Function(ChooseDrugSecondColorId value)? chooseDrugSecondColorId,
+    TResult Function(AddFrequency value)? addFrequency,
+    TResult Function(AddTotalDoses value)? addTotalDoses,
+    TResult Function(AddDrugAlertQuantity value)? addDrugAlertQuantity,
+    TResult Function(AddDoctorRecommendation value)? addDoctorRecommendation,
     TResult Function(AddNameDrug value)? addNameDrug,
     TResult Function(AddOwnNameDrug value)? addOwnNameDrug,
     TResult Function(DrugIconSelected value)? drugIconSelected,
+    TResult Function(ChooseFirstColorId value)? chooseFirstColorId,
+    TResult Function(ChooseSecondColorId value)? chooseSecondColorId,
     TResult Function(DrugFirstColorSelected value)? drugFirstColorSelected,
     TResult Function(DrugSecondColorSelected value)? drugSecondColorSelected,
     TResult Function(DrugDivisible value)? isDrugDivisible,

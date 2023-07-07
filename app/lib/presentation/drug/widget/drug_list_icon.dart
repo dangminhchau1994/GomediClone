@@ -12,9 +12,11 @@ class DrugListIcon extends StatefulWidget {
   const DrugListIcon({
     super.key,
     this.drugIcons,
+    this.updateDrugIcon,
   });
 
   final List<DrugIcon>? drugIcons;
+  final Function(DrugIcon drugIcon)? updateDrugIcon;
 
   @override
   State<DrugListIcon> createState() => _DrugListIconState();
@@ -28,6 +30,8 @@ class _DrugListIconState extends State<DrugListIcon> {
         widget.drugIcons?.length ?? 0,
         (index) => GestureDetector(
           onTap: () {
+            widget
+                .updateDrugIcon!(widget.drugIcons?[index] ?? const DrugIcon());
             context.read<DrugBloc>().add(DrugEvent.drugIconSelected(index));
             context.read<DrugBloc>().add(DrugEvent.isDrugDivisible(
                 widget.drugIcons?[index].isDivisible ?? false));

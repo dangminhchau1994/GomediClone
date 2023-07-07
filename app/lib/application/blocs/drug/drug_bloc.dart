@@ -15,6 +15,36 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     on<GetDrugTypes>(_getDrugTypes);
     on<GetDrugIcons>(_getDrugIcons);
     on<GetDrugColors>(_getDrugColors);
+    on<AddNameDrug>(
+      (event, emit) {
+        emit(state.copyWith(drugShortName: event.nameDrug));
+      },
+    );
+    on<AddOwnNameDrug>(
+      (event, emit) {
+        emit(state.copyWith(drugOwnName: event.ownNameDrug));
+      },
+    );
+    on<AddTotalDoses>(
+      (event, emit) {
+        emit(state.copyWith(totalDoses: event.totalDoses));
+      },
+    );
+    on<AddDoctorRecommendation>(
+      (event, emit) {
+        emit(state.copyWith(doctorRecommendation: event.doctorRecommendation));
+      },
+    );
+    on<AddDrugAlertQuantity>(
+      (event, emit) {
+        emit(state.copyWith(alertDrugQuantity: event.drugAlertQuantity));
+      },
+    );
+    on<AddDrugIconId>(
+      (event, emit) {
+        emit(state.copyWith(drugIconTypeId: event.iconId));
+      },
+    );
     on<AddDrugSchedule>(
       (event, emit) {
         emit(state.copyWith(drugScheduleDefinitions: []));
@@ -45,6 +75,21 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     on<AddDrugTypeId>(
       (event, emit) => emit(
         state.copyWith(drugTypeId: event.drugTypeId),
+      ),
+    );
+    on<AddDrugPriorityId>(
+      (event, emit) => emit(
+        state.copyWith(drugPriorityId: event.drugPriorityId),
+      ),
+    );
+    on<AddDrugTypeId>(
+      (event, emit) => emit(
+        state.copyWith(drugTypeId: event.drugTypeId),
+      ),
+    );
+    on<ChooseProfileId>(
+      (event, emit) => emit(
+        state.copyWith(profileDetailId: event.profileId),
       ),
     );
     on<ShowEndDatePicker>(

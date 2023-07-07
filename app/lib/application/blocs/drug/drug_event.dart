@@ -15,6 +15,8 @@ class DrugEvent with _$DrugEvent {
 
   const factory DrugEvent.addDrugTypeId(int drugTypeId) = AddDrugTypeId;
 
+  const factory DrugEvent.addDrugIconId(int iconId) = AddDrugIconId;
+
   const factory DrugEvent.chooseProfileId(int profileId) = ChooseProfileId;
 
   const factory DrugEvent.chooseDrugPriorityId(int drugPriorityId) =
@@ -26,12 +28,28 @@ class DrugEvent with _$DrugEvent {
   const factory DrugEvent.chooseDrugSecondColorId(int drugSecondColorId) =
       ChooseDrugSecondColorId;
 
+  const factory DrugEvent.addFrequency(int frequency) = AddFrequency;
+
+  const factory DrugEvent.addTotalDoses(int totalDoses) = AddTotalDoses;
+
+  const factory DrugEvent.addDrugAlertQuantity(int drugAlertQuantity) =
+      AddDrugAlertQuantity;
+
+  const factory DrugEvent.addDoctorRecommendation(String doctorRecommendation) =
+      AddDoctorRecommendation;
+
   const factory DrugEvent.addNameDrug(String nameDrug) = AddNameDrug;
 
   const factory DrugEvent.addOwnNameDrug(String ownNameDrug) = AddOwnNameDrug;
 
   const factory DrugEvent.drugIconSelected(int? iconSelected) =
       DrugIconSelected;
+
+  const factory DrugEvent.chooseFirstColorId(int? firstColorId) =
+      ChooseFirstColorId;
+
+  const factory DrugEvent.chooseSecondColorId(int? secondColorId) =
+      ChooseSecondColorId;
 
   const factory DrugEvent.drugFirstColorSelected(int? colorSelected) =
       DrugFirstColorSelected;
