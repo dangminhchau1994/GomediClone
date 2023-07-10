@@ -44,6 +44,18 @@ class DrugApi {
     }
   }
 
+  Future<Response?>? addDrugToProfile(Map<String, dynamic> params) async {
+    try {
+      final response = await dioClient?.post(
+        Endpoints.drugProfiles,
+        data: params,
+      );
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
   Future<Response?>? getDrugIcons() async {
     try {
       final response = await dioClient?.get(Endpoints.drugIconTypes);

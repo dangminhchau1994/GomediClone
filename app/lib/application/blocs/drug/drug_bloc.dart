@@ -1,7 +1,12 @@
+import 'dart:convert';
 import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/application/blocs/status/base_status.dart';
 import 'package:app/domain/drug/i_drug_repository.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_profile.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_profile_weekday.dart';
+import 'package:app/infrastructure/models/drug_profile/drug_schedule.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DrugBloc extends Bloc<DrugEvent, DrugState> {
@@ -15,9 +20,20 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     on<GetDrugTypes>(_getDrugTypes);
     on<GetDrugIcons>(_getDrugIcons);
     on<GetDrugColors>(_getDrugColors);
+    on<AddDrugToProfile>(_addDrugToProfile);
     on<AddNameDrug>(
       (event, emit) {
         emit(state.copyWith(drugShortName: event.nameDrug));
+      },
+    );
+    on<AddDrugId>(
+      (event, emit) {
+        emit(state.copyWith(drugId: event.drugId));
+      },
+    );
+    on<AddFrequency>(
+      (event, emit) {
+        emit(state.copyWith(times: event.frequency));
       },
     );
     on<AddOwnNameDrug>(
@@ -32,6 +48,7 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
     );
     on<AddDoctorRecommendation>(
       (event, emit) {
+        emit(state.copyWith(status: const BaseStatus.initial()));
         emit(state.copyWith(doctorRecommendation: event.doctorRecommendation));
       },
     );
@@ -82,14 +99,19 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
         state.copyWith(drugPriorityId: event.drugPriorityId),
       ),
     );
-    on<AddDrugTypeId>(
-      (event, emit) => emit(
-        state.copyWith(drugTypeId: event.drugTypeId),
-      ),
-    );
     on<ChooseProfileId>(
       (event, emit) => emit(
         state.copyWith(profileDetailId: event.profileId),
+      ),
+    );
+    on<ChooseFirstColorId>(
+      (event, emit) => emit(
+        state.copyWith(drugColorId: event.firstColorId),
+      ),
+    );
+    on<ChooseSecondColorId>(
+      (event, emit) => emit(
+        state.copyWith(drugSecondColorId: event.secondColorId),
       ),
     );
     on<ShowEndDatePicker>(
@@ -123,6 +145,70 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
   }
 
   final IDrugRepository repository;
+
+  Future<void> _addDrugToProfile(
+    AddDrugToProfile event,
+    Emitter<DrugState> emit,
+  ) async {
+    emit(state.copyWith(status: const BaseStatus.loading()));
+
+    final params = DrugProfile(
+      id: state.drugId,
+      name: state.drugShortName,
+      drugOwnName: state.drugOwnName,
+      profileDetailId: state.profileDetailId,
+      doctorRecommendation: state.doctorRecommendation,
+      totalDrugDoses: state.totalDoses,
+      drugAlertQuantity: state.alertDrugQuantity,
+      drugPriorityId: state.drugPriorityId,
+      drugTypeId: state.drugTypeId,
+      drugIconTypeId: state.drugIconTypeId,
+      colorTypeId: state.drugColorId,
+      colorTypeSecondaryId: state.drugSecondColorId,
+      drugFrequency: state.times,
+      drugProfileWeekDays: state.drugProfieWeekdays,
+      startDate: state.startDate,
+      endDate: state.endDate,
+      drugScheduleDefinitions: state.drugScheduleDefinitions
+          ?.map((e) => e.toJson())
+          .toList()
+          .map((e) => DrugScheduleDefinitions.fromJson(e))
+          .toList(),
+    ).toJson();
+
+    debugPrint('drugParam: ${jsonEncode(params)}');
+
+    final result = await repository.addDrugToProfile(params);
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            failure: failure,
+            status: const BaseStatus.failure(),
+          ),
+        );
+        emit(
+          state.copyWith(
+            failure: failure,
+            status: const BaseStatus.initial(),
+          ),
+        );
+      },
+      (data) {
+        emit(
+          state.copyWith(
+            status: const BaseStatus.success(),
+          ),
+        );
+        emit(
+          state.copyWith(
+            status: const BaseStatus.initial(),
+          ),
+        );
+      },
+    );
+  }
 
   Future<void> _getDrugPriorities(
     GetDrugPriorites event,
@@ -237,5 +323,17 @@ class DrugBloc extends Bloc<DrugEvent, DrugState> {
         );
       },
     );
+  }
+
+  List<Map<String, dynamic>> _handleWeekDays() {
+    if (state.drugProfieWeekdays?.contains(
+          const DrugProfileWeekDays(weekDayId: 1),
+        ) ??
+        true) {
+      return [
+        const DrugProfileWeekDays(weekDayId: 1).toJson(),
+      ];
+    }
+    return state.drugProfieWeekdays!.map((e) => e.toJson()).toList();
   }
 }

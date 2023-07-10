@@ -7,6 +7,7 @@ part 'drug_schedule.g.dart';
 class DrugScheduleDefinitions extends Equatable {
   int? id;
   String? drugTime;
+  String? timeToServer;
   String? time;
   int? doseQuantity;
 

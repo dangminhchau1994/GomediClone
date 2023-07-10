@@ -47,7 +47,11 @@ class _DrugWeekdaysInputState extends State<DrugWeekdaysInput> {
                 updateWeekdays: (newWeekdays) {
                   weekdays = newWeekdays
                       .where((element) => element.isChecked == true)
-                      .map((e) => DrugProfileWeekDays(id: e.id, title: e.title))
+                      .map((e) => DrugProfileWeekDays(
+                            id: e.id,
+                            title: e.title,
+                            weekDayId: e.id,
+                          ))
                       .toList();
                 },
               ),

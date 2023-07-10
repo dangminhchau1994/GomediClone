@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$DrugState {
   int? get times => throw _privateConstructorUsedError;
+  int? get drugId => throw _privateConstructorUsedError;
   int? get drugTypeId => throw _privateConstructorUsedError;
   int? get profileDetailId => throw _privateConstructorUsedError;
   int? get iconSelected => throw _privateConstructorUsedError;
@@ -59,6 +60,7 @@ abstract class $DrugStateCopyWith<$Res> {
   @useResult
   $Res call(
       {int? times,
+      int? drugId,
       int? drugTypeId,
       int? profileDetailId,
       int? iconSelected,
@@ -105,6 +107,7 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
   @override
   $Res call({
     Object? times = freezed,
+    Object? drugId = freezed,
     Object? drugTypeId = freezed,
     Object? profileDetailId = freezed,
     Object? iconSelected = freezed,
@@ -137,6 +140,10 @@ class _$DrugStateCopyWithImpl<$Res, $Val extends DrugState>
       times: freezed == times
           ? _value.times
           : times // ignore: cast_nullable_to_non_nullable
+              as int?,
+      drugId: freezed == drugId
+          ? _value.drugId
+          : drugId // ignore: cast_nullable_to_non_nullable
               as int?,
       drugTypeId: freezed == drugTypeId
           ? _value.drugTypeId
@@ -283,6 +290,7 @@ abstract class _$$_DrugStateCopyWith<$Res> implements $DrugStateCopyWith<$Res> {
   @useResult
   $Res call(
       {int? times,
+      int? drugId,
       int? drugTypeId,
       int? profileDetailId,
       int? iconSelected,
@@ -329,6 +337,7 @@ class __$$_DrugStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? times = freezed,
+    Object? drugId = freezed,
     Object? drugTypeId = freezed,
     Object? profileDetailId = freezed,
     Object? iconSelected = freezed,
@@ -361,6 +370,10 @@ class __$$_DrugStateCopyWithImpl<$Res>
       times: freezed == times
           ? _value.times
           : times // ignore: cast_nullable_to_non_nullable
+              as int?,
+      drugId: freezed == drugId
+          ? _value.drugId
+          : drugId // ignore: cast_nullable_to_non_nullable
               as int?,
       drugTypeId: freezed == drugTypeId
           ? _value.drugTypeId
@@ -479,6 +492,7 @@ class __$$_DrugStateCopyWithImpl<$Res>
 class _$_DrugState implements _DrugState {
   const _$_DrugState(
       {this.times,
+      this.drugId,
       this.drugTypeId,
       this.profileDetailId,
       this.iconSelected,
@@ -515,6 +529,8 @@ class _$_DrugState implements _DrugState {
 
   @override
   final int? times;
+  @override
+  final int? drugId;
   @override
   final int? drugTypeId;
   @override
@@ -622,7 +638,7 @@ class _$_DrugState implements _DrugState {
 
   @override
   String toString() {
-    return 'DrugState(times: $times, drugTypeId: $drugTypeId, profileDetailId: $profileDetailId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, drugPriorityId: $drugPriorityId, drugIconTypeId: $drugIconTypeId, drugColorId: $drugColorId, drugSecondColorId: $drugSecondColorId, totalDoses: $totalDoses, alertDrugQuantity: $alertDrugQuantity, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, drugShortName: $drugShortName, drugOwnName: $drugOwnName, doctorRecommendation: $doctorRecommendation, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugProfieWeekdays: $drugProfieWeekdays, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
+    return 'DrugState(times: $times, drugId: $drugId, drugTypeId: $drugTypeId, profileDetailId: $profileDetailId, iconSelected: $iconSelected, firstColorSelected: $firstColorSelected, secondColorSelected: $secondColorSelected, drugPriorityId: $drugPriorityId, drugIconTypeId: $drugIconTypeId, drugColorId: $drugColorId, drugSecondColorId: $drugSecondColorId, totalDoses: $totalDoses, alertDrugQuantity: $alertDrugQuantity, isDivisible: $isDivisible, showEndDatePicker: $showEndDatePicker, drugShortName: $drugShortName, drugOwnName: $drugOwnName, doctorRecommendation: $doctorRecommendation, startDate: $startDate, endDate: $endDate, durationDate: $durationDate, drugPriorities: $drugPriorities, drugScheduleDefinitions: $drugScheduleDefinitions, drugProfieWeekdays: $drugProfieWeekdays, drugTypes: $drugTypes, drugIcons: $drugIcons, drugColors: $drugColors, failure: $failure, status: $status)';
   }
 
   @override
@@ -631,6 +647,7 @@ class _$_DrugState implements _DrugState {
         (other.runtimeType == runtimeType &&
             other is _$_DrugState &&
             (identical(other.times, times) || other.times == times) &&
+            (identical(other.drugId, drugId) || other.drugId == drugId) &&
             (identical(other.drugTypeId, drugTypeId) ||
                 other.drugTypeId == drugTypeId) &&
             (identical(other.profileDetailId, profileDetailId) ||
@@ -688,6 +705,7 @@ class _$_DrugState implements _DrugState {
   int get hashCode => Object.hashAll([
         runtimeType,
         times,
+        drugId,
         drugTypeId,
         profileDetailId,
         iconSelected,
@@ -727,6 +745,7 @@ class _$_DrugState implements _DrugState {
 abstract class _DrugState implements DrugState {
   const factory _DrugState(
       {final int? times,
+      final int? drugId,
       final int? drugTypeId,
       final int? profileDetailId,
       final int? iconSelected,
@@ -757,6 +776,8 @@ abstract class _DrugState implements DrugState {
 
   @override
   int? get times;
+  @override
+  int? get drugId;
   @override
   int? get drugTypeId;
   @override

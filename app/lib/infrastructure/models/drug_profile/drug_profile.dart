@@ -19,7 +19,7 @@ class DrugProfile extends Equatable {
   final int? colorTypeId;
   final int? colorTypeSecondaryId;
   final int? drugIconTypeId;
-  final String? drugId;
+  final int? drugId;
   final dynamic drugInfoDTO;
   final String? startDate;
   final String? endDate;

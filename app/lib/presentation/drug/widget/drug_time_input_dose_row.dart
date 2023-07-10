@@ -58,6 +58,19 @@ class _DrugTimeInputDoseRowState extends State<DrugTimeInputDoseRow>
                   mode: CupertinoTimerPickerMode.hm,
                   onTimerDurationChanged: (Duration value) {
                     drugSchedule?.drugTime = TimeUtils.convertDuration(value);
+                    drugSchedule?.timeToServer = TimeUtils.convertTimeToServer(
+                      DateTime(
+                        DateTime.now().year,
+                        DateTime.now().month,
+                        DateTime.now().day,
+                        int.parse(
+                          drugSchedule!.drugTime!.split(':')[0],
+                        ),
+                        int.parse(
+                          drugSchedule!.drugTime!.split(':')[1],
+                        ),
+                      ),
+                    );
                     widget.updateDrugSchedules!(widget.drugSchedules ?? []);
                   },
                 ),

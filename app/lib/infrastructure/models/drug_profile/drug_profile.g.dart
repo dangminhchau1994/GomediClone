@@ -20,7 +20,7 @@ DrugProfile _$DrugProfileFromJson(Map<String, dynamic> json) => DrugProfile(
       colorTypeId: json['colorTypeId'] as int?,
       colorTypeSecondaryId: json['colorTypeSecondaryId'] as int?,
       drugIconTypeId: json['drugIconTypeId'] as int?,
-      drugId: json['drugId'] as String?,
+      drugId: json['drugId'] as int?,
       drugInfoDTO: json['drugInfoDTO'],
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,

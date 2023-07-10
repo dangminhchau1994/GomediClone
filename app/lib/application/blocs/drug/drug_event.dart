@@ -72,4 +72,8 @@ class DrugEvent with _$DrugEvent {
 
   const factory DrugEvent.addWeekdays(List<DrugProfileWeekDays> weekdays) =
       AddDrugWeekdays;
+
+  const factory DrugEvent.addDrugToProfile() = AddDrugToProfile;
+
+  const factory DrugEvent.addDrugId(int drugId) = AddDrugId;
 }

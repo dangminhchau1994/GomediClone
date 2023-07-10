@@ -102,4 +102,19 @@ class DrugRepositoryImpl extends IDrugRepository {
       );
     }
   }
+
+  @override
+  Future<Either<DrugFailure, Unit>> addDrugToProfile(
+      Map<String, dynamic> params) async {
+    try {
+      await drugApi?.addDrugToProfile(params);
+      return right(unit);
+    } on DioException catch (e) {
+      return left(
+        DrugFailure.serverError(
+          DioExceptions.fromDioError(e).toString(),
+        ),
+      );
+    }
+  }
 }

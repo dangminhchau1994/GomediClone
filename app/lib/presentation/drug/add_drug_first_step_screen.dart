@@ -77,6 +77,9 @@ class _BodyState extends State<Body> {
   void _initData() {
     context
         .read<DrugBloc>()
+        .add(DrugEvent.addDrugId(widget.drugProfile?.id ?? 0));
+    context
+        .read<DrugBloc>()
         .add(DrugEvent.addNameDrug(widget.drugProfile?.name ?? ''));
     context
         .read<DrugBloc>()

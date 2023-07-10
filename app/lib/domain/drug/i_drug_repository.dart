@@ -17,4 +17,8 @@ abstract class IDrugRepository {
   Future<Either<DrugFailure, List<DrugIcon>>> getDrugIcons();
 
   Future<Either<DrugFailure, List<DrugColor>>> getDrugColors();
+
+  Future<Either<DrugFailure, Unit>> addDrugToProfile(
+    Map<String, dynamic> params,
+  );
 }
