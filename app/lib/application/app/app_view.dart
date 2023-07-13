@@ -19,6 +19,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      key: AppConfig.navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Gomedi',
       theme: getAppTheme(context),

@@ -8,15 +8,21 @@ class UITextInput extends StatefulWidget {
     this.editingController,
     this.onChanged,
     this.validator,
-    this.isPasswordType,
+    this.textInputType,
+    this.maxLine,
+    this.isPasswordType = false,
+    this.isEditType = false,
   });
 
   final TextEditingController? editingController;
   final Function(String value)? onChanged;
   final String? Function(String value)? validator;
+  final TextInputType? textInputType;
   final String? title;
   final String? textHint;
   final bool? isPasswordType;
+  final bool? isEditType;
+  final int? maxLine;
 
   @override
   State<UITextInput> createState() => _UITextInputState();
@@ -24,6 +30,34 @@ class UITextInput extends StatefulWidget {
 
 class _UITextInputState extends State<UITextInput> {
   var _passwordVisible = false;
+
+  Widget _suffixIcon() {
+    if (widget.isEditType == true) {
+      return IconButton(
+        icon: const Icon(
+          Icons.edit,
+          color: Colors.black,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      );
+    } else if (widget.isPasswordType == true) {
+      return IconButton(
+        icon: Icon(
+          _passwordVisible ? Icons.visibility : Icons.visibility_off,
+          color: Colors.black,
+        ),
+        onPressed: () {
+          setState(() {
+            _passwordVisible = !_passwordVisible;
+          });
+        },
+      );
+    } else {
+      return const SizedBox(width: 20);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +71,8 @@ class _UITextInputState extends State<UITextInput> {
               ),
         ),
         TextFormField(
+          maxLines: widget.maxLine,
+          keyboardType: widget.textInputType,
           controller: widget.editingController,
           onChanged: (value) {
             widget.onChanged!(value);
@@ -49,20 +85,7 @@ class _UITextInputState extends State<UITextInput> {
                   color: Colors.grey,
                   fontSize: 14,
                 ),
-            suffixIcon: Visibility(
-              visible: widget.isPasswordType ?? false,
-              child: IconButton(
-                icon: Icon(
-                  _passwordVisible ? Icons.visibility : Icons.visibility_off,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _passwordVisible = !_passwordVisible;
-                  });
-                },
-              ),
-            ),
+            suffixIcon: _suffixIcon(),
           ),
         ),
       ],

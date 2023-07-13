@@ -10,8 +10,8 @@ Lactations _$LactationsFromJson(Map<String, dynamic> json) => Lactations(
       id: json['id'] as int?,
       name: json['name'] as String?,
       description: json['description'] as String?,
-      enumKey: json['enum_key'] as String?,
-      isActive: json['is_active'] as bool?,
+      enumKey: json['enumKey'] as String?,
+      isActive: json['isActive'] as bool?,
     );
 
 Map<String, dynamic> _$LactationsToJson(Lactations instance) =>
@@ -19,6 +19,6 @@ Map<String, dynamic> _$LactationsToJson(Lactations instance) =>
       'id': instance.id,
       'name': instance.name,
       'description': instance.description,
-      'enum_key': instance.enumKey,
-      'is_active': instance.isActive,
+      'enumKey': instance.enumKey,
+      'isActive': instance.isActive,
     };

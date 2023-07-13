@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 enum Flavor { prod, dev }
 
 class AppConfig {
@@ -6,6 +8,7 @@ class AppConfig {
   Flavor flavor = Flavor.dev;
 
   static AppConfig shared = AppConfig.create();
+  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   factory AppConfig.create({
     String appName = "",

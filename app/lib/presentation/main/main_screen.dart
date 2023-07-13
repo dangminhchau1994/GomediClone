@@ -1,10 +1,14 @@
+import 'package:app/application/blocs/profile/profile_bloc.dart';
+import 'package:app/application/blocs/profile/profile_event.dart';
 import 'package:app/application/theme/ui_color.dart';
-import 'package:app/application/widgets/ui_app_bar.dart';
+import 'package:app/di/service_locator.dart';
+import 'package:app/domain/profile/i_profile_repository.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/map/map_screen.dart';
 import 'package:app/presentation/more/more_screen.dart';
 import 'package:app/presentation/my_medications/my_medications_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../gen/assets.gen.dart';
@@ -28,42 +32,23 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const UIAppbar(
-        showBadge: true,
-      ),
-      body: PersistentTabView(
-        context,
-        controller: _tabController,
-        screens: _buildScreens,
-        items: _navBarsItems,
-        confineInSafeArea: true,
-        navBarHeight: 70,
-        backgroundColor: Colors.white, // Default is Colors.white.
-        handleAndroidBackButtonPress: true, // Default is true.
-        resizeToAvoidBottomInset:
-            true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
-        stateManagement: true, // Default is true.
-        hideNavigationBarWhenKeyboardShows:
-            true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
-        decoration: NavBarDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          colorBehindNavBar: Colors.white,
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => ProfileBloc(
+              getIt<IProfileRepository>(),
+            )..add(const ProfileEvent.getProfile()),
+          ),
+        ],
+        child: PersistentTabView(
+          context,
+          controller: _tabController,
+          navBarHeight: 70,
+          screens: _buildScreens,
+          items: _navBarsItems,
+          navBarStyle: NavBarStyle
+              .simple, // Choose the nav bar style with this property.
         ),
-        popAllScreensOnTapOfSelectedTab: true,
-        popActionScreens: PopActionScreensType.all,
-        itemAnimationProperties: const ItemAnimationProperties(
-          // Navigation Bar's items animation properties.
-          duration: Duration(milliseconds: 200),
-          curve: Curves.ease,
-        ),
-        screenTransitionAnimation: const ScreenTransitionAnimation(
-          // Screen transition animation on change of selected tab.
-          animateTabTransition: true,
-          curve: Curves.ease,
-          duration: Duration(milliseconds: 200),
-        ),
-        navBarStyle:
-            NavBarStyle.simple, // Choose the nav bar style with this property.
       ),
     );
   }

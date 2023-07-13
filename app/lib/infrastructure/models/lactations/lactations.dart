@@ -1,15 +1,16 @@
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'lactations.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-class Lactations {
+@JsonSerializable()
+class Lactations extends Equatable {
   final int? id;
   final String? name;
   final String? description;
   final String? enumKey;
   final bool? isActive;
 
-  Lactations({
+  const Lactations({
     this.id,
     this.name,
     this.description,
@@ -21,4 +22,13 @@ class Lactations {
       _$LactationsFromJson(json);
 
   Map<String, dynamic> toJson() => _$LactationsToJson(this);
+
+  @override
+  List<Object?> get props => [
+        id,
+        name,
+        description,
+        enumKey,
+        isActive,
+      ];
 }

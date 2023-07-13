@@ -1,16 +1,17 @@
 import 'package:app/infrastructure/models/substance/substance.dart';
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'profile_substance.g.dart';
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-class ProfileSubstance {
+@JsonSerializable()
+class ProfileSubstance extends Equatable {
   final int? id;
   final int? drugId;
   final int? profileDetailId;
   final int? substanceId;
   final Substance? substance;
 
-  ProfileSubstance({
+  const ProfileSubstance({
     this.id,
     this.drugId,
     this.profileDetailId,
@@ -22,4 +23,13 @@ class ProfileSubstance {
       _$ProfileSubstanceFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProfileSubstanceToJson(this);
+
+  @override
+  List<Object?> get props => [
+        id,
+        drugId,
+        profileDetailId,
+        substanceId,
+        substance,
+      ];
 }

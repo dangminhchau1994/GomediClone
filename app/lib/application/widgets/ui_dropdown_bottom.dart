@@ -2,7 +2,6 @@ import 'package:app/application/theme/ui_color.dart';
 import 'package:app/application/widgets/ui_primary_button.dart';
 import 'package:app/infrastructure/models/bottom_item/bottom_item.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import '../constants/dimensions.dart';
 
 class UIDropdownBottom extends StatefulWidget {
@@ -31,7 +30,7 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
   }
 
   Future<void> _showBottomSheet() {
-    return showModalBottomSheet(
+    final dialog = showModalBottomSheet(
       context: context,
       backgroundColor: Colors.white.withOpacity(1),
       shape: const RoundedRectangleBorder(
@@ -76,23 +75,25 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        UIButton(
-                          width: 180,
-                          isPrimaryButton: false,
-                          title: 'Cancel',
-                          onPressed: () {
-                            context.pop();
-                          },
+                        Expanded(
+                          child: UIButton(
+                            isPrimaryButton: false,
+                            title: 'Cancel',
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
                         ),
                         const SizedBox(
                           width: 20,
                         ),
-                        UIButton(
-                          width: 180,
-                          title: 'OK',
-                          onPressed: () {
-                            context.pop();
-                          },
+                        Expanded(
+                          child: UIButton(
+                            title: 'OK',
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
                         ),
                       ],
                     ),
@@ -104,6 +105,7 @@ class _UIDropdownBottomState extends State<UIDropdownBottom> {
         );
       },
     );
+    return dialog;
   }
 
   @override
