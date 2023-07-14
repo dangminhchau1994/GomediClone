@@ -2,6 +2,7 @@ import 'package:app/application/blocs/drug/drug_bloc.dart';
 import 'package:app/application/blocs/drug/drug_event.dart';
 import 'package:app/application/blocs/drug/drug_state.dart';
 import 'package:app/application/constants/dimensions.dart';
+import 'package:app/application/utils/collection_type.dart';
 import 'package:app/infrastructure/models/drug/drug_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,7 +16,7 @@ class DrugListColors extends StatefulWidget {
     this.updateFirstDrugColor,
   });
 
-  final List<DrugColor>? drugColors;
+  final ListDrugColor? drugColors;
   final Function(DrugColor drugColor)? updateFirstDrugColor;
 
   @override

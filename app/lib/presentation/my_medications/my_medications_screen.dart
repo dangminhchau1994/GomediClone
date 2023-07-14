@@ -1,3 +1,5 @@
+import 'package:app/application/widgets/ui_app_bar.dart';
+import 'package:app/application/widgets/ui_table_calendar.dart';
 import 'package:flutter/material.dart';
 
 class MyMedicationScreen extends StatefulWidget {
@@ -11,8 +13,21 @@ class _MyMedicationScreenState extends State<MyMedicationScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('My medications'),
+      appBar: UIAppbar(
+        showBadge: true,
+      ),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                UITableCalendar(),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

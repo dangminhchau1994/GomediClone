@@ -12,9 +12,6 @@ ThemeData getAppTheme(BuildContext context) {
     primaryColor: UIColors.blue,
     unselectedWidgetColor: Colors.grey,
     scaffoldBackgroundColor: Colors.white,
-    colorScheme: ThemeData.light().colorScheme.copyWith(
-          secondary: UIColors.lightBlue,
-        ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: UIColors.blue,
